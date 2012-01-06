@@ -1,0 +1,15 @@
+Config
+	{ 
+		font = "xft:Acknowledge TT (BRK):size=10",
+		bgColor = "black",
+		fgColor = "grey",
+		position = Top,
+		commands = 
+			[ 
+				Run Date "%y%m%_d %H:%M " "date" 10,
+				Run StdinReader
+			],
+		sepChar = "%",
+		alignSep = "}{",
+		template = "%StdinReader% }{ <fc=#ffffff>%date%</fc>"
+	}

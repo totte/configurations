@@ -1,0 +1,36 @@
+!urxvt
+urxvt*geometry:			86x42
+urxvt*font:				xft:Inconsolata:size=12:antialias=true:hinting=true
+urxvt*urlLauncher:		chromium
+urxvt*scrollBar:		true
+urxvt*scrollBar_right:	true
+urxvt*scrollstyle:		plain
+urxvt*scrollColor:		#323232
+urxvt*cursorColor:		#eeeeee
+
+*foreground:#ffffff
+*background:#161616
+!black
+*color0:    #161616
+*color8:    #323232
+!red
+*color1:    #ee3216
+*color9:    #ff6432
+!green
+*color2:    #96ca2c
+*color10:   #c8d686
+!yellow
+*color3:    #89725b
+*color11:   #e1d8aa
+!blue
+*color4:    #4192d9
+*color12:   #a5cffc
+!magenta
+*color5:    #893bfb
+*color13:   #cc99ff
+!cyan
+*color6:    #424242
+*color14:   #868686
+!white
+*color7:    #dddddd
+*color15:   #ffffff
