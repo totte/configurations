@@ -69,12 +69,12 @@ alias gull='git pull'
 alias gush='git push'
 alias gchb='git checkout -b'
 alias gc='git commit -am'
-alias gass='git-assemble'
-alias ghip='git-ship'
 alias gss='git stash save'
 alias gsa='git stash apply' # Apply most recent or specify stash@{1}
 alias gsl='git stash list'
 alias gslc='git stash list clear'
+alias guar='guar.sh'
+alias gmap='gmap.sh'
 alias gs='git status'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gd='git diff'
@@ -175,9 +175,10 @@ function +vi-git-stash(){
     fi
 }
 
-# Display message if untracked files are in the working index
-+vi-git-untracked(){
-	if $(git status --porcelain | grep '??' &> /dev/null) ; then
+# Display message if untracked files are present
+function +vi-git-untracked(){
+	if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+		git status --porcelain | grep '??' &> /dev/null ; then
 		hook_com[unstaged]+=" (untracked files present)"
 	fi
 }
@@ -204,7 +205,7 @@ function prompt_character(){
 	echo '%{$fg[white]%}»%{$reset_color%}'
 }
 
-# TODO Steve Losh had a cosmetic fix for displaying virtualenvs in % which may come in handy
+# TODO S. Losh had a cosmetic fix for displaying virtualenvs in % which may come in handy
 # when I start using those.
 function set_prompt(){
 	PROMPT="$(rou)%n %{$reset_color%}at $(rou)%m %{$reset_color%}in $(rou)%~ ${vcs_info_msg_0_}
