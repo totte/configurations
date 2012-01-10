@@ -102,6 +102,13 @@ fi
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
+bindkey "^[[H" beginning-of-line
+bindkey "^[[1~" beginning-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[[F"  end-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[OF" end-of-line
+
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
