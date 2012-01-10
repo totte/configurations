@@ -142,7 +142,20 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 
 " <leader>t to view tasklist
-nmap <leader>t <Plug>TaskList
+nmap <leader>tl <plug>TaskList
+
+" <leader>tx for pytest commands
+" Execute the tests
+nmap <silent><leader>tf <esc>:Pytest file<cr>
+nmap <silent><leader>tc <esc>:Pytest class<cr>
+nmap <silent><leader>tm <esc>:Pytest method<cr>
+" cycle through test errors
+nmap <silent><leader>tn <esc>:Pytest next<cr>
+nmap <silent><leader>tp <esc>:Pytest previous<cr>
+nmap <silent><leader>te <esc>:Pytest error<cr>
+
+" Run django tests
+map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<cr>
 
 " move between buffers with ctrl+movement keys
 map <c-j> <c-w>j
