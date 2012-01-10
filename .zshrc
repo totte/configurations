@@ -4,7 +4,7 @@
 if [[ $HOST != embepe* ]]; then
 	export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/bin"
 else
-	export PATH="/opt/local/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/Library/Haskell/bin:/usr/X11/bin:/opt/local/bin:$HOME/bin"
+	export PATH="/opt/local/bin:/opt/local/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/Library/Haskell/bin:/usr/X11/bin:$HOME/bin"
 fi
 
 #---------------------------------------------------------------------------------------------------
@@ -37,6 +37,7 @@ setopt correctall
 setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
+setopt extendedglob
 
 #---------------------------------------------------------------------------------------------------
 # ALIASES
@@ -93,6 +94,18 @@ if [[ $HOST != embepe* ]]; then
 	alias aptu='sudo aptitude update && sudo aptitude upgrade'
 	alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
+
+#---------------------------------------------------------------------------------------------------
+# KEYBINDINGS
+#---------------------------------------------------------------------------------------------------
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
+bindkey '^?' backward-delete-char
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+bindkey "\e[3~" delete-char
 
 #---------------------------------------------------------------------------------------------------
 # TAB COMPLETION
