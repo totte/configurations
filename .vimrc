@@ -40,6 +40,11 @@ set completeopt=menuone,longest,preview
 let g:pyflakes_use_quickfix = 0
 
 "---------------------------------------------------------------------------------------------------
+" SNIPMATE
+"---------------------------------------------------------------------------------------------------
+let g:snips_author = 'Hans Tovetjärn'
+
+"---------------------------------------------------------------------------------------------------
 " MISCELLANEOUS
 "---------------------------------------------------------------------------------------------------
 set nocompatible								" Disable Vi-like behaviour(?)
@@ -57,6 +62,7 @@ set backspace=indent,eol,start					" Make the backspace key act like I'm used to
 set encoding=utf-8								" Set UTF-8 encoding EVERYWHERE just to be safe
 set termencoding=utf-8							" Yeah, here too, eff you Terminal.app!
 set ls=2										" Always display statusline
+set nuw=6										" Columns used for line number display
 set clipboard=unnamed							" Copy to OSX clipboard
 
 "---------------------------------------------------------------------------------------------------
@@ -104,61 +110,101 @@ set statusline+=%2*line:%1*%l\ \
 set statusline+=%2*total:%1*%L\ 
 
 "---------------------------------------------------------------------------------------------------
-" GUI SETTINGS
-"---------------------------------------------------------------------------------------------------
-"if has('gui_running')							" If run as gui...
-"	set title titlestring=VIM					" Set GUI window title
-"	set icon iconstring=''						" Set GUI window icon
-"	set go-=l									" Remove scrollbar on the left side
-"	set go-=L									" Remove scrollbar for realz?
-"	set go-=r									" Remove scrollbar on the right side
-"	set go-=R									" Remove scrollbar for realz?
-"	set go-=T									" Remove toolbar too
-"	set guifont=Inconsolata:h18					" Any font at less than size 18 looks bad on S2231W
-"	set transp=0								" MacVim transparency, the lower - the more opaque
-"	set lines=42 columns=132					" Window size
-"endif
-
-"---------------------------------------------------------------------------------------------------
 " KEYBINDINGS
 "---------------------------------------------------------------------------------------------------
-" Changing leader key
-let mapleader=","
-
-" <leader>r to run code
-autocmd FileType python nmap <buffer> <leader>r :!python %<cr>
-
-" <leader>u to toggle Gundo
-nmap <leader>u :GundoToggle<cr>
-
-" <leader>d to toggle NERDtree
-nmap <leader>d :NERDTreeToggle<cr>
-
-" <leader>gx for Fugitive git commands
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit<cr>
-nmap <leader>ga :Gwrite<cr>
-nmap <leader>gl :Glog<cr>
-nmap <leader>gd :Gdiff<cr>
-
-" <leader>t to view tasklist
-nmap <leader>tl <plug>TaskList
-
-" <leader>tx for pytest commands
-" Execute the tests
-nmap <silent><leader>tf <esc>:Pytest file<cr>
-nmap <silent><leader>tc <esc>:Pytest class<cr>
-nmap <silent><leader>tm <esc>:Pytest method<cr>
-" cycle through test errors
-nmap <silent><leader>tn <esc>:Pytest next<cr>
-nmap <silent><leader>tp <esc>:Pytest previous<cr>
-nmap <silent><leader>te <esc>:Pytest error<cr>
-
+" Double tap <leader> to <esc>ape into normal mode
+imap <leader><leader> <esc>
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<cr>
+" <F1> to toggle NERDtree
+nmap <F1> :NERDTreeToggle<cr>
+" <F2> to toggle Gundo
+nmap <F2> :GundoToggle<cr>
+" <F3> to view tasklist
+nmap <F3> <plug>TaskList
+" <F4> to run code
+autocmd FileType python nmap <buffer> <F4> :!python %<cr>
+" <F5-10> for pytest commands
+nmap <silent><F5> <esc>:Pytest file<cr>
+nmap <silent><F6> <esc>:Pytest class<cr>
+nmap <silent><F7> <esc>:Pytest method<cr>
+nmap <silent><F8> <esc>:Pytest next<cr>
+nmap <silent><F9> <esc>:Pytest previous<cr>
+nmap <silent><F10> <esc>:Pytest error<cr>
+" <F11> for PEP8
+autocmd FileType python map <buffer> <F11> :call Pep8()<cr>
+" <F12> for Fugitive git status
+nmap <F12> :Gstatus<cr>
 
-" move between buffers with ctrl+movement keys
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+noremap w t
+noremap W T
+noremap g G
+noremap G g
+noremap l o
+noremap L O
+noremap t i
+noremap T I
+noremap h n
+noremap H N
+
+noremap n h
+noremap e j
+noremap i k
+noremap o l
+noremap N b
+noremap E B
+noremap I W
+noremap O w
+
+map <silent><c-n> <home>
+map <silent><c-e> <pagedown>
+map <silent><c-i> <pageup>
+map <silent><c-o> <end>
+
+imap <leader><leader> <esc>
+nnoremap zz za
+nnoremap ZZ :w<return>
+nnoremap ZQ :q<return>
+
+" NEWBMEWD
+"unmap !
+"unmap @
+"unmap #
+"unmap $
+"unmap %
+"unmap ^
+"unmap &
+"unmap *
+"unmap (
+"unmap )
+"unmap _
+"unmap +
+"unmap `
+"unmap 0
+"unmap -
+"unmap =
+"unmap Q
+"unmap W
+"unmap F
+"unmap G
+"unmap J
+"unmap L
+"unmap {
+"unmap }
+"unmap |
+"unmap q
+"unmap w
+"unmap f
+"unmap j
+"unmap l
+"unmap ;
+"unmap [
+"unmap ]
+"unmap "
+"unmap '
+"unmap B
+"unmap M
+"unmap b
+"unmap k
+"unmap m
+"unmap ,

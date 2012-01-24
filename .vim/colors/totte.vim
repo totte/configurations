@@ -19,7 +19,7 @@
 " #9900ff#cc99ff Magenta			Haskell
 " #424242#868686 Cyan
 
-" Additional colours (I've always got 256 anyway?)
+" Additional colours (I've always got 256 anyway)
 " #242424
 
 set background=dark
@@ -66,7 +66,7 @@ hi ErrorMsg				gui=NONE		guibg=#ee3216	guifg=#ffffff		cterm=NONE		ctermbg=1			ct
 hi Exception			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Float				gui=NONE		guibg=NONE		guifg=#ffffff		cterm=NONE		ctermbg=NONE		ctermfg=15
 hi FoldColumn			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
-hi Folded				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
+hi Folded				gui=NONE		guibg=NONE		guifg=#868686		cterm=NONE		ctermbg=NONE		ctermfg=14
 hi Function				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Identifier			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Ignore				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
