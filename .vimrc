@@ -114,8 +114,6 @@ set statusline+=%2*total:%1*%L\
 "---------------------------------------------------------------------------------------------------
 " Double tap <leader> to <esc>ape into normal mode
 imap <leader><leader> <esc>
-" Run django tests
-map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<cr>
 " <F1> to toggle NERDtree
 nmap <F1> :NERDTreeToggle<cr>
 " <F2> to toggle Gundo
@@ -132,7 +130,7 @@ nmap <silent><F8> <esc>:Pytest next<cr>
 nmap <silent><F9> <esc>:Pytest previous<cr>
 nmap <silent><F10> <esc>:Pytest error<cr>
 " <F11> for PEP8
-autocmd FileType python map <buffer> <F11> :call Pep8()<cr>
+let g:pep8_map='<F11>'
 " <F12> for Fugitive git status
 nmap <F12> :Gstatus<cr>
 

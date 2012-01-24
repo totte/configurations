@@ -68,6 +68,7 @@ hi Float				gui=NONE		guibg=NONE		guifg=#ffffff		cterm=NONE		ctermbg=NONE		cterm
 hi FoldColumn			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Folded				gui=NONE		guibg=NONE		guifg=#868686		cterm=NONE		ctermbg=NONE		ctermfg=14
 hi Function				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
+hi GreenBar				gui=NONE		guibg=#96ca2c	guifg=#ffffff		cterm=NONE		ctermbg=2			ctermfg=15
 hi Identifier			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Ignore				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi IncSearch			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
@@ -89,6 +90,7 @@ hi PmenuThumb			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		c
 hi PreCondit			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi PreProc				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Question				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
+hi RedBar				gui=NONE		guibg=#ee3216	guifg=#ffffff		cterm=NONE		ctermbg=1			ctermfg=15
 hi Repeat				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Search				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi SignColumn			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
