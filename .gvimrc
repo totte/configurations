@@ -5,9 +5,9 @@ set go-=L									" Remove scrollbar for realz?
 set go-=r									" Remove scrollbar on the right side
 set go-=R									" Remove scrollbar for realz?
 set go-=T									" Remove toolbar too
-set guifont=Inconsolata:h18					" Any font at less than size 18 looks bad on S2231W
+set guifont=Menlo:h16						" Any font at less than size 16 looks bad on S2231W
 set transp=0								" MacVim transparency, the lower - the more opaque
-set lines=42 columns=132					" Window size
+set lines=42 columns=128					" Window size
 for i in range(1, 9)						" Cmd+1-9 to switch between tabs
 	exec "nnoremap <D-".i."> ".i."gt" 
 endfor

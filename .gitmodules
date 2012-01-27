@@ -33,3 +33,7 @@
 [submodule ".vim/bundle/pyflakes"]
 	path = .vim/bundle/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
+	ignore = untracked
+[submodule ".vim/bundle/lycosaexplorer"]
+	path = .vim/bundle/lycosaexplorer
+	url = https://github.com/hwt/LycosaExplorer.git
