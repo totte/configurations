@@ -51,8 +51,8 @@ hi Conceal				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		cte
 hi Conditional			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Constant				gui=NONE		guibg=NONE		guifg=#ffffff		cterm=NONE		ctermbg=NONE		ctermfg=15
 hi Cursor				gui=NONE		guibg=#ffffff	guifg=#161616		cterm=NONE		ctermbg=15			ctermfg=16
-hi CursorColumn			gui=NONE		guibg=#242424	guifg=NONE			cterm=NONE		ctermbg=6			ctermfg=NONE
-hi CursorLine			gui=NONE		guibg=#242424	guifg=NONE			cterm=NONE		ctermbg=6			ctermfg=NONE
+hi CursorColumn			gui=NONE		guibg=#242424	guifg=NONE			cterm=NONE		ctermbg=8			ctermfg=NONE
+hi CursorLine			gui=NONE		guibg=#242424	guifg=NONE			cterm=NONE		ctermbg=8			ctermfg=NONE
 hi Debug				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Define				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Delimiter			gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
@@ -138,6 +138,7 @@ hi pythonException		gui=NONE		guibg=NONE		guifg=#c8d686		cterm=NONE		ctermbg=NON
 hi pythonConditional	gui=NONE		guibg=NONE		guifg=#96ca2c		cterm=NONE		ctermbg=NONE		ctermfg=2
 hi pythonOperator		gui=NONE		guibg=NONE		guifg=#c8d686		cterm=NONE		ctermbg=NONE		ctermfg=10
 hi pythonRepeat			gui=NONE		guibg=NONE		guifg=#96ca2c		cterm=NONE		ctermbg=NONE		ctermfg=2
+hi pythonPreCondit		gui=NONE		guibg=NONE		guifg=#c8d686		cterm=NONE		ctermbg=NONE		ctermfg=10
 
 " Django
 hi djangoTagBlock		gui=NONE		guibg=NONE		guifg=#96ca2c		cterm=NONE		ctermbg=NONE		ctermfg=2

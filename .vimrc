@@ -7,18 +7,6 @@ call pathogen#helptags()
 call pathogen#infect()
 
 "---------------------------------------------------------------------------------------------------
-" CODE FOLDING
-"---------------------------------------------------------------------------------------------------
-set foldmethod=indent
-set foldlevel=99
-
-"---------------------------------------------------------------------------------------------------
-" SYNTAX HIGHLIGHTING
-"---------------------------------------------------------------------------------------------------
-syntax on										" Enable syntax highlighting
-colorscheme totte								" Set colorscheme
-
-"---------------------------------------------------------------------------------------------------
 " FILETYPE RECOGNITION
 "---------------------------------------------------------------------------------------------------
 filetype on										" Detect filetypes
@@ -26,6 +14,11 @@ filetype plugin on								" ...load relevant plugins
 filetype plugin indent on						" ...enable loading indent file for filetype
 autocmd FileType html set ft=htmldjango			" Parse all HTML files as django-HTML
 
+"---------------------------------------------------------------------------------------------------
+" SYNTAX HIGHLIGHTING
+"---------------------------------------------------------------------------------------------------
+syntax on										" Enable syntax highlighting
+colorscheme totte								" Set colorscheme
 
 "---------------------------------------------------------------------------------------------------
 " TAB COMPLETION
@@ -40,25 +33,31 @@ set completeopt=menuone,longest,preview
 let g:snips_author = 'Hans Tovetjärn'
 
 "---------------------------------------------------------------------------------------------------
+" CODE FOLDING
+"---------------------------------------------------------------------------------------------------
+set foldmethod=indent
+set foldlevel=99
+
+"---------------------------------------------------------------------------------------------------
 " MISCELLANEOUS
 "---------------------------------------------------------------------------------------------------
-set nocompatible								" Disable Vi-like behaviour(?)
-set t_Co=256									" Gimme colourz! (Do I still need this?)
+set nocompatible								" Disable Vi-like behaviour
 set number										" Enable line numbers
 set cursorline									" Highlight cursor line
-set tabstop=4									" What's this one do again?
+set tabstop=4									" Number of spaces a tab counts for
 set autoindent									" Autoindent new lines
-set shiftwidth=4								" What's this one do again?
-set wm=4										" Wrap margin
-set so=999										" Sets scroll offset to the active line, sort of
+set shiftwidth=4								" Number of spaces used for each autoindent
+set wm=4										" Right-side margin
+set so=999										" Number of lines to keep above and beneath cursor
 set shortmess=I									" Disable welcome message
 set completeopt=menuone							" Popup menu with code completion suggestion
 set backspace=indent,eol,start					" Make the backspace key act like I'm used to
-set encoding=utf-8								" Set UTF-8 encoding EVERYWHERE just to be safe
-set termencoding=utf-8							" Yeah, here too, eff you Terminal.app!
+set encoding=utf-8								" Set UTF-8 encoding
+set termencoding=utf-8							" Set terminal UTF-8 encoding
 set ls=2										" Always display statusline
 set nuw=6										" Columns used for line number display
-set clipboard=unnamed							" Copy to OSX clipboard
+set clipboard=unnamed							" Copy to OS X clipboard
+set hlsearch									" Highlight search pattern
 
 "---------------------------------------------------------------------------------------------------
 " STATUSLINE
@@ -98,7 +97,7 @@ set statusline+=%2*%{IsGit()}%1*%{GitBranch()}
 set statusline+=%2*encoding:%1*%{strlen(&fenc)?&fenc:'none'}\ \ 
 set statusline+=%2*format:%1*%{&ff}\ \ 
 set statusline+=%2*type:%1*%{strlen(&ft)?&ft:'none'}\ \ 
-"set statusline+=%2*si:%1*%{SyntaxItem()}
+"set statusline+=%2*syntax:%1*%{SyntaxItem()}
 set statusline+=%1*%=
 set statusline+=%2*column:%1*%c\ \ 
 set statusline+=%2*line:%1*%l\ \ 
@@ -121,13 +120,12 @@ autocmd FileType python nmap <buffer> <F4> :!python %<cr>
 nmap <silent><F5> <esc>:Pytest file<cr>
 nmap <silent><F6> <esc>:Pytest class<cr>
 nmap <silent><F7> <esc>:Pytest method<cr>
-nmap <silent><F8> <esc>:Pytest next<cr>
+nmap <silent><F8> <esc>:Pytest function<cr>
 nmap <silent><F9> <esc>:Pytest previous<cr>
-nmap <silent><F10> <esc>:Pytest error<cr>
+nmap <silent><F10> <esc>:Pytest next<cr>
+nmap <silent><F11> <esc>:Pytest session<cr>
 " <F11> for PEP8
-let g:pep8_map='<F11>'
-" <F12> for Fugitive git status
-nmap <F12> :Gstatus<cr>
+let g:pep8_map='<F12>'
 
 noremap w t
 noremap W T
@@ -137,12 +135,11 @@ noremap l o
 noremap L O
 noremap t i
 noremap T I
-noremap h n
+noremap h n 
 noremap H N
-
 noremap n h
 noremap e j
-noremap i k
+noremap i k 
 noremap o l
 noremap N b
 noremap E B
@@ -154,8 +151,7 @@ map <silent><c-e> <pagedown>
 map <silent><c-i> <pageup>
 map <silent><c-o> <end>
 
-imap <leader><leader> <esc>
-nnoremap zz za
+nnoremap zz za "Folding issue
 nnoremap ZZ :w<return>
 nnoremap ZQ :q<return>
 
