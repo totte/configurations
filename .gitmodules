@@ -36,5 +36,5 @@
 	ignore = untracked
 [submodule ".vim/bundle/pytest"]
 	path = .vim/bundle/pytest
-	url = https://hwt@github.com/hwt/pytest.vim.git
+	url = git@github.com:hwt/pytest.vim.git
 	ignore = untracked
