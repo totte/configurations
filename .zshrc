@@ -85,8 +85,8 @@ alias gb='git branch'
 alias ga='git add'
 alias gr='git rm'
 alias gch='git checkout'
-bkp(){cp -v $1 ${1}.backup}
-cmd_stats(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
+bu(){cp -v $1 ${1}.backup}
+cmd_toplist(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
 # TODO Host-specific shortcuts, rewrite to include pacman for archlinux and macports for mac
 if [[ $HOST != embepe* ]]; then

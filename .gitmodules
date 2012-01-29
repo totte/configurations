@@ -22,10 +22,6 @@
 	path = .vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
 	ignore = untracked
-[submodule ".vim/bundle/pytest"]
-	path = .vim/bundle/pytest
-	url = https://github.com/alfredodeza/pytest.vim.git
-	ignore = untracked
 [submodule ".vim/bundle/pep8"]
 	path = .vim/bundle/pep8
 	url = https://github.com/vim-scripts/pep8.git
@@ -37,3 +33,8 @@
 [submodule ".vim/bundle/lycosaexplorer"]
 	path = .vim/bundle/lycosaexplorer
 	url = https://github.com/hwt/LycosaExplorer.git
+	ignore = untracked
+[submodule ".vim/bundle/pytest"]
+	path = .vim/bundle/pytest
+	url = https://hwt@github.com/hwt/pytest.vim.git
+	ignore = untracked

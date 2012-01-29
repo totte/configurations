@@ -10,14 +10,14 @@
 " not delving deeper into programming languages).
 
 " Palette:
-" #000000#161616 Black
-" #dddddd#ffffff White
-" #ee3216#ff6432 Red				Errors, Warnings, Messages
-" #96ca2c#c8d686 Green				Python, django
-" #89725b#e7e1b7 Brown (yellow)		Shell, JavaScript
-" #4192d9#a5cffc Blue				Markup, (X)HTML, CSS
-" #9900ff#cc99ff Magenta			Haskell
-" #424242#868686 Cyan
+" #ee3216 #ff6432 001 009 Red				Errors, Warnings, Messages
+" #96ca2c #c8d686 002 010 Green				Python, django
+" #89725b #e7e1b7 003 011 Brown (Yellow)	Shell, JavaScript
+" #4192d9 #a5cffc 004 012 Blue				Markup, (X)HTML, CSS
+" #9900ff #cc99ff 005 013 Magenta			Haskell
+" #424242 #868686 006 014 Grey (Cyan)
+" #dddddd #ffffff 007 015 White
+" #000000 #161616 016 000 Black
 
 " Additional colours (I've always got 256 anyway)
 " #242424

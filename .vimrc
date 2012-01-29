@@ -58,6 +58,7 @@ set ls=2										" Always display statusline
 set nuw=6										" Columns used for line number display
 set clipboard=unnamed							" Copy to OS X clipboard
 set hlsearch									" Highlight search pattern
+set hidden										" (LycosaExplorer suggested this)
 
 "---------------------------------------------------------------------------------------------------
 " STATUSLINE
@@ -151,7 +152,7 @@ map <silent><c-e> <pagedown>
 map <silent><c-i> <pageup>
 map <silent><c-o> <end>
 
-nnoremap zz za "Folding issue
+nnoremap zz za
 nnoremap ZZ :w<return>
 nnoremap ZQ :q<return>
 
