@@ -107,17 +107,16 @@ set statusline+=%2*total:%1*%L\
 "---------------------------------------------------------------------------------------------------
 " KEYBINDINGS
 "---------------------------------------------------------------------------------------------------
+" Toggle fullscreen mode
+map <d-cr> :set invfu<cr>
+
 " Double tap <leader> to <esc>ape into normal mode
 imap <leader><leader> <esc>
-" <F1> to toggle NERDtree
+
 nmap <F1> :NERDTreeToggle<cr>
-" <F2> to toggle Gundo
-nmap <F2> :GundoToggle<cr>
-" <F3> to view tasklist
-nmap <F3> <plug>TaskList
-" <F4> to run code
+nmap <F2> :LycosaFilesystemExplorer<cr>
+nmap <F3> :LycosaBufferExplorer<cr>
 autocmd FileType python nmap <buffer> <F4> :!python %<cr>
-" <F5-10> for pytest commands
 nmap <silent><F5> <esc>:Pytest file<cr>
 nmap <silent><F6> <esc>:Pytest class<cr>
 nmap <silent><F7> <esc>:Pytest method<cr>
@@ -125,7 +124,6 @@ nmap <silent><F8> <esc>:Pytest function<cr>
 nmap <silent><F9> <esc>:Pytest previous<cr>
 nmap <silent><F10> <esc>:Pytest next<cr>
 nmap <silent><F11> <esc>:Pytest session<cr>
-" <F11> for PEP8
 let g:pep8_map='<F12>'
 
 noremap w t
@@ -154,47 +152,4 @@ map <silent><c-o> <end>
 
 nnoremap zz za
 nnoremap ZZ :w<return>
-nnoremap ZQ :q<return>
-
-" NEWBMEWD
-"unmap !
-"unmap @
-"unmap #
-"unmap $
-"unmap %
-"unmap ^
-"unmap &
-"unmap *
-"unmap (
-"unmap )
-"unmap _
-"unmap +
-"unmap `
-"unmap 0
-"unmap -
-"unmap =
-"unmap Q
-"unmap W
-"unmap F
-"unmap G
-"unmap J
-"unmap L
-"unmap {
-"unmap }
-"unmap |
-"unmap q
-"unmap w
-"unmap f
-"unmap j
-"unmap l
-"unmap ;
-"unmap [
-"unmap ]
-"unmap "
-"unmap '
-"unmap B
-"unmap M
-"unmap b
-"unmap k
-"unmap m
-"unmap ,
+nnoremap ZQ :q!<return>
