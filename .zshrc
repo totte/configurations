@@ -4,7 +4,7 @@
 if [[ $HOST != embepe* ]]; then
 	export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/bin"
 else
-	export PATH="/opt/local/bin:/opt/local/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/Library/Haskell/bin:/usr/X11/bin:$HOME/bin"
+	export PATH="/opt/local/bin:/opt/local/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/Library/Haskell/bin:/usr/X11/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:$HOME/bin"
 fi
 
 #---------------------------------------------------------------------------------------------------
@@ -59,35 +59,36 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias d='dirs -v'
-alias 1='cd -'
-alias 2='cd +2'
-alias 3='cd +3'
-alias 4='cd +4'
-alias 5='cd +5'
-alias 6='cd +6'
-alias 7='cd +7'
-alias 8='cd +8'
-alias 9='cd +9'
+
+alias ga='git add'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gc='git commit'
+alias gcam='git commit -am'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gchf='git checkout HEAD'
+alias gclone='git clone'
+alias gd='git diff'
+alias ginit='git init'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gmap='gmap.sh'
+alias gr='git rm'
+alias greset='git reset --hard HEAD'
+alias grevert='git revert HEAD'
+alias gs='git status'
+alias guar='guar.sh'
 alias gull='git pull'
 alias gush='git push'
-alias gchb='git checkout -b'
-alias gc='git commit -am'
-alias gss='git stash save'
-alias gsa='git stash apply' # Apply most recent or specify stash@{1}
-alias gsl='git stash list'
-alias gslc='git stash list clear'
-alias guar='guar.sh'
-alias gmap='gmap.sh'
-alias gs='git status'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gd='git diff'
-alias gb='git branch'
-alias ga='git add'
-alias gr='git rm'
-alias gch='git checkout'
+alias stash='git stash save'
+alias stasha='git stash apply' # Apply most recent or specify stash@{N}
+alias stashl='git stash list'
+alias stashc='git stash list clear'
+
 bu(){cp -v $1 ${1}.backup}
-cmd_toplist(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
+cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
+
 # TODO Host-specific shortcuts, rewrite to include pacman for archlinux and macports for mac
 if [[ $HOST != embepe* ]]; then
 	alias apts='sudo aptitude search'

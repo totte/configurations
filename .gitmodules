@@ -38,3 +38,6 @@
 	path = .vim/bundle/pytest
 	url = git@github.com:hwt/pytest.vim.git
 	ignore = untracked
+[submodule ".vim/bundle/rename"]
+	path = .vim/bundle/rename
+	url = https://github.com/vim-scripts/Rename2.git

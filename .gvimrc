@@ -1,5 +1,5 @@
 set title titlestring=VIM						" Set GUI window title
-set icon iconstring=''							" Set GUI window icon
+set iconstring=''							" Set GUI window icon
 set go-=l										" Remove scrollbar on the left side
 set go-=L										" Remove scrollbar for realz?
 set go-=r										" Remove scrollbar on the right side
