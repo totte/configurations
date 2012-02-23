@@ -13,9 +13,7 @@ aliases = {
   WJOIN = "join -window";
   WQUERY = "query -window";
   LEAVE = "part";
-  BYE = "quit";
   EXIT = "quit";
-  SIGNOFF = "quit";
   DESCRIBE = "action";
   DATE = "time";
   HOST = "userhost";
@@ -57,6 +55,8 @@ aliases = {
   UNSET = "set -clear";
   RESET = "set -default";
   afk = "away";
+  mni = "msg nickserv identify";
+  jfc = "/join #debian;/join #archlinux;/join #zsh;/join #tmux;/join #vim;/join #git;/join #python;/join #qt;/join #django;/join #haskell";
 };
 
 statusbar = {
@@ -204,15 +204,14 @@ ignores = (
     channels = (
       "#debian",
       "#archlinux",
-      "#python",
-      "#django",
-      "#haskell",
-      "#vim",
-      "#git",
       "#zsh",
       "#tmux",
-      "#macports",
-      "##freebsd"
+      "#vim",
+      "#git",
+      "#python",
+      "#qt",
+      "#django",
+      "#haskell"
     );
   }
 );
@@ -220,3 +219,14 @@ windows = { 1 = { immortal = "yes"; name = "network"; level = "ALL"; }; };
 mainwindows = { 1 = { first_line = "1"; lines = "9"; }; };
 logs = { };
 chatnets = { Freenode = { type = "IRC"; }; };
+keyboard = (
+  { key = "^W"; id = "key"; data = "window"; },
+  { key = "window-c"; id = "command"; data = "WINDOW NEW HIDDEN"; },
+  { key = "window-w"; id = "command"; data = "WINDOW KILL"; },
+  { key = "window-q"; id = "command"; data = "QUIT"; },
+  { key = "window-n"; id = "command"; data = "WINDOW PREVIOUS"; },
+  { key = "window-o"; id = "command"; data = "WINDOW NEXT"; },
+  { key = "window-<"; id = "command"; data = "WINDOW MOVE LEFT"; },
+  { key = "window->"; id = "command"; data = "WINDOW MOVE RIGHT"; },
+  { key = "window-."; id = "command"; data = "RELOAD"; }
+);
