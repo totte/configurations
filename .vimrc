@@ -1,35 +1,35 @@
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " PATHOGEN
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 call pathogen#infect()
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " FILETYPE RECOGNITION
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 filetype on										" Detect filetypes
-filetype plugin on								" ...load relevant plugins
-filetype plugin indent on						" ...enable loading indent file for filetype
-"autocmd FileType html set ft=htmldjango			" Parse all HTML files as django-HTML
+filetype plugin on								" Load relevant plugins
+filetype plugin indent on						" Load indent file for filetype
+"autocmd FileType html set ft=htmldjango			" Parse HTML files as django-HTML
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " SYNTAX HIGHLIGHTING
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 syntax on										" Enable syntax highlighting
 colorscheme totte								" Set colorscheme
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " TAB COMPLETION
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " CHMOD +X
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 function! SetExecutableBit()
 	let fname = expand("%:p")
 	checktime
@@ -40,9 +40,9 @@ function! SetExecutableBit()
 endfunction
 command! Xbit call SetExecutableBit()
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " RELOAD CONFIGURATION FILES
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 if !exists("*ReloadConfigs")
   function ReloadConfigs()
       :source ~/.vimrc
@@ -53,44 +53,47 @@ if !exists("*ReloadConfigs")
   command! Recfg call ReloadConfigs()
 endif
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " SNIPMATE
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 let g:snips_author = 'Hans Tovetjärn'
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " CODE FOLDING
-"---------------------------------------------------------------------------------------------------
-set foldmethod=indent
+"-------------------------------------------------------------------------------------
 set foldlevel=99
+set foldmethod=indent
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " MISCELLANEOUS
-"---------------------------------------------------------------------------------------------------
-set nocompatible								" Disable Vi-like behaviour
-"set notitle										" Disable 'Thanks for flying Vim' message
-set number										" Enable line numbers
-set cursorline									" Highlight cursor line
-set tabstop=4									" Number of spaces a tab counts for
-set autoindent									" Autoindent new lines
-set shiftwidth=4								" Number of spaces used for each autoindent
-set wrap										" Inserts soft line breaks for lines that reach the right margin 
-set wm=4										" Right-side margin
-set so=999										" Number of lines to keep above and beneath cursor
-set shortmess=I									" Disable startup message
-set completeopt=menuone							" Popup menu with code completion suggestion
-set backspace=indent,eol,start					" Make the backspace key act like I'm used to
-set encoding=utf-8								" Set UTF-8 encoding
-set termencoding=utf-8							" Set terminal UTF-8 encoding
-set ls=2										" Always display statusline
-set nuw=6										" Columns used for line number display
-set clipboard=unnamed							" Copy to OS X clipboard
-set hlsearch									" Highlight search pattern
-set hidden										" (LycosaExplorer suggested this)
+"-------------------------------------------------------------------------------------
+set autoindent					" Autoindent new lines
+set backspace=indent,eol,start	" Make the backspace key act like I'm used to
+set clipboard=unnamed			" Copy to OS X clipboard
+set completeopt=menuone			" Popup menu with code completion suggestion
+set cursorline					" Highlight cursor line
+set encoding=utf-8				" Set UTF-8 encoding
+set hidden						" (LycosaExplorer suggested this)
+set hlsearch					" Highlight search pattern
+set linebreak					" Only insert linebreak manually
+set laststatus=2				" Always display statusline
+set nocompatible				" Disable Vi-like behaviour
+set nolist						" List disables linebreak
+"set notitle						" Disable 'Thanks for flying Vim' message
+set number						" Enable line numbers
+set numberwidth=6				" Columns used for line number display
+set shiftwidth=4				" Number of spaces used for each autoindent
+set shortmess=I					" Disable startup message
+set scrolloff=999				" Number of lines to keep above and beneath cursor
+set tabstop=4					" Number of spaces a tab counts for
+set termencoding=utf-8			" Set terminal UTF-8 encoding
+set textwidth=0					" Disable maximum width of text
+set wrap						" Soft line breaks for lines reaching right margin 
+set wrapmargin=0				" Right-side margin
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " STATUSLINE
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " Check if file is a help document
 function! IsHelp()
 	return &buftype=='help'?'':''
@@ -132,9 +135,9 @@ set statusline+=%2*column:%1*%c\ \
 set statusline+=%2*line:%1*%l\ \ 
 set statusline+=%2*total:%1*%L\ 
 
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " KEYBINDINGS
-"---------------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------------
 " Toggle fullscreen mode
 map <d-cr> :set invfu<cr>
 

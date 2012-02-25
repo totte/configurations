@@ -1,19 +1,24 @@
 set title titlestring=VIM						" Set GUI window title
-set iconstring=''							" Set GUI window icon
-set go-=l										" Remove scrollbar on the left side
-set go-=L										" Remove scrollbar for realz?
-set go-=r										" Remove scrollbar on the right side
-set go-=R										" Remove scrollbar for realz?
-set go-=T										" Remove toolbar too
-set guifont=Inconsolata:h18						" Any font at less than size 16 looks bad on S2231W
-set transp=0									" MacVim transparency, the lower - the more opaque
-set lines=42 columns=128						" Window size
-if &diff										" Double the width up to a reasonable maximum
+set iconstring=''								" Set GUI window icon
+set go-=l										" Remove left scrollbar
+set go-=L										" Remove scrollbar
+set go-=r										" Remove right scrollbar
+set go-=R										" Remove scrollbar
+set go-=T										" Remove toolbar
+set go-=m										" Remove menubar
+set lines=42 columns=100						" Window size
+if &diff										" Double the width up
 	let &columns = ((&columns*2 > 172)? 172: &columns*2)
 endif
-set fuoptions=maxvert,background:Normal
-for i in range(1, 9)							" Cmd+1-9 to switch between tabs
-	exec "nnoremap <D-".i."> ".i."gt" 
-endfor
-macm Window.Select\ Previous\ Tab key=<D-Left>	" Cmd+Left to switch to previous tab
-macm Window.Select\ Next\ Tab key=<D-Right>		" Cmd+Right to switch to next tab
+
+" GVim
+set guifont=Inconsolata\ Medium\ 14
+
+" MacVim
+if has("unix")
+	let s:uname = system("uname")
+	if s:uname == "Darwin"
+		set guifont=Inconsolata:h18
+		set fuoptions=maxvert,background:Normal
+	endif
+endif
