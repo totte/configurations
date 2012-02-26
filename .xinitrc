@@ -13,8 +13,9 @@ xsetroot -cursor_name left_ptr
 # Keyboard map (change to US Colemak)
 setxkbmap -layout sv
 
-# Background image
-eval `cat $HOME/.fehbg` &
+# Background image (restoring it doesn't fucking work!)
+#eval `cat $HOME/.fehbg` &
+sh $HOME/.fehbg &
 
 # Compositing effects
 xcompmgr -c &
