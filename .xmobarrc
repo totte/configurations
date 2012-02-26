@@ -4,6 +4,7 @@ Config
 		bgColor = "black",
 		fgColor = "grey",
 		position = Top,
+		lowerOnStart = True,
 		commands = 
 			[ 
 				Run Date "%y%m%_d %H:%M " "date" 10,
