@@ -1,29 +1,13 @@
 " ViM color file
 
 " Author: Hans 'Totte' Tovetjärn <hans.tovetjarn@gmail.com
-" Source: https://github.com/hwt/dotfiles
+" Source: https://github.com/hwt/lib
 
 " Note: This is an attempt to create a template and the
 " colour settings I prefer are rather minimal. Most themes
 " I found didn't include all highlighting groups and that's
 " what I try to remedy here (at least the generic stuff,
 " not delving deeper into programming languages).
-
-" Palette:
-" #000000 #161616 000 008 Black
-" #ee3216 #ff6432 001 009 Red				Errors, Warnings
-" #96ca2c #c8d686 002 010 Green				Python, django
-" #89725b #e7e1b7 003 011 Brown (Yellow)	Shell, JavaScript
-" #4192d9 #a5cffc 004 012 Blue				(X)HTML, CSS
-" #9900ff #cc99ff 005 013 Magenta			Haskell
-" #424242 #868686 006 014 Grey (Cyan)
-" #dddddd #ffffff 007 015 White
-
-" Foreground: #ffffff
-" Background: #161616
-
-" Additional colours (I've always got 256 anyway)
-" #242424
 
 set background=dark
 hi clear

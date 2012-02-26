@@ -1,1 +1,16 @@
 Various configuration files.
+
+#000000 #161616 000 008 Black
+#ee3216 #ff6432 001 009 Red
+#96ca2c #c8d686 002 010 Green
+#89725b #e7e1b7 003 011 Brown (Yellow)
+#4192d9 #a5cffc 004 012 Blue
+#9900ff #cc99ff 005 013 Magenta
+#424242 #868686 006 014 Grey (Cyan)
+#dddddd #ffffff 007 015 White
+
+Foreground: #ffffff
+Background: #161616
+
+Additional colours (I've always got 256 anyway)
+#242424
