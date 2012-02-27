@@ -6,19 +6,16 @@ set go-=r										" Remove right scrollbar
 set go-=R										" Remove scrollbar
 set go-=T										" Remove toolbar
 set go-=m										" Remove menubar
-set lines=42 columns=100						" Window size
+set lines=42 columns=112						" Window size
 if &diff										" Double the width up
 	let &columns = ((&columns*2 > 172)? 172: &columns*2)
 endif
 
-" GVim
-set guifont=Inconsolata\ Medium\ 14
-
-" MacVim
-if has("unix")
-	let s:uname = system("uname")
-	if s:uname == "Darwin"
-		set guifont=Inconsolata:h18
-		set fuoptions=maxvert,background:Normal
-	endif
+if has("macunix")
+	" MacVim
+	set guifont=Inconsolata:h18
+	set fuoptions=maxvert,background:Normal
+elseif has("unix")
+	" GVim
+	set guifont=Inconsolata\ Medium\ 14
 endif

@@ -84,7 +84,7 @@ alias gush='git push'
 alias stash='git stash save'
 alias stasha='git stash apply' # Apply most recent or specify stash@{N}
 alias stashl='git stash list'
-alias stashc='git stash list clear'
+alias stashc='git stash clear'
 
 bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
