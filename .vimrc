@@ -159,8 +159,8 @@ map <c-s-space> :LycosaBufferExplorer<cr>
 
 " Function keys
 nmap <F1> :NERDTreeToggle<cr>
-nmap <F2> :Gundo<cr>
-nmap <F3> :Tasklist<cr>
+nmap <F2> :GundoToggle<cr>
+nmap <F3> <Plug>TaskList
 autocmd FileType python nmap <buffer> <F4> :!python %<cr>
 nmap <silent><F5> <esc>:Pytest file<cr>
 nmap <silent><F6> <esc>:Pytest class<cr>
