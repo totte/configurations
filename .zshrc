@@ -93,23 +93,23 @@ md(){mkdir -p $1; cd $1}
 # OS-specific aliases
 if [[ $(uname) == "Darwin" ]]; then
 	# Mac OS X
-	alias macs='port search' # Search
-	alias maci='sudo port install' # Install
-	alias macu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
-	alias macr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
+	alias pkgs='port search' # Search
+	alias pkgi='sudo port install' # Install
+	alias pkgu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
+	alias pkgr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
 elif [[ $(uname) == "Linux" ]]; then
 	case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
 		(Arch) # Arch Linux
-			alias pacs='pacman -Ss' # Search
-			alias paci='sudo pacman -S' # Install
-			alias pacu='sudo pacman -Syu' # Update & Upgrade
-			alias pacr='sudo pacman -Rs' # Remove package and unused dependencies
+			alias pkgs='pacman -Ss' # Search
+			alias pkgi='sudo pacman -S' # Install
+			alias pkgu='sudo pacman -Syu' # Update & Upgrade
+			alias pkgr='sudo pacman -Rs' # Remove package and unused dependencies
 			;;
 		(Debian|Ubuntu) # Debian and Ubuntu
-			alias apts='aptitude search' # Search
-			alias apti='sudo aptitude install' # Install
-			alias aptu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
-			alias aptp='sudo aptitude purge' # Remove package and unused dependencies
+			alias pkgs='aptitude search' # Search
+			alias pkgi='sudo aptitude install' # Install
+			alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
+			alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
 			;;
 	esac
 fi
@@ -118,25 +118,6 @@ fi
 if [[ ${HOST:r} == "betre" ]]; then
 	alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
-
-#---------------------------------------------------------------------------------------------------
-# KEYBINDINGS
-#---------------------------------------------------------------------------------------------------
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
-
-bindkey "^[[H" beginning-of-line
-bindkey "^[[1~" beginning-of-line
-bindkey "^[OH" beginning-of-line
-bindkey "^[[F"  end-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[OF" end-of-line
-
-# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
-bindkey '^?' backward-delete-char
-bindkey "^[[3~" delete-char
-bindkey "^[3;5~" delete-char
-bindkey "\e[3~" delete-char
 
 #---------------------------------------------------------------------------------------------------
 # TAB COMPLETION
@@ -162,6 +143,25 @@ hosts=(
 	localhost
 )
 zstyle ':completion:*:hosts' hosts $hosts
+
+#---------------------------------------------------------------------------------------------------
+# KEYBINDINGS
+#---------------------------------------------------------------------------------------------------
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[1~" beginning-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[[F"  end-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[OF" end-of-line
+
+# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
+bindkey '^?' backward-delete-char
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+bindkey "\e[3~" delete-char
 
 #---------------------------------------------------------------------------------------------------
 # TITLES
