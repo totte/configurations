@@ -103,7 +103,7 @@ elif [[ $(uname) == "Linux" ]]; then
 			alias pkgs='pacman -Ss' # Search
 			alias pkgi='sudo pacman -S' # Install
 			alias pkgu='sudo pacman -Syu' # Update & Upgrade
-			alias pkgr='sudo pacman -Rs' # Remove package and unused dependencies
+			alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
 			;;
 		(Debian|Ubuntu) # Debian and Ubuntu
 			alias pkgs='aptitude search' # Search
