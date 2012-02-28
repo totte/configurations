@@ -90,12 +90,32 @@ bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
 
-# TODO Host-specific shortcuts, rewrite to include pacman for archlinux and macports for mac
-if [[ $HOST != embepe* ]]; then
-	alias apts='sudo aptitude search'
-	alias apti='sudo aptitude install'
-	alias aptp='sudo aptitude purge'
-	alias aptu='sudo aptitude update && sudo aptitude upgrade'
+# OS-specific aliases
+if [ $(uname)=="Linux" ]; then
+	case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
+		(Arch) # Arch Linux
+			alias pacs='sudo pacman -Ss' # Search
+			alias paci='sudo pacman -S' # Install
+			alias pacu='sudo pacman -Syu' # Update & Upgrade
+			alias pacr='sudo pacman -Rs' # Remove package and unused dependencies
+			;;
+		(Debian|Ubuntu) # Debian and Ubuntu
+			alias apts='sudo aptitude search' # Search
+			alias apti='sudo aptitude install' # Install
+			alias aptu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
+			alias aptp='sudo aptitude purge' # Remove package and unused dependencies
+			;;
+	esac
+elif [ $(uname)=="Darwin" ]; then
+	# Mac OS X
+	alias macs='sudo port search' # Search
+	alias maci='sudo port install' # Install
+	alias macu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
+	alias macr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
+fi
+
+# Host-specific aliases
+if [ ${HOST:r}=="betre" ]; then
 	alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
 
