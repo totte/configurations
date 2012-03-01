@@ -1,6 +1,9 @@
 !urxvt
 urxvt*geometry:			86x42
-urxvt*font:				xft:Inconsolata:size=14:antialias=true:hinting=true
+urxvt*font:				xft:Inconsolata:size=18:antialias=true:hinting=true
+urxvt*boldFont:			xft:Inconsolata:size=18:antialias=true:hinting=true
+urxvt*italicFont:		xft:Inconsolata:size=18:antialias=true:hinting=true
+urxvt*boldLtalicFont:	xft:Inconsolata:size=18:antialias=true:hinting=true
 urxvt*urlLauncher:		chromium
 urxvt*scrollBar:		true
 urxvt*scrollBar_right:	true

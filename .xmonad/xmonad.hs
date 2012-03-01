@@ -20,8 +20,8 @@ myFocusedBorderColor	=	"#323232"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
-		((modm,	                xK_slash ), spawn $ XMonad.terminal conf),		-- launch a terminal
-        ((modm,					xK_space ), spawn "gmrun"),						-- launch gmrun
+		((modm,	                xK_slash ), spawn $ XMonad.terminal conf),		-- Init a terminal
+        ((modm,					xK_space ), spawn "dmenu_run -fn 'Terminus:bold:size=16' -nb '#000' -nf '#868686' -sb '#868686' -sf '#fff'"),					-- Init dmenu_run
 		((modm,					xK_Tab   ), windows W.focusDown),				-- Move focus to the next window
 		((modm .|. shiftMask,	xK_Tab 	 ), sendMessage NextLayout),			-- Rotate through the available layout algorithms
 		((modm,                 xK_Return), sendMessage ToggleLayout),          -- Toggle fullscreen mode
@@ -43,7 +43,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 		--((modm,				xK_t     ), withFocused $ windows . W.sink),	-- Push window back into tiling
 		--((modm,				xK_comma ), sendMessage (IncMasterN 1)),		-- Increment number of windows in the master area
 		--((modm,				xK_period), sendMessage (IncMasterN (-1))),		-- Deincrement number of windows in the master area
-		((modm,	                xK_q     ), io (exitWith ExitSuccess)),			-- Quit xmonad
+		((modm,	                xK_comma ), io (exitWith ExitSuccess)),			-- Quit xmonad
 		((modm,					xK_period), spawn "xmonad --recompile; xmonad --restart")-- Restart xmonad
 	]
     ++
@@ -100,7 +100,7 @@ myManageHook = composeAll
 myBar = "xmobar"
 myPP = xmobarPP
 		{
-			ppCurrent			=	wrap "<fc=#ffffff,#646464> " " </fc>",
+			ppCurrent			=	wrap "<fc=#ffffff,#868686> " " </fc>",
 			ppVisible			=	xmobarColor "#ff0000" "",
 			ppHidden			=	xmobarColor "#646464" "",
 			ppHiddenNoWindows	=	xmobarColor "#646464" "",

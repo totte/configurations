@@ -1,8 +1,8 @@
 Config
 	{ 
-		font = "xft:Acknowledge TT (BRK):size=10",
-		bgColor = "black",
-		fgColor = "grey",
+		font = "xft:Terminus:bold:size=16",
+		bgColor = "#000",
+		fgColor = "#868686",
 		position = Top,
 		lowerOnStart = True,
 		commands = 
@@ -12,5 +12,5 @@ Config
 			],
 		sepChar = "%",
 		alignSep = "}{",
-		template = "%StdinReader% }{ <fc=#ffffff>%date%</fc>"
+		template = " %StdinReader% }{ <fc=#ffffff>%date%</fc>"
 	}

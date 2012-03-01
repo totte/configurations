@@ -10,11 +10,13 @@ fi
 # Mouse cursor
 xsetroot -cursor_name left_ptr
 
-# Keyboard map (change to US Colemak)
-setxkbmap -layout sv
+# Keyboard map
+setxkbmap us -variant colemak
 
-# Background image (restoring it doesn't fucking work!)
-#eval `cat $HOME/.fehbg` &
+# VirtualBox guest
+VBoxClient-all &
+
+# Background image
 sh $HOME/.fehbg &
 
 # Compositing effects
