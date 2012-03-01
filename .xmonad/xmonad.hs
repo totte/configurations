@@ -8,7 +8,7 @@ import XMonad.Layout.Spacing
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
  
-myTerminal				=	"urxvt"
+myTerminal				=	"urxvtc"
 myBorderWidth			=	2
 myModMask				=	mod4Mask
 myWorkspaces			=	["ZSH","VIM","WEB","IRC"]
