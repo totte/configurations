@@ -4,6 +4,7 @@ import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.ToggleLayouts
+import XMonad.Layout.Spacing
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
  
@@ -73,6 +74,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myLayout =
 	avoidStruts $
+	spacing 4 $
 	toggleLayouts Full $
 	tiled ||| Mirror tiled
 	where
