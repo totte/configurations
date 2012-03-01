@@ -97,6 +97,7 @@ if [[ $(uname) == "Darwin" ]]; then
 	alias pkgi='sudo port install' # Install
 	alias pkgu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
 	alias pkgr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
+	alias pkgl='port list installed' # List installed packages
 elif [[ $(uname) == "Linux" ]]; then
 	case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
 		(Arch) # Arch Linux
@@ -104,12 +105,14 @@ elif [[ $(uname) == "Linux" ]]; then
 			alias pkgi='sudo pacman -S' # Install
 			alias pkgu='sudo pacman -Syu' # Update & Upgrade
 			alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
+			alias pkgl='pacman -Q' # List installed packages			
 			;;
 		(Debian|Ubuntu) # Debian and Ubuntu
 			alias pkgs='aptitude search' # Search
 			alias pkgi='sudo aptitude install' # Install
 			alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
 			alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
+			alias pkgl='dpkg --get-selections | grep -v deinstall | cut -f1' # List installed packages	
 			;;
 	esac
 fi
