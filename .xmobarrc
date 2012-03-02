@@ -1,8 +1,10 @@
 Config
 	{ 
 		font = "xft:Terminus:bold:size=16",
-		bgColor = "#000",
+		bgColor = "#000000",
 		fgColor = "#868686",
+		border = NoBorder,
+		borderColor = "#000000"
 		position = Top,
 		lowerOnStart = True,
 		commands = 

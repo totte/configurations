@@ -173,7 +173,7 @@ bindkey "\e[3~" delete-char
 #-------------------------------------------------------------------------------------
 tmux_title="%16<..<%~%<<"
 term_tab_title="%m"
-term_title=" Terminal "
+term_title="Terminal"
 
 function title(){
   if [[ "$TERM" == screen* ]]; then

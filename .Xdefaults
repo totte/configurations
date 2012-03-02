@@ -13,7 +13,8 @@ urxvt*scrollBar:		true
 urxvt*scrollBar_right:	true
 urxvt*scrollstyle:		plain
 urxvt*scrollColor:		#323232
-urxvt*cursorColor:		#eeeeee
+urxvt*cursorColor:		#ffffff
+urxvt*cursorBlink:		true
 
 !black
 *color0:    #000000
