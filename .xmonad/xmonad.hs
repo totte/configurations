@@ -22,7 +22,7 @@ myFocusedBorderColor	=	"#323232"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
 		((modm,	                xK_slash ), spawn $ XMonad.terminal conf),		-- Init a terminal
-        ((modm,					xK_space ), spawn "dmenu_run -fn 'Terminus:bold:size=16' -nb '#000' -nf '#868686' -sb '#868686' -sf '#fff'"),					-- Init dmenu_run
+        ((modm,					xK_space ), spawn "dmenu_run -fn 'Terminus:bold:size=16' -nb '#000' -nf '#868686' -sb '#868686' -sf '#fff' -h 20"),					-- Init dmenu_run
 		((modm,					xK_Tab   ), windows W.focusDown),				-- Move focus to the next window
 		((modm .|. shiftMask,	xK_Tab 	 ), sendMessage NextLayout),			-- Rotate through the available layout algorithms
 		((modm,                 xK_Return), sendMessage ToggleLayout),          -- Toggle fullscreen mode

@@ -59,6 +59,8 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias d='dirs -v'
+alias reboot='sudo shutdown -r now'
+alias shutdown='sudo shutdown -h now'
 
 alias ga='git add'
 alias gb='git branch'

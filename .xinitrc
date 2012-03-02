@@ -22,8 +22,5 @@ sh $HOME/.fehbg &
 # rxvt-unicode daemon
 urxvtd -q -f -o &
 
-# Compositing effects
-xcompmgr -c &
-
 # Window manager
 xmonad
