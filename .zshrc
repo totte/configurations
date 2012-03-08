@@ -114,7 +114,7 @@ elif [[ $(uname) == "Linux" ]]; then
 			alias pkgi='sudo aptitude install' # Install
 			alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
 			alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
-			alias pkgl='dpkg --get-selections | grep -v deinstall | cut -f1' # List installed packages	
+			alias pkgl='aptitude search -F "%p" "~i"' # List installed packages	
 			;;
 	esac
 fi
