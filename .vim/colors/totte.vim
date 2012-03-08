@@ -66,8 +66,8 @@ hi Macro				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		cterm
 hi MatchParen			gui=NONE		guibg=#424242	guifg=#ffffff		cterm=NONE		ctermbg=6			ctermfg=15
 hi ModeMsg				gui=NONE		guibg=NONE		guifg=#ffffff		cterm=NONE		ctermbg=NONE		ctermfg=15
 hi MoreMsg				gui=NONE		guibg=NONE		guifg=#ff00aa		cterm=NONE		ctermbg=NONE		ctermfg=15
-hi NonText				gui=NONE		guibg=NONE		guifg=#161616		cterm=NONE		ctermbg=NONE		ctermfg=0
-hi Normal				gui=NONE		guibg=#161616	guifg=#ffffff		cterm=NONE		ctermbg=0			ctermfg=15
+hi NonText				gui=NONE		guibg=NONE		guifg=#161616		cterm=NONE		ctermbg=NONE		ctermfg=8
+hi Normal				gui=NONE		guibg=#161616	guifg=#ffffff		cterm=NONE		ctermbg=NONE		ctermfg=15
 hi Number				gui=NONE		guibg=NONE		guifg=#ffffff		cterm=NONE		ctermbg=NONE		ctermfg=15
 hi Operator				gui=NONE		guibg=NONE		guifg=#4192d9		cterm=NONE		ctermbg=NONE		ctermfg=4
 hi Pmenu				gui=NONE		guibg=#424242	guifg=#161616		cterm=NONE		ctermbg=6			ctermfg=0

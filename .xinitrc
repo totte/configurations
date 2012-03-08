@@ -19,8 +19,8 @@ VBoxClient-all &
 # Background image
 sh $HOME/.fehbg &
 
-# Compositing effects
-xcompmgr -c &
+# rxvt-unicode daemon
+urxvtd -q -f -o &
 
 # Window manager
 xmonad

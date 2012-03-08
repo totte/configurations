@@ -59,6 +59,8 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias d='dirs -v'
+alias reboot='sudo shutdown -r now'
+alias shutdown='sudo shutdown -h now'
 
 alias ga='git add'
 alias gb='git branch'
@@ -171,7 +173,7 @@ bindkey "\e[3~" delete-char
 #-------------------------------------------------------------------------------------
 tmux_title="%16<..<%~%<<"
 term_tab_title="%m"
-term_title=" Terminal "
+term_title="Terminal"
 
 function title(){
   if [[ "$TERM" == screen* ]]; then

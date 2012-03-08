@@ -6,14 +6,14 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Layout.ToggleLayouts
 import XMonad.Layout.Spacing
 import qualified XMonad.StackSet as W
-import qualified Data.Map        as M
+import qualified Data.Map as M
  
-myTerminal				=	"urxvt"
+myTerminal				=	"urxvtc"
 myBorderWidth			=	2
 myModMask				=	mod4Mask
 myWorkspaces			=	["ZSH","VIM","WEB","IRC"]
 myNormalBorderColor		=	"#161616"
-myFocusedBorderColor	=	"#323232"
+myFocusedBorderColor	=	"#ee3216"
  
 --------------------------------------------------------------------------------------
 -- Key bindings
@@ -22,7 +22,7 @@ myFocusedBorderColor	=	"#323232"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
 		((modm,	                xK_slash ), spawn $ XMonad.terminal conf),		-- Init a terminal
-        ((modm,					xK_space ), spawn "dmenu_run -fn 'Terminus:bold:size=16' -nb '#000' -nf '#868686' -sb '#868686' -sf '#fff'"),					-- Init dmenu_run
+        ((modm,					xK_space ), spawn "dmenu_run -fn 'Terminus:bold:size=16' -nb '#000' -nf '#868686' -sb '#868686' -sf '#fff' -h 20"),					-- Init dmenu_run
 		((modm,					xK_Tab   ), windows W.focusDown),				-- Move focus to the next window
 		((modm .|. shiftMask,	xK_Tab 	 ), sendMessage NextLayout),			-- Rotate through the available layout algorithms
 		((modm,                 xK_Return), sendMessage ToggleLayout),          -- Toggle fullscreen mode
@@ -102,14 +102,14 @@ myManageHook = composeAll
 myBar = "xmobar"
 myPP = xmobarPP
 		{
-			ppCurrent			=	wrap "<fc=#ffffff,#868686> " " </fc>",
+			ppCurrent			=	wrap "<fc=#ffffff,#646464> " " </fc>",
 			ppVisible			=	xmobarColor "#ff0000" "",
 			ppHidden			=	xmobarColor "#646464" "",
 			ppHiddenNoWindows	=	xmobarColor "#646464" "",
 			ppUrgent			=	xmobarColor "#ff0000" "",
 			ppLayout			=	xmobarColor "#aaaaaa" "",
 			ppTitle				=	xmobarColor "#ffffff" "",
-			ppSep				=	" : ",
+			ppSep				=	" » ",
 			ppWsSep				=	" "
 		}
 
