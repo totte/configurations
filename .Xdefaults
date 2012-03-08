@@ -4,10 +4,10 @@ urxvt*foreground:		#ffffff
 urxvt*background:		#161616
 !urxvt*depth:			32
 !urxvt*background:		rgba:1616/1616/1616/dddd
-urxvt*font:				xft:Inconsolata:size=18:antialias=true:hinting=true
-urxvt*boldFont:			xft:Inconsolata:size=18:antialias=true:hinting=true
-urxvt*italicFont:		xft:Inconsolata:size=18:antialias=true:hinting=true
-urxvt*boldLtalicFont:	xft:Inconsolata:size=18:antialias=true:hinting=true
+urxvt*font:				xft:Inconsolata:size=18:Bold:antialias=true:hinting=true
+urxvt*boldFont:			xft:Inconsolata:size=18:Bold:antialias=true:hinting=true
+urxvt*italicFont:		xft:Inconsolata:size=18:Bold:antialias=true:hinting=true
+urxvt*boldLtalicFont:	xft:Inconsolata:size=18:Bold:antialias=true:hinting=true
 urxvt*urlLauncher:		chromium
 urxvt*scrollBar:		true
 urxvt*scrollBar_right:	true
