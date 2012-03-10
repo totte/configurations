@@ -88,6 +88,12 @@ alias stasha='git stash apply' # Apply most recent or specify stash@{N}
 alias stashl='git stash list'
 alias stashc='git stash clear'
 
+alias pips='pip search'
+alias pipi='pip install'
+alias pipu='pip install -U'
+alias pipr='pip uninstall'
+alias pipl='pip freeze'
+
 bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
