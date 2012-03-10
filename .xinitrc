@@ -17,7 +17,7 @@ setxkbmap us -variant colemak
 VBoxClient-all &
 
 # Background image
-hsetroot -fill $HOME/img/03.jpg &
+hsetroot -fill $HOME/lib/background.jpg &
 
 # rxvt-unicode daemon
 urxvtd -q -f -o &
