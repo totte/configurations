@@ -1,6 +1,6 @@
 Config
 	{ 
-		font = "xft:Droid Sans Mono:bold:size=12",
+		font = "xft:Droid Sans:style=Bold:size=14",
 		bgColor = "#000000",
 		fgColor = "#868686",
 		border = NoBorder,

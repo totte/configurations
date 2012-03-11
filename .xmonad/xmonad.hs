@@ -11,7 +11,7 @@ import qualified Data.Map as M
 myTerminal				=	"urxvtc"
 myBorderWidth			=	2
 myModMask				=	mod4Mask
-myWorkspaces			=	["ZSH","VIM","WEB","IRC"]
+myWorkspaces			=	["ZSH","VIM","WEB","IRC","GFX","MSC"]
 myNormalBorderColor		=	"#161616"
 myFocusedBorderColor	=	"#ee3216"
  

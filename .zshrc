@@ -43,7 +43,7 @@ setopt extendedglob
 # ALIASES
 #-------------------------------------------------------------------------------------
 alias rezsh='. ~/.zshrc'
-alias _='sudo'
+alias _='sudo '
 alias l='ls -lh --color'
 alias la='ls -lAh --color'
 alias -- -='cd -'
