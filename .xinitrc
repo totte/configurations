@@ -22,5 +22,8 @@ hsetroot -fill $HOME/lib/background.jpg &
 # rxvt-unicode daemon
 urxvtd -q -f -o &
 
+# Conky
+conky &
+
 # Window manager
 xmonad

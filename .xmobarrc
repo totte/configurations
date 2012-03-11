@@ -1,6 +1,6 @@
 Config
 	{ 
-		font = "xft:Droid Sans:bold:size=12",
+		font = "xft:Droid Sans Mono:bold:size=12",
 		bgColor = "#000000",
 		fgColor = "#868686",
 		border = NoBorder,
@@ -9,7 +9,7 @@ Config
 		lowerOnStart = True,
 		commands = 
 			[ 
-				Run Date "%y%m%_d %H:%M " "date" 10,
+				Run Date "%H:%M " "date" 10,
 				Run StdinReader
 			],
 		sepChar = "%",
