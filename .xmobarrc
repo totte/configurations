@@ -9,7 +9,7 @@ Config
 		lowerOnStart = True,
 		commands = 
 			[ 
-				Run Date "%H:%M " "date" 10,
+				Run Date "%y%m%_d %H:%M " "date" 10,
 				Run StdinReader
 			],
 		sepChar = "%",
