@@ -208,8 +208,8 @@ autoload -Uz vcs_info
 
 #zstyle	':vcs_info:*+*:*'				debug true
 zstyle	':vcs_info:*'					enable git
-zstyle	':vcs_info:git*'				formats					'%fon %F{2}%b%f%c%u%m'
-zstyle	':vcs_info:git*'				actionformats			'%fon %F{2}%b%f:%F{2}%a%f%c%u%m'
+zstyle	':vcs_info:git*'				formats					'%fon $(rou)%b%f%c%u%m'
+zstyle	':vcs_info:git*'				actionformats			'%fon $(rou)%b%f:$(rou)%a%f%c%u%m'
 zstyle	':vcs_info:git*:*'				stagedstr				' (staged)'
 zstyle	':vcs_info:git*:*'				unstagedstr				' (unstaged)'
 zstyle	':vcs_info:git*:*'				get-revision true
