@@ -19,11 +19,14 @@ VBoxClient-all &
 # Background image
 hsetroot -fill $HOME/cfg/misc/background.jpg &
 
-# rxvt-unicode daemon
-urxvtd -q -f -o &
+# Composite manager
+compton -CGb &
 
 # Conky
 conky &
+
+# rxvt-unicode daemon
+urxvtd -q -f -o &
 
 # Window manager
 xmonad

@@ -248,9 +248,9 @@ function prompt_precmd(){
 # Root or user?
 function rou(){
 	if [[ $UID -eq 0 ]] ; then
-		echo "%{$fg[red]%}"
+		echo "%{$fg[magenta]%}"
 	else
-		echo "%{$fg[green]%}"
+		echo "%{$fg[blue]%}"
 	fi
 }
 
