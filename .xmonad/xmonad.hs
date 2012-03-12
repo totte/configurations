@@ -15,8 +15,8 @@ myTerminal				=	"urxvtc"
 myBorderWidth			=	4
 myModMask				=	mod4Mask
 myWorkspaces			=	["ZSH","VIM","WEB","IRC","GFX","MSC"]
-myNormalBorderColor		=	"#101010"
-myFocusedBorderColor	=	"#101010"
+myNormalBorderColor		=	"#080808"
+myFocusedBorderColor	=	"#080808"
  
 --------------------------------------------------------------------------------------
 -- Key bindings
@@ -24,7 +24,7 @@ myFocusedBorderColor	=	"#101010"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
-		((modm, xK_space), spawn "dmenu_run -fn 'xft:Droid Sans:style=Bold:size=14' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff'"), -- Launcher
+		((modm, xK_space), spawn "dmenu_run -fn 'xft:caviar dreams:size=16' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff'"), -- Launcher
 		((modm, xK_Return), spawn $ XMonad.terminal conf), -- Terminal
 		((modm, xK_apostrophe), spawn "qvim"), -- QVim
 		((modm, xK_slash), spawn "slock"), -- Lock screen
