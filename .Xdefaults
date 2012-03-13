@@ -2,10 +2,10 @@
 urxvt*geometry:			86x42
 urxvt*foreground:		#ffffff
 urxvt*background:		#161616
-urxvt*font:				xft:Inconsolata XL:size=14:antialias=true:hinting=true
-urxvt*boldFont:			xft:Inconsolata XL:size=14:antialias=true:hinting=true
-urxvt*italicFont:		xft:Inconsolata XL:size=14:antialias=true:hinting=true
-urxvt*boldItalicFont:	xft:Inconsolata XL:size=14:antialias=true:hinting=true
+urxvt*font:				xft:Inconsolata XL:size=12:antialias=true:hinting=true
+urxvt*boldFont:			xft:Inconsolata XL:size=12:antialias=true:hinting=true
+urxvt*italicFont:		xft:Inconsolata XL:size=12:antialias=true:hinting=true
+urxvt*boldItalicFont:	xft:Inconsolata XL:size=12:antialias=true:hinting=true
 urxvt*urlLauncher:		opera
 urxvt*scrollBar:		false
 urxvt*cursorColor:		#ffffff

@@ -18,7 +18,7 @@ eval "`dircolors -b ~/.dircolorsrc`"
 #-------------------------------------------------------------------------------------
 export PAGER=less
 export EDITOR=vim
-export LANG=en_GB.UTF-8
+export LANG=en_US.UTF-8
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;34'
 HISTFILE=$HOME/.zsh_history
@@ -248,9 +248,9 @@ function prompt_precmd(){
 # Root or user?
 function rou(){
 	if [[ $UID -eq 0 ]] ; then
-		echo "%{$fg[magenta]%}"
+		echo "%{$fg[red]%}"
 	else
-		echo "%{$fg[blue]%}"
+		echo "%{$fg[green]%}"
 	fi
 }
 
