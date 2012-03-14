@@ -1,6 +1,6 @@
 Config
 	{ 
-		font = "xft:Chicago:size=12",
+		font = "xft:Chicago:style=Bold:size=12",
 		bgColor = "#000000",
 		fgColor = "#868686",
 		border = NoBorder,
