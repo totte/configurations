@@ -1,6 +1,32 @@
-*.swp
+# OS X
 .DS_Store
 .AppleDouble
 .netrwhist
+.Spotlight-V100
+.Trashes
+._
+
+# GNU/Linux
+*~
+
+# Vim
+*.swp
 doc/tags
+
+# Espresso
+*.esproj
+
+# irssi
 away.log
+
+# Python
+*.py[co]
+
+# Django
+*.log
+*.pot
+local_settings.py
+
+# Haskell
+*.o
+*.hi
