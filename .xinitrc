@@ -19,9 +19,6 @@ VBoxClient-all &
 # Background image
 hsetroot -fill $HOME/cfg/misc/background.jpg &
 
-# Composite manager
-compton -cGb &
-
 # rxvt-unicode daemon
 urxvtd -q -f -o &
 
