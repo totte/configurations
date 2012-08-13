@@ -153,10 +153,6 @@ nmap <leader>gc :Gcommit<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gb :Gblame<cr>
 
-" Launcher-likes
-map <c-space> :LycosaFilesystemExplorer<cr>
-map <c-s-space> :LycosaBufferExplorer<cr>
-
 " Function keys
 nmap <F1> :NERDTreeToggle<cr>
 nmap <F2> :GundoToggle<cr>
