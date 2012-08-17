@@ -11,10 +11,11 @@ fi
 xsetroot -cursor_name left_ptr
 
 # Keyboard map
-setxkbmap us -variant colemak
+#setxkbmap us -variant colemak
+setxkbmap us
 
 # VirtualBox guest
-VBoxClient-all &
+#VBoxClient-all &
 
 # Background image
 hsetroot -fill $HOME/cfg/background.jpg &

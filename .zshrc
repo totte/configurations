@@ -61,6 +61,7 @@ alias rmdir='rmdir -v'
 alias d='dirs -v'
 alias reboot='sudo shutdown -r now'
 alias shutdown='sudo shutdown -h now'
+alias runx='eval $(ssh-agent) && ssh-add && startx'
 
 alias ga='git add'
 alias gb='git branch'
