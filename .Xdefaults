@@ -6,6 +6,7 @@ urxvt*font:				xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=tr
 urxvt*boldFont:			xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true
 urxvt*italicFont:		xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true	
 urxvt*boldItalicFont:	xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true	
+urxvt*letterSpace:		-2
 urxvt*urlLauncher:		opera
 urxvt*scrollBar:		false
 urxvt*cursorColor:		#ffffff
