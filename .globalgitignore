@@ -30,3 +30,7 @@ local_settings.py
 # Haskell
 *.o
 *.hi
+
+# XMonad
+xmonad-x86_64-linux
+xmonad.errors
