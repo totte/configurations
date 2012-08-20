@@ -29,7 +29,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 		((modm, xK_apostrophe), spawn "qvim"), -- QVim
 		((modm, xK_slash), spawn "slock"), -- Lock screen
 		((modm, xK_backslash), spawn "xmonad --recompile; xmonad --restart"),
-		((modm, xK_grave), io (exitWith ExitSuccess)),
+		((modm, xK_q), io (exitWith ExitSuccess)),
+		((modm, xK_grave), io (exitWith ExitSuccess)), -- Temporary
 		
 		((modm, xK_Tab), windows W.focusDown), -- Move focus to the next window
 		((modm .|. shiftMask, xK_Tab), sendMessage NextLayout), -- Rotate through available layouts
