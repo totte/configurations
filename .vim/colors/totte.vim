@@ -1,7 +1,8 @@
 " ViM color file
 
-" Author: Hans 'Totte' Tovetjärn <hans.tovetjarn@gmail.com
-" Source: https://github.com/hwt/lib
+" Author: Hans 'Totte' Tovetjärn 
+" Contact: totte@tott.es
+" Source: https://github.com/hwt/cfg
 
 " Note: This is an attempt to create a template and the
 " colour settings I prefer are rather minimal. Most themes
