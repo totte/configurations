@@ -9,16 +9,15 @@ call pathogen#infect()
 "-------------------------------------------------------------------------------------
 " FILETYPE RECOGNITION
 "-------------------------------------------------------------------------------------
-filetype on										" Detect filetypes
-filetype plugin on								" Load relevant plugins
-filetype plugin indent on						" Load indent file for filetype
-"autocmd FileType html set ft=htmldjango			" Parse HTML files as django-HTML
+filetype on                                     " Detect filetypes
+filetype plugin on                              " Load relevant plugins
+filetype indent on                              " Load indent file for filetype
 
 "-------------------------------------------------------------------------------------
 " SYNTAX HIGHLIGHTING
 "-------------------------------------------------------------------------------------
-syntax on										" Enable syntax highlighting
-colorscheme totte								" Set colorscheme
+syntax on                                       " Enable syntax highlighting
+colorscheme totte                               " Set colorscheme
 
 "-------------------------------------------------------------------------------------
 " TAB COMPLETION
@@ -28,35 +27,9 @@ let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
 "-------------------------------------------------------------------------------------
-" CHMOD +X
-"-------------------------------------------------------------------------------------
-function! SetExecutableBit()
-	let fname = expand("%:p")
-	checktime
-	execute "au FileChangedShell " . fname . " :echo"
-	silent !chmod a+x %
-	checktime
-	execute "au! FileChangedShell " . fname
-endfunction
-command! Xbit call SetExecutableBit()
-
-"-------------------------------------------------------------------------------------
-" RELOAD CONFIGURATION FILES
-"-------------------------------------------------------------------------------------
-if !exists("*ReloadConfigs")
-  function ReloadConfigs()
-      :source ~/.vimrc
-      if has("gui_running")
-          :source ~/.gvimrc
-      endif
-  endfunction
-  command! Recfg call ReloadConfigs()
-endif
-
-"-------------------------------------------------------------------------------------
 " SNIPMATE
 "-------------------------------------------------------------------------------------
-let g:snips_author = 'Hans Tovetjärn'
+let g:snips_author = 'totte'
 
 "-------------------------------------------------------------------------------------
 " CODE FOLDING
@@ -65,60 +38,70 @@ set foldlevel=99
 set foldmethod=indent
 
 "-------------------------------------------------------------------------------------
+" INDENTATION
+"-------------------------------------------------------------------------------------
+set autoindent                  " Automatically indent the new line to match previous
+set expandtab                   " Insert spaces instead of tab characters
+set shiftwidth=4                " Number of spaces for each indent by the < > keys
+set softtabstop=4               " Number of spaces inserted instead of tab characters
+set tabstop=8
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 4
+let g:indent_guides_enable_on_vim_startup = 1
+
+"-------------------------------------------------------------------------------------
 " MISCELLANEOUS
 "-------------------------------------------------------------------------------------
-set autoindent					" Autoindent new lines
-set backspace=indent,eol,start	" Make the backspace key act like I'm used to
-set clipboard=unnamed			" Copy to OS X clipboard
-set completeopt=menuone			" Popup menu with code completion suggestion
-set cursorline					" Highlight cursor line
-set encoding=utf-8				" Set UTF-8 encoding
-set hidden						" (LycosaExplorer suggested this)
-set hlsearch					" Highlight search pattern
-set linebreak					" Only insert linebreak manually
-set laststatus=2				" Always display statusline
-set nocompatible				" Disable Vi-like behaviour
-set nolist						" List disables linebreak
-"set notitle						" Disable 'Thanks for flying Vim' message
-set number						" Enable line numbers
-set numberwidth=6				" Columns used for line number display
-set shiftwidth=4				" Number of spaces used for each autoindent
-set shortmess=I					" Disable startup message
-set scrolloff=999				" Number of lines to keep above and beneath cursor
-set tabstop=4					" Number of spaces a tab counts for
-set termencoding=utf-8			" Set terminal UTF-8 encoding
-set textwidth=0					" Disable maximum width of text
-set wrap						" Soft line breaks for lines reaching right margin 
-set wrapmargin=0				" Right-side margin
+set backspace=indent,eol,start  " Make the backspace key act like I'm used to
+set clipboard=unnamed           " Copy to OS X clipboard
+set completeopt=menuone         " Popup menu with code completion suggestion
+set cursorline                  " Highlight cursor line
+set encoding=utf-8              " Set UTF-8 encoding
+set hlsearch                    " Highlight search pattern
+set ignorecase                  " Case insensitive search
+set incsearch                   " Match while typing
+set laststatus=2                " Always display statusline
+set nolist                      " Don't display unprintable characters
+set listchars=tab:▸\ ,eol:¬     " Use these symbols for tabstops and EOLs
+set nocompatible                " Disable Vi-like behaviour
+"set notitle                    " Disable 'Thanks for flying Vim' message
+set number                      " Enable line numbers
+set numberwidth=6               " Columns used for line number display
+set scrolloff=999               " Number of lines to keep above and beneath cursor
+set shortmess=I                 " Disable startup message
+set termencoding=utf-8          " Set terminal UTF-8 encoding
+set textwidth=0                 " Disable hard linewrap
+set wrap                        " Enable soft linewrap
+set wrapmargin=0                " Number of characters from the right
 
 "-------------------------------------------------------------------------------------
 " STATUSLINE
 "-------------------------------------------------------------------------------------
 " Check if file is a help document
 function! IsHelp()
-	return &buftype=='help'?'':''
+        return &buftype=='help'?'':''
 endfunction
 
 " Have syntax highlight group for item under cursor displayed
 function! SyntaxItem()
-	return synIDattr(synID(line("."),col("."),1),"name")
+        return synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . " " . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")
 endfunction
 
 " Check with fugitive if we're in a git directory
 function! IsGit()
-	if !exists('b:git_dir')
-    	return ''
-	endif
-	return 'git:'
+        if !exists('b:git_dir')
+            return ''
+        endif
+        return 'git:'
 endfunction
 
 " Chop off '[Git(' and ')]' from the string returned by fugitive#statusline()
 function! GitBranch()
-	if !exists('b:git_dir')
-    	return ''
-	endif
-	let branch = substitute(fugitive#statusline(), '.*(\(.*\)).*', '\1', 'g')
-	return branch.'  '
+        if !exists('b:git_dir')
+            return ''
+        endif
+        let branch = substitute(fugitive#statusline(), '.*(\(.*\)).*', '\1', 'g')
+        return branch.'  '
 endfunction
 
 set statusline=\ %F
@@ -129,11 +112,37 @@ set statusline+=%2*%{IsGit()}%1*%{GitBranch()}
 set statusline+=%2*encoding:%1*%{strlen(&fenc)?&fenc:'none'}\ \ 
 set statusline+=%2*format:%1*%{&ff}\ \ 
 set statusline+=%2*type:%1*%{strlen(&ft)?&ft:'none'}\ \ 
-"set statusline+=%2*syntax:%1*%{SyntaxItem()}
+set statusline+=%2*syntax:%1*%{SyntaxItem()}
 set statusline+=%1*%=
 set statusline+=%2*column:%1*%c\ \ 
 set statusline+=%2*line:%1*%l\ \ 
 set statusline+=%2*total:%1*%L\ 
+
+"-------------------------------------------------------------------------------------
+" CHMOD +X
+"-------------------------------------------------------------------------------------
+function! SetExecutableBit()
+        let fname = expand("%:p")
+        checktime
+        execute "au FileChangedShell " . fname . " :echo"
+        silent !chmod a+x %
+        checktime
+        execute "au! FileChangedShell " . fname
+endfunction
+command! Xbit call SetExecutableBit()
+
+"-------------------------------------------------------------------------------------
+" RELOAD CONFIGURATION FILES
+"-------------------------------------------------------------------------------------
+if !exists("*ReloadConfigs")
+    function ReloadConfigs()
+        :source ~/.vimrc
+        if has("gui_running")
+            :source ~/.gvimrc
+        endif
+    endfunction
+    command! Recfg call ReloadConfigs()
+endif
 
 "-------------------------------------------------------------------------------------
 " KEYBINDINGS
@@ -141,13 +150,12 @@ set statusline+=%2*total:%1*%L\
 " Toggle fullscreen mode
 map <d-cr> :set invfu<cr>
 
-" Double tap <leader> to <esc>ape into normal mode
-imap <leader><leader> <esc>
-
 " Leader stuff
-nmap <leader>xb :Xbit<cr>
-autocmd FileType python nmap <buffer> <leader>py27 :!python2.7 %<cr>
-autocmd FileType python nmap <buffer> <leader>py32 :!python3.2 %<cr>
+nmap <leader>x :Xbit<cr>
+nmap <leader>r :Recfg<cr>
+nmap <leader>h :call HexHighlight()<cr>
+nmap <leader>l :set linebreak! list!<cr>
+nmap <leader>i :IndentGuidesToggle<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gd :Gdiff<cr>
@@ -157,7 +165,7 @@ nmap <leader>gb :Gblame<cr>
 nmap <F1> :NERDTreeToggle<cr>
 nmap <F2> :GundoToggle<cr>
 nmap <F3> <Plug>TaskList
-autocmd FileType python nmap <buffer> <F4> :!python %<cr>
+autocmd FileType python nmap <buffer> <F4> :!python3 %<cr>
 nmap <silent><F5> <esc>:Pytest file<cr>
 nmap <silent><F6> <esc>:Pytest class<cr>
 nmap <silent><F7> <esc>:Pytest method<cr>

@@ -43,3 +43,9 @@
 [submodule ".vim/bundle/molokai"]
 	path = .vim/bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule ".vim/bundle/indentguides"]
+	path = .vim/bundle/indentguides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule ".vim/bundle/pep8textwidth"]
+	path = .vim/bundle/pep8textwidth
+	url = https://github.com/jimf/vim-pep8-text-width.git
