@@ -1,4 +1,53 @@
 totte's cfg
 ===========
 
-Various configuration files.
+Various configuration files for Mac OS X, Arch Linux and Debian GNU/Linux.
+
+.Xdefaults
+.dircolorsrc
+.globalgitignore
+.gvimrc
+.irssi/
+    config
+    default.theme
+    scripts/
+        autorun/
+            adv_windowlist.pl
+.tmux.conf
+.toprc
+.vim/
+    autoload/
+        pathogen.vim
+    bundle/
+        fugitive/
+        gundo/
+        hexhighlight/
+        indentguides/
+        jellybeans/
+        nerdtree/
+        pep8/
+        pep8textwidth/
+        pytest/
+        rename/
+        snipmate/
+        supertab/
+        syntastic/
+        tasklist/
+    colors/
+        totte.vim
+    snippets/
+        python.snippets
+.vimrc
+.xinitrc
+.xmobarrc
+.xmonad/
+    xmonad.hs
+.zprofile
+.zshrc
+background.jpg
+boot.png
+fonts.tar.gz
+miscellaneous/
+    totte.css
+    totte.itermcolors
+syslinux.cfg
