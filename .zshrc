@@ -29,15 +29,24 @@ elif [[ ${HOST:r} == "embepe" ]]; then
     # Python 3.2.3 32- and 64-bit (precompiled, from http://www.python.org/download/releases/3.2.3/)
     #  distribute (curl http://python-distribute.org/distribute_setup.py | python3)
     #  pip 1.2.1 (curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python3)
-    #   flake8 (
-    #   pytest
-    #   virtualenv
+    #   flake8 (pipi flake8)
+    #   pytest (pipi pytest)
+    #   virtualenv (pipi virtualenv)
     PATH4="/Library/Frameworks/Python.framework/Versions/3.2/bin"
     
     # ~/bin
     PATH5="$HOME/bin"
 
     export PATH="$PATH1:$PATH2:$PATH3:$PATH4:$PATH5"
+
+    # MacVim (snapshot 61 on OS X 10.6.8) seems to need the path being set in 
+    # ~/.zprofile, see https://github.com/b4winckler/macvim/wiki/Troubleshooting, 
+    # "For zsh users". There was no /etc/zshenv on my system, only /etc/zprofile. 
+    # I ran:
+    #   sudo defaults write org.vim.MacVim MMLoginShellCommand "/usr/local/zsh"
+    # but it had no visible effect. I then copied the path setting in .zshrc to 
+    # .zprofile and it solved the issue. Despite setting $PATH twice the paths only 
+    # appear once, not twice.
 fi
 
 #-------------------------------------------------------------------------------------
