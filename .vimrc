@@ -79,19 +79,19 @@ set wrapmargin=0                " Number of characters from the right
 "-------------------------------------------------------------------------------------
 let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
-let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
+let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='EE'
-let g:syntastic_style_error_symbol='SE'
 let g:syntastic_warning_symbol='WW'
+let g:syntastic_style_error_symbol='SE'
 let g:syntastic_style_warning_symbol='SW'
-let g:syntastic_enable_highlighting=0
+let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=8
 let g:syntastic_mode_map = { 'mode': 'passive',
                             \ 'active_filetypes': [],
                             \ 'passive_filetypes': [] }
-
+let g:syntastic_quiet_warnings=0
 let g:syntastic_python_checker='flake8'
 
 "-------------------------------------------------------------------------------------

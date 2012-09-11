@@ -85,10 +85,10 @@ hi SpecialChar        gui=NONE      guibg=NONE    guifg=#b39577 cterm=NONE cterm
 hi SpecialComment     gui=NONE      guibg=NONE    guifg=#868686 cterm=NONE ctermbg=NONE ctermfg=NONE
 hi SpecialKey         gui=NONE      guibg=NONE    guifg=#424242 cterm=NONE ctermbg=NONE ctermfg=NONE
 if has("spell")
-    hi SpellBad       gui=undercurl guibg=NONE    guifg=#ee3216 cterm=NONE ctermbg=NONE ctermfg=NONE
-    hi SpellCap       gui=undercurl guibg=NONE    guifg=#ee3216 cterm=NONE ctermbg=NONE ctermfg=NONE
-    hi SpellLocal     gui=undercurl guibg=NONE    guifg=#ee3216 cterm=NONE ctermbg=NONE ctermfg=NONE
-    hi SpellRare      gui=undercurl guibg=NONE    guifg=#ee3216 cterm=NONE ctermbg=NONE ctermfg=NONE
+    hi SpellBad       gui=undercurl guibg=NONE    guifg=NONE cterm=NONE ctermbg=NONE ctermfg=NONE
+    hi SpellCap       gui=undercurl guibg=NONE    guifg=NONE cterm=NONE ctermbg=NONE ctermfg=NONE
+    hi SpellLocal     gui=undercurl guibg=NONE    guifg=NONE cterm=NONE ctermbg=NONE ctermfg=NONE
+    hi SpellRare      gui=undercurl guibg=NONE    guifg=NONE cterm=NONE ctermbg=NONE ctermfg=NONE
 endif
 hi Statement          gui=NONE      guibg=NONE    guifg=#b39577 cterm=NONE ctermbg=NONE ctermfg=NONE
 hi StatusLine         gui=NONE      guibg=#424242 guifg=#ffffff cterm=NONE ctermbg=NONE ctermfg=NONE
