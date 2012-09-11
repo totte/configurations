@@ -180,6 +180,7 @@ nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gb :Gblame<cr>
+nmap <silent> <leader>/ :silent noh<cr>
 
 " Function keys
 nmap <F1> :NERDTreeToggle<cr>
