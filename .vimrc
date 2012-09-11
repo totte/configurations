@@ -75,6 +75,19 @@ set wrap                        " Enable soft linewrap
 set wrapmargin=0                " Number of characters from the right
 
 "-------------------------------------------------------------------------------------
+" SYNTASTIC
+"-------------------------------------------------------------------------------------
+let g:syntastic_python_checker='flake8'
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='E'
+let g:syntastic_style_error_symbol='SE'
+let g:syntastic_warning_symbol='W'
+let g:syntastic_style_warning_symbol='SW'
+let g:syntastic_enable_highlighting=0
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=8
+
+"-------------------------------------------------------------------------------------
 " STATUSLINE
 "-------------------------------------------------------------------------------------
 " Check if file is a help document
@@ -112,7 +125,10 @@ set statusline+=%2*%{IsGit()}%1*%{GitBranch()}
 set statusline+=%2*encoding:%1*%{strlen(&fenc)?&fenc:'none'}\ \ 
 set statusline+=%2*format:%1*%{&ff}\ \ 
 set statusline+=%2*type:%1*%{strlen(&ft)?&ft:'none'}\ \ 
-set statusline+=%2*syntax:%1*%{SyntaxItem()}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"set statusline+=%2*syntax:%1*%{SyntaxItem()}
 set statusline+=%1*%=
 set statusline+=%2*column:%1*%c\ \ 
 set statusline+=%2*line:%1*%l\ \ 
@@ -173,7 +189,7 @@ nmap <silent><F8> <esc>:Pytest function<cr>
 nmap <silent><F9> <esc>:Pytest previous<cr>
 nmap <silent><F10> <esc>:Pytest next<cr>
 nmap <silent><F11> <esc>:Pytest session<cr>
-let g:pep8_map='<F12>'
+nmap <F12> :SyntasticCheck<cr>
 
 " The normal mode remap for Colemak
 nnoremap w t

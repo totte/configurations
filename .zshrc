@@ -1,10 +1,43 @@
 #-------------------------------------------------------------------------------------
 # PATH
 #-------------------------------------------------------------------------------------
-if [[ $HOST != embepe* ]]; then
-	export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/bin"
-else
-	export PATH="/opt/local/bin:/opt/local/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:$HOME/Library/Haskell/bin:/usr/X11/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:$HOME/bin"
+if [[ ${HOST:r} != "embepe" ]]; then
+    # Default binaries
+    PATH1="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+    
+    # Git
+    PATH2="/usr/local/git/bin"
+    
+    # ~/bin
+    PATH3="$HOME/bin"
+
+    export PATH="$PATH1:$PATH2:$PATH3"
+
+elif [[ ${HOST:r} == "embepe" ]]; then
+    # MacPorts (precompiled, from http://www.macports.org/)
+    #  coreutils 8.19_0 (symlinks without the 'g' prefix in /opt/local/libexec/gnubin)
+    #  tmux 1.6_1
+    #  zsh 5.0.0_0
+    PATH1="/opt/local/bin:/opt/local/libexec/gnubin"
+
+    # Default OS X binaries
+    PATH2="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+    
+    # Git (precompiled, from http://git-scm.com/)
+    PATH3="/usr/local/git/bin"
+    
+    # Python 3.2.3 32- and 64-bit (precompiled, from http://www.python.org/download/releases/3.2.3/)
+    #  distribute (curl http://python-distribute.org/distribute_setup.py | python3)
+    #  pip 1.2.1 (curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python3)
+    #   flake8 (
+    #   pytest
+    #   virtualenv
+    PATH4="/Library/Frameworks/Python.framework/Versions/3.2/bin"
+    
+    # ~/bin
+    PATH5="$HOME/bin"
+
+    export PATH="$PATH1:$PATH2:$PATH3:$PATH4:$PATH5"
 fi
 
 #-------------------------------------------------------------------------------------
@@ -59,9 +92,9 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias d='dirs -v'
-alias reboot='sudo shutdown -r now'
-alias shutdown='sudo shutdown -h now'
-alias runx='eval $(ssh-agent) && ssh-add && startx'
+bu(){cp -v $1 ${1}.backup}
+cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
+md(){mkdir -p $1; cd $1}
 
 alias ga='git add'
 alias gb='git branch'
@@ -89,46 +122,51 @@ alias stasha='git stash apply' # Apply most recent or specify stash@{N}
 alias stashl='git stash list'
 alias stashc='git stash clear'
 
-alias pips='pip search'
-alias pipi='pip install'
-alias pipu='pip install -U'
-alias pipr='pip uninstall'
-alias pipl='pip freeze'
-
-bu(){cp -v $1 ${1}.backup}
-cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
-md(){mkdir -p $1; cd $1}
-
 # OS-specific aliases
 if [[ $(uname) == "Darwin" ]]; then
-	# Mac OS X
-	alias pkgs='port search' # Search
-	alias pkgi='sudo port install' # Install
-	alias pkgu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
-	alias pkgr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
-	alias pkgl='port list installed' # List installed packages
+    # Mac OS X
+    alias pkgs='port search' # Search
+    alias pkgi='sudo port install' # Install
+    alias pkgu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
+    alias pkgr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
+    alias pkgl='port installed' # List installed packages
+    alias python='/usr/local/bin/python3'
+    alias pip='pip-3.2'
+    alias pips='pip-3.2 search'
+    alias pipi='pip-3.2 install'
+    alias pipu='pip-3.2 install -U'
+    alias pipr='pip-3.2 uninstall'
+    alias pipl='pip-3.2 freeze'
 elif [[ $(uname) == "Linux" ]]; then
-	case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
-		(Arch) # Arch Linux
-			alias pkgs='pacman -Ss' # Search
-			alias pkgi='sudo pacman -S' # Install
-			alias pkgu='sudo pacman -Syu' # Update & Upgrade
-			alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
-			alias pkgl='pacman -Q' # List installed packages			
-			;;
-		(Debian|Ubuntu) # Debian and Ubuntu
-			alias pkgs='aptitude search' # Search
-			alias pkgi='sudo aptitude install' # Install
-			alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
-			alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
-			alias pkgl='aptitude search -F "%p" "~i"' # List installed packages	
-			;;
-	esac
+    alias pips='pip search'
+    alias pipi='pip install'
+    alias pipu='pip install -U'
+    alias pipr='pip uninstall'
+    alias pipl='pip freeze'
+    alias reboot='sudo shutdown -r now'
+    alias shutdown='sudo shutdown -h now'
+    alias runx='eval $(ssh-agent) && ssh-add && startx'
+    case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
+        (Arch) # Arch Linux
+            alias pkgs='pacman -Ss' # Search
+            alias pkgi='sudo pacman -S' # Install
+            alias pkgu='sudo pacman -Syu' # Update & Upgrade
+            alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
+            alias pkgl='pacman -Q' # List installed packages
+            ;;
+        (Debian|Ubuntu) # Debian and Ubuntu
+            alias pkgs='aptitude search' # Search
+            alias pkgi='sudo aptitude install' # Install
+            alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
+            alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
+            alias pkgl='aptitude search -F "%p" "~i"' # List installed packages
+            ;;
+    esac
 fi
 
 # Host-specific aliases
 if [[ ${HOST:r} == "betre" ]]; then
-	alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
+    alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
 
 #-------------------------------------------------------------------------------------
@@ -148,11 +186,11 @@ cdpath=(.)
 [ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
 [ -r /etc/hosts ] && : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || _etc_hosts=()
 hosts=(
-	"$_global_ssh_hosts[@]"
-	"$_ssh_hosts[@]"
-	"$_etc_hosts[@]"
-	`hostname`
-	localhost
+    "$_global_ssh_hosts[@]"
+    "$_ssh_hosts[@]"
+    "$_etc_hosts[@]"
+    `hostname`
+    localhost
 )
 zstyle ':completion:*:hosts' hosts $hosts
 
@@ -207,15 +245,15 @@ function title_preexec(){
 #-------------------------------------------------------------------------------------
 autoload -Uz vcs_info
 
-#zstyle	':vcs_info:*+*:*'				debug true
-zstyle	':vcs_info:*'					enable git
-zstyle	':vcs_info:git*'				formats					'%fon $(rou)%b%f%c%u%m'
-zstyle	':vcs_info:git*'				actionformats			'%fon $(rou)%b%f:$(rou)%a%f%c%u%m'
-zstyle	':vcs_info:git*:*'				stagedstr				' (staged)'
-zstyle	':vcs_info:git*:*'				unstagedstr				' (unstaged)'
-zstyle	':vcs_info:git*:*'				get-revision true
-zstyle	':vcs_info:git*:*'				check-for-changes true
-zstyle	':vcs_info:git*+set-message:*'	hooks git-stash git-untracked
+#zstyle    ':vcs_info:*+*:*'                debug true
+zstyle    ':vcs_info:*'                    enable git
+zstyle    ':vcs_info:git*'                formats                    '%fon $(rou)%b%f%c%u%m'
+zstyle    ':vcs_info:git*'                actionformats            '%fon $(rou)%b%f:$(rou)%a%f%c%u%m'
+zstyle    ':vcs_info:git*:*'                stagedstr                ' (staged)'
+zstyle    ':vcs_info:git*:*'                unstagedstr                ' (unstaged)'
+zstyle    ':vcs_info:git*:*'                get-revision true
+zstyle    ':vcs_info:git*:*'                check-for-changes true
+zstyle    ':vcs_info:git*+set-message:*'    hooks git-stash git-untracked
 
 # Display count of stashed changes
 function +vi-git-stash(){
@@ -223,20 +261,20 @@ function +vi-git-stash(){
 
     if [[ -s ${hook_com[base]}/.git/refs/stash ]] ; then
         stashes=$(git stash list 2>/dev/null | wc -l)
-		if [[ $stashes > 1 ]] ; then
-	        hook_com[misc]+=" (${stashes} stashes)"
-		else
-			hook_com[misc]+=" (${stashes} stash)"
-		fi
+        if [[ $stashes > 1 ]] ; then
+            hook_com[misc]+=" (${stashes} stashes)"
+        else
+            hook_com[misc]+=" (${stashes} stash)"
+        fi
     fi
 }
 
 # Display message if untracked files are present
 function +vi-git-untracked(){
-	if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-		git status --porcelain | grep '??' &> /dev/null ; then
-		hook_com[unstaged]+=" (untracked files present)"
-	fi
+    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+        git status --porcelain | grep '??' &> /dev/null ; then
+        hook_com[unstaged]+=" (untracked files present)"
+    fi
 }
 
 function prompt_precmd(){
@@ -248,22 +286,22 @@ function prompt_precmd(){
 #-------------------------------------------------------------------------------------
 # Root or user?
 function rou(){
-	if [[ $UID -eq 0 ]] ; then
-		echo "%{$fg[red]%}"
-	else
-		echo "%{$fg[green]%}"
-	fi
+    if [[ $UID -eq 0 ]] ; then
+        echo "%{$fg[red]%}"
+    else
+        echo "%{$fg[green]%}"
+    fi
 }
 
 # Display ± if we're in a git repository and » at all other times
 function prompt_character(){
     git branch >/dev/null 2>/dev/null && echo '%{$fg[white]%}±%{$reset_color%}' && return
-	echo '%{$fg[white]%}»%{$reset_color%}'
+    echo '%{$fg[white]%}»%{$reset_color%}'
 }
 
 # Set the prompt
 function set_prompt(){
-	PROMPT="$(rou)%n %{$reset_color%}at $(rou)%m %{$reset_color%}in $(rou)%~ ${vcs_info_msg_0_}
+    PROMPT="$(rou)%n %{$reset_color%}at $(rou)%m %{$reset_color%}in $(rou)%~ ${vcs_info_msg_0_}
  %{$reset_color%}$(prompt_character) "
 }
 
@@ -272,7 +310,7 @@ function set_prompt(){
 #-------------------------------------------------------------------------------------
 autoload -U add-zsh-hook
 
-add-zsh-hook	preexec		title_preexec
-add-zsh-hook	precmd		title_precmd
-add-zsh-hook	precmd		prompt_precmd
-add-zsh-hook	precmd		set_prompt
+add-zsh-hook    preexec        title_preexec
+add-zsh-hook    precmd        title_precmd
+add-zsh-hook    precmd        prompt_precmd
+add-zsh-hook    precmd        set_prompt

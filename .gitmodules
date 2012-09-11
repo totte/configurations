@@ -26,10 +26,6 @@
 	path = .vim/bundle/pep8
 	url = git@github.com:vim-scripts/pep8.git
 	ignore = untracked
-[submodule ".vim/bundle/pyflakes"]
-	path = .vim/bundle/pyflakes
-	url = git@github.com:kevinw/pyflakes-vim.git
-	ignore = untracked
 [submodule ".vim/bundle/pytest"]
 	path = .vim/bundle/pytest
 	url = git@github.com:hwt/pytest.vim.git
@@ -49,3 +45,6 @@
 [submodule ".vim/bundle/pep8textwidth"]
 	path = .vim/bundle/pep8textwidth
 	url = https://github.com/jimf/vim-pep8-text-width.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
