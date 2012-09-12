@@ -59,6 +59,7 @@ eval "`dircolors -b ~/.dircolorsrc`"
 #-------------------------------------------------------------------------------------
 export PAGER=less
 export EDITOR=vim
+export VISUAL=vim
 export LANG=en_US.UTF-8
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;34'
