@@ -96,6 +96,14 @@ alias la='ls -lAh --color'
 alias -- -='cd -'
 alias ..='cd ..'
 alias df='df -h'
+alias g='git'
+
+# Pull origin/master into local/master, 
+# rebase local/master into local/working, 
+# merge local/working into local/master, 
+# push to origin/master,
+# checkout local/working.
+alias gg='guar.sh && gmap.sh'
 alias tmux='tmux attach'
 alias cp='cp -v'
 alias mv='mv -v'
@@ -105,35 +113,6 @@ alias d='dirs -v'
 bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
-
-# Hm
-alias ga='git add' # Add file to staging area (and track it if not already)
-alias gc='git commit -a' # Stage all tracked files and commit
-alias gcm='git commit -am' # Stage all tracked files and commit with message (gcm "foo")
-
-# Branches
-alias gb='git branch' # List branches or create branch (gb foo)
-alias gbd='git branch -d' # Delete branch (gbd foo)
-alias gch='git checkout' # Switch to branch (gch foo)
-alias gchb='git checkout -b' # Create new branch foo and switch to it (gchb foo)
-alias gchf='git checkout HEAD'
-
-alias gclone='git clone' # Clone 
-alias gd='git diff'
-alias ginit='git init' # Create repository in current directory
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gmap='gmap.sh' # Merge and Push
-alias gr='git rm'
-alias greset='git reset --hard HEAD'
-alias grevert='git revert HEAD'
-alias gs='git status'
-alias guar='guar.sh' # Update and Rebase
-alias gull='git pull'
-alias gush='git push'
-alias stash='git stash save'
-alias stasha='git stash apply' # Apply most recent or specify stash@{N}
-alias stashl='git stash list'
-alias stashc='git stash clear'
 
 # OS-specific aliases
 if [[ $(uname) == "Darwin" ]]; then
