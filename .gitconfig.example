@@ -1,3 +1,6 @@
+[user]
+	name = totte
+	email = totte@tott.es
 [alias]
         a = add
         ar = remote add
