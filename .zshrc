@@ -1,19 +1,7 @@
 #-------------------------------------------------------------------------------------
 # PATH
 #-------------------------------------------------------------------------------------
-if [[ ${HOST:r} != "embepe" ]]; then
-    # Default binaries
-    PATH1="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-    
-    # Git
-    PATH2="/usr/local/git/bin"
-    
-    # ~/bin
-    PATH3="$HOME/bin"
-
-    export PATH="$PATH1:$PATH2:$PATH3"
-
-elif [[ ${HOST:r} == "embepe" ]]; then
+if [[ ${HOST:r} == "embepe" ]]; then
     # MacPorts (precompiled, from http://www.macports.org/)
     #  coreutils 8.19_0 (symlinks without the 'g' prefix in /opt/local/libexec/gnubin)
     #  tmux 1.6_1
@@ -47,6 +35,17 @@ elif [[ ${HOST:r} == "embepe" ]]; then
     # but it had no visible effect. I then copied the path setting in .zshrc to 
     # .zprofile and it solved the issue. Despite setting $PATH twice the paths only 
     # appear once, not twice.
+elif [[ ${HOST:r} != "embepe" ]]; then
+    # Default binaries
+    PATH1="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+    
+    # Git
+    PATH2="/usr/local/git/bin"
+    
+    # ~/bin
+    PATH3="$HOME/bin"
+
+    export PATH="$PATH1:$PATH2:$PATH3"
 fi
 
 #-------------------------------------------------------------------------------------
@@ -81,6 +80,12 @@ setopt complete_in_word
 setopt always_to_end
 setopt extendedglob
 
+if [[ ${HOST:r} == "embepe" ]]; then
+    export GIT_EDITOR='mvim -fg'
+elif [[ ${HOST:r} != "embepe" ]]; then
+    export GIT_EDITOR='vim -fg'
+fi
+
 #-------------------------------------------------------------------------------------
 # ALIASES
 #-------------------------------------------------------------------------------------
@@ -92,10 +97,6 @@ alias -- -='cd -'
 alias ..='cd ..'
 alias df='df -h'
 alias tmux='tmux attach'
-alias v='vim'
-alias :q='exit'
-alias :e='vim'
-alias :s='locate'
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
@@ -105,25 +106,28 @@ bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
 md(){mkdir -p $1; cd $1}
 
-alias ga='git add'
-alias gb='git branch'
-alias gbd='git branch -d'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gcam='git commit -am'
-alias gch='git checkout'
-alias gchb='git checkout -b'
+# Hm
+alias ga='git add' # Add file to staging area (and track it if not already)
+alias gc='git commit -a' # Stage all tracked files and commit
+alias gcm='git commit -am' # Stage all tracked files and commit with message (gcm "foo")
+
+# Branches
+alias gb='git branch' # List branches or create branch (gb foo)
+alias gbd='git branch -d' # Delete branch (gbd foo)
+alias gch='git checkout' # Switch to branch (gch foo)
+alias gchb='git checkout -b' # Create new branch foo and switch to it (gchb foo)
 alias gchf='git checkout HEAD'
-alias gclone='git clone'
+
+alias gclone='git clone' # Clone 
 alias gd='git diff'
-alias ginit='git init'
+alias ginit='git init' # Create repository in current directory
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gmap='gmap.sh'
+alias gmap='gmap.sh' # Merge and Push
 alias gr='git rm'
 alias greset='git reset --hard HEAD'
 alias grevert='git revert HEAD'
 alias gs='git status'
-alias guar='guar.sh'
+alias guar='guar.sh' # Update and Rebase
 alias gull='git pull'
 alias gush='git push'
 alias stash='git stash save'
@@ -146,6 +150,7 @@ if [[ $(uname) == "Darwin" ]]; then
     alias pipu='pip-3.2 install -U'
     alias pipr='pip-3.2 uninstall'
     alias pipl='pip-3.2 freeze'
+    alias v='mvim'
 elif [[ $(uname) == "Linux" ]]; then
     alias pips='pip search'
     alias pipi='pip install'
@@ -155,6 +160,7 @@ elif [[ $(uname) == "Linux" ]]; then
     alias reboot='sudo shutdown -r now'
     alias shutdown='sudo shutdown -h now'
     alias runx='eval $(ssh-agent) && ssh-add && startx'
+    alias v='vim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
             alias pkgs='pacman -Ss' # Search

@@ -139,17 +139,18 @@ set statusline+=%2*line:%1*%l\ \
 set statusline+=%2*total:%1*%L\ 
 
 "-------------------------------------------------------------------------------------
-" CHMOD +X
+" CHMOD +X CURRENT FILE AND RUN IT (WITH ABSOLUTE PATH AND ESCAPING)
 "-------------------------------------------------------------------------------------
-function! SetExecutableBit()
-        let fname = expand("%:p")
-        checktime
-        execute "au FileChangedShell " . fname . " :echo"
-        silent !chmod a+x %
-        checktime
-        execute "au! FileChangedShell " . fname
+function! SetExecutableBitAndRun()
+    let fname = expand("%:p")
+    checktime
+    execute "au FileChangedShell " . fnameescape(fname) . " :echo"
+    silent execute "!chmod +x " . shellescape(fname)
+    checktime
+    execute "au! FileChangedShell " . fnameescape(fname)
+    execute "! " . shellescape(fname)
 endfunction
-command! Xbit call SetExecutableBit()
+command! XnRun call SetExecutableBitAndRun()
 
 "-------------------------------------------------------------------------------------
 " RELOAD CONFIGURATION FILES
@@ -171,7 +172,6 @@ endif
 map <d-cr> :set invfu<cr>
 
 " Leader stuff
-nmap <leader>x :Xbit<cr>
 nmap <leader>r :Recfg<cr>
 nmap <leader>h :call HexHighlight()<cr>
 nmap <leader>l :set linebreak! list!<cr>
@@ -186,7 +186,7 @@ nmap <silent> <leader>/ :silent noh<cr>
 nmap <F1> :NERDTreeToggle<cr>
 nmap <F2> :GundoToggle<cr>
 nmap <F3> <Plug>TaskList
-autocmd FileType python nmap <buffer> <F4> :!python3 %<cr>
+nmap <F4> :XnRun<cr>
 nmap <silent><F5> <esc>:Pytest file<cr>
 nmap <silent><F6> <esc>:Pytest class<cr>
 nmap <silent><F7> <esc>:Pytest method<cr>
