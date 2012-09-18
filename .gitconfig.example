@@ -18,11 +18,12 @@
         m = merge
         p = push
         s = status
-        t = !gittask.sh
         sa = stash apply
         sc = stash clear
         sl = stash list
         ss = stash save
+        sy = !gitsync.sh
+        t = !gittask.sh
         uc = revert HEAD
         uf = checkout HEAD
         ui = reset --hard HEAD

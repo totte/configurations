@@ -98,13 +98,6 @@ alias -- -='cd -'
 alias ..='cd ..'
 alias df='df -h'
 alias g='git'
-
-# Pull origin/master into local/master, 
-# rebase local/master into local/working, 
-# merge local/working into local/master, 
-# push to origin/master,
-# checkout local/working.
-alias gg='guar.sh && gmap.sh'
 alias tmux='tmux attach'
 alias cp='cp -v'
 alias mv='mv -v'
