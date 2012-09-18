@@ -3,27 +3,26 @@
 	email = totte@tott.es
 [alias]
         a = add
-        ar = remote add
         b = branch
         bd = branch -d
-        c = commit -a
+        c = commit -S
+        ca = commit -Sa
+        cam = commit -Sam
         cb = checkout -b
         ch = checkout
-        cl = clone
-        cm = commit -am
+        cm = commit -Sm
         d = diff
         f = fetch
         fm = pull
-        i = init
         l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
         m = merge
         p = push
-        r = rm
         s = status
+        t = !gittask.sh
         sa = stash apply
         sc = stash clear
         sl = stash list
         ss = stash save
         uc = revert HEAD
         uf = checkout HEAD
-        ut = reset --hard HEAD
+        ui = reset --hard HEAD

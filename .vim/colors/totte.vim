@@ -63,7 +63,7 @@ hi Keyword            gui=NONE      guibg=NONE    guifg=#b39577 cterm=NONE cterm
 hi Label              gui=NONE      guibg=NONE    guifg=#e1d487 cterm=NONE ctermbg=NONE ctermfg=NONE
 hi LineNr             gui=NONE      guibg=NONE    guifg=#424242 cterm=NONE ctermbg=NONE ctermfg=NONE
 hi Macro              gui=NONE      guibg=NONE    guifg=#e1d487 cterm=NONE ctermbg=NONE ctermfg=NONE
-hi MatchParen         gui=NONE      guibg=#424242 guifg=#ffffff cterm=NONE ctermbg=NONE ctermfg=NONE
+hi MatchParen         gui=NONE      guibg=#868686 guifg=#161616 cterm=NONE ctermbg=NONE ctermfg=NONE
 hi ModeMsg            gui=NONE      guibg=NONE    guifg=#ffffff cterm=NONE ctermbg=NONE ctermfg=NONE
 hi MoreMsg            gui=NONE      guibg=NONE    guifg=#ffffff cterm=NONE ctermbg=NONE ctermfg=NONE
 hi NonText            gui=NONE      guibg=NONE    guifg=#424242 cterm=NONE ctermbg=NONE ctermfg=NONE
@@ -132,5 +132,5 @@ hi GreenBar           gui=NONE      guibg=#afd240 guifg=#ffffff cterm=NONE cterm
 hi RedBar             gui=NONE      guibg=#ee3216 guifg=#ffffff cterm=NONE ctermbg=NONE ctermfg=NONE
 
 " indent_guides.vim
-hi IndentGuidesEven   gui=NONE      guibg=#161616 guifg=NONE    cterm=NONE ctermbg=NONE ctermfg=NONE
+hi IndentGuidesEven   gui=NONE      guibg=NONE    guifg=NONE    cterm=NONE ctermbg=NONE ctermfg=NONE
 hi IndentGuidesOdd    gui=NONE      guibg=#242424 guifg=NONE    cterm=NONE ctermbg=NONE ctermfg=NONE

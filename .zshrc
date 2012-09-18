@@ -305,7 +305,7 @@ function set_prompt(){
 #-------------------------------------------------------------------------------------
 autoload -U add-zsh-hook
 
-add-zsh-hook    preexec        title_preexec
-add-zsh-hook    precmd        title_precmd
-add-zsh-hook    precmd        prompt_precmd
-add-zsh-hook    precmd        set_prompt
+add-zsh-hook    preexec    title_preexec
+add-zsh-hook    precmd     title_precmd
+add-zsh-hook    precmd     prompt_precmd
+add-zsh-hook    precmd     set_prompt
