@@ -1,12 +1,20 @@
+!X.org
+xft.dpi:                        96
+xft.lcdfilter:                  lcddefault
+xft.antialias:                  true
+xft.hinting:                    true
+xft.hintstyle:                  hintfull
+xft.rgba:                       rgb
+
 !urxvt
 urxvt*geometry:			86x42
 urxvt*foreground:		#ffffff
 urxvt*background:		#161616
-urxvt*font:				xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true	
-urxvt*boldFont:			xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true
-urxvt*italicFont:		xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true	
-urxvt*boldItalicFont:	xft:Inconsolata XL:style=Medium:size=12:antialias=true:hinting=true	
-urxvt*letterSpace:		-2
+urxvt*font:			xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true	
+urxvt*boldFont:			xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true
+urxvt*italicFont:		xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true	
+urxvt*boldItalicFont:	        xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true	
+urxvt*letterSpace:		0
 urxvt*urlLauncher:		opera
 urxvt*scrollBar:		false
 urxvt*cursorColor:		#ffffff
@@ -35,4 +43,4 @@ urxvt*cursorBlink:		true
 *color14:   #868686
 !white
 *color7:    #dddddd
-*color15:   #ffffff
+color15:   #ffffff

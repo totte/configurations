@@ -11,12 +11,12 @@ import XMonad.Layout.Dishes
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
  
-myTerminal				=	"urxvtc"
-myBorderWidth			=	4
-myModMask				=	mod4Mask
-myWorkspaces			=	["ZSH","VIM","WEB","IRC","GFX","MSC"]
-myNormalBorderColor		=	"#080808"
-myFocusedBorderColor	=	"#080808"
+myTerminal			=   "urxvtc"
+myBorderWidth			=   4
+myModMask			=   mod4Mask
+myWorkspaces			=   ["ZSH","VIM","WEB","IRC","GFX","MSC"]
+myNormalBorderColor		=   "#080808"
+myFocusedBorderColor	        =   "#080808"
  
 --------------------------------------------------------------------------------------
 -- Key bindings
