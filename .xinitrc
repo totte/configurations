@@ -13,6 +13,9 @@ xsetroot -cursor_name left_ptr
 # Keyboard map
 setxkbmap us -variant colemak
 
+# MPD
+mpd &
+
 # Background image
 hsetroot -fill $HOME/cfg/background.jpg &
 

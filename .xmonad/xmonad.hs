@@ -87,7 +87,7 @@ myDiscs = spacing 4 $ limitWindows 5 $ Dishes nmaster ratio
 
 myLayout =
 	avoidStruts $
-	renamed [Replace "Focus"] myFocus ||| renamed [Replace "Full"] myFull ||| renamed [Replace "Discs"] myDiscs
+	renamed [Replace "Full"] myFull ||| renamed [Replace "Focus"] myFocus ||| renamed [Replace "Discs"] myDiscs
 
 --------------------------------------------------------------------------------------
 -- Window rules

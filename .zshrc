@@ -132,7 +132,7 @@ elif [[ $(uname) == "Linux" ]]; then
     alias pipl='pip freeze'
     alias reboot='sudo shutdown -r now'
     alias shutdown='sudo shutdown -h now'
-    alias runx='ssh-add && startx'
+    alias runx='eval $(gpg-agent --enable-ssh-support --daemon) && ssh-add && startx'
     #alias runx='eval $(ssh-agent) && ssh-add && startx'
     alias v='vim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
