@@ -24,7 +24,7 @@ myFocusedBorderColor	        =   "#080808"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
-		((modm, xK_space), spawn "dmenu_run -fn 'xft:Chicago:size=16' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff'"), -- Launcher
+		((modm, xK_space), spawn "dmenu_run -fn 'Chicago-14:style=Bold' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff' -h 32"), -- Launcher
 		((modm, xK_Return), spawn $ XMonad.terminal conf), -- Terminal
 		((modm, xK_apostrophe), spawn "qvim"), -- QVim
 		((modm, xK_slash), spawn "slock"), -- Lock screen
