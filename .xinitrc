@@ -10,6 +10,9 @@ fi
 # Mouse cursor
 xsetroot -cursor_name left_ptr
 
+# Hide mouse cursor when idle
+unclutter -idle 4 &
+
 # Keyboard map
 setxkbmap us -variant colemak
 
