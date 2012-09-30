@@ -133,7 +133,6 @@ elif [[ $(uname) == "Linux" ]]; then
     alias reboot='sudo shutdown -r now'
     alias shutdown='sudo shutdown -h now'
     alias runx='eval $(gpg-agent --enable-ssh-support --daemon) && ssh-add && startx'
-    alias runm='mpd --kill && mpd && ncmpc' 
     alias v='vim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
