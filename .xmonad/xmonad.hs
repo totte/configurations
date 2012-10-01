@@ -24,26 +24,24 @@ myFocusedBorderColor	        =   "#080808"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
-		((modm, xK_space), spawn "dmenu_run -fn 'Chicago-14:style=Bold' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff' -h 32"), -- Launcher
-		((modm, xK_Return), spawn $ XMonad.terminal conf), -- Terminal
-		((modm, xK_apostrophe), spawn "qvim"), -- QVim
-		((modm, xK_slash), spawn "slock"), -- Lock screen
-		((modm, xK_backslash), spawn "xmonad --recompile; xmonad --restart"),
-		((modm, xK_q), spawn "dcop kdesktop default logout"),
-		((modm .|. shiftMask, xK_q), io (exitWith ExitSuccess)),
-		((modm, xK_grave), io (exitWith ExitSuccess)), -- Temporary
-		
-		((modm, xK_Tab), windows W.focusDown), -- Move focus to the next window
-		((modm .|. shiftMask, xK_Tab), sendMessage NextLayout), -- Rotate through available layouts
+                ((modm, xK_Tab), sendMessage NextLayout),       -- Rotate through available layouts
+                ((modm, xK_q), io (exitWith ExitSuccess)),
+		((modm, xK_p), withFocused $ windows . W.sink), -- Push window back into tiling
+		((modm, xK_l), spawn "slock"),
+		((modm, xK_r), spawn "xmonad --recompile; xmonad --restart"),
+		((modm, xK_t), spawn $ XMonad.terminal conf),
 		((modm, xK_n), prevWS),
-		((modm, xK_o), nextWS),
 		((modm .|. shiftMask, xK_n), shiftToPrev >> prevWS),
+                ((modm, xK_e), windows W.focusDown),            -- Move focus to the previous window
+		((modm, xK_i), windows W.focusUp),              -- Move focus to the next window
+		((modm, xK_o), nextWS),
 		((modm .|. shiftMask, xK_o), shiftToNext >> nextWS),
-		((modm .|. shiftMask, xK_k), kill), -- close focused window
-		((modm, xK_m), windows W.swapMaster), -- Make focused window master window
-		((modm, xK_comma), sendMessage Shrink), -- Shrink the master area
-		((modm, xK_period), sendMessage Expand), -- Expand the master area
-		((modm, xK_t), withFocused $ windows . W.sink) -- Push window back into tiling
+		((modm, xK_v), spawn "gvim"),
+                ((modm, xK_k), kill),                           -- close focused window
+		((modm, xK_m), windows W.swapMaster),           -- Make focused window master window
+		((modm, xK_comma), sendMessage Shrink),         -- Shrink the master area
+		((modm, xK_period), sendMessage Expand),        -- Expand the master area
+		((modm, xK_space), spawn "yeganesh -x -- -fn 'Chicago-14:style=Bold' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff' -h '32' -p 'Run: ' | sh")
 	]
     ++
  
