@@ -10,6 +10,8 @@ xft.rgba:                       rgb
 urxvt*geometry:			86x42
 urxvt*foreground:		#ffffff
 urxvt*background:		#161616
+urxvt*transparent:              true
+urxvt*shading:                  8
 urxvt*font:			xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true	
 urxvt*boldFont:			xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true
 urxvt*italicFont:		xft:Inconsolata XL:style=Medium:size=14:antialias=true:hinting=true	
