@@ -27,5 +27,6 @@ if has("macunix")
         set fuoptions=maxvert,background:Normal
 elseif has("unix")
         " GVim
-        set guifont=Inconsolata\ XL\ 12
+        "set guifont=Inconsolata\ XL\ 12
+        set guifont=Inconsolata\ 16
 endif

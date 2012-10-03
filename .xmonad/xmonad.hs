@@ -1,20 +1,21 @@
 import XMonad
-import System.Exit
 import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Layout.Spacing
-import XMonad.Layout.Gaps
-import XMonad.Layout.Renamed
-import XMonad.Layout.LimitWindows
 import XMonad.Layout.Dishes
+import XMonad.Layout.Gaps
+import XMonad.Layout.LimitWindows
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Renamed
+import XMonad.Layout.Spacing
+import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
  
 myTerminal			=   "urxvtc"
 myBorderWidth			=   4
 myModMask			=   mod4Mask
-myWorkspaces			=   ["ZSH","VIM","WEB","IRC","GFX","MSC"]
+myWorkspaces			=   ["ZSH","VIM","WEB","IRC","GFX","MSC","NET","SYS"]
 myNormalBorderColor		=   "#080808"
 myFocusedBorderColor	        =   "#080808"
  
@@ -24,19 +25,17 @@ myFocusedBorderColor	        =   "#080808"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	[
-                ((modm, xK_Tab), sendMessage NextLayout),       -- Rotate through available layouts
-                ((modm, xK_q), io (exitWith ExitSuccess)),
-		((modm, xK_p), withFocused $ windows . W.sink), -- Push window back into tiling
-		((modm, xK_l), spawn "slock"),
+                ((modm, xK_Tab), sendMessage NextLayout),
+		((modm, xK_q), spawn "slock"),
+                ((modm .|. shiftMask, xK_q), io (exitWith ExitSuccess)),
 		((modm, xK_r), spawn "xmonad --recompile; xmonad --restart"),
-		((modm, xK_t), spawn $ XMonad.terminal conf),
+		((modm, xK_Return), spawn $ XMonad.terminal conf),
 		((modm, xK_n), prevWS),
 		((modm .|. shiftMask, xK_n), shiftToPrev >> prevWS),
                 ((modm, xK_e), windows W.focusDown),            -- Move focus to the previous window
 		((modm, xK_i), windows W.focusUp),              -- Move focus to the next window
 		((modm, xK_o), nextWS),
 		((modm .|. shiftMask, xK_o), shiftToNext >> nextWS),
-		((modm, xK_v), spawn "gvim"),
                 ((modm, xK_k), kill),                           -- close focused window
 		((modm, xK_m), windows W.swapMaster),           -- Make focused window master window
 		((modm, xK_comma), sendMessage Shrink),         -- Shrink the master area
@@ -86,7 +85,7 @@ myDiscs = spacing 4 $ limitWindows 5 $ Dishes nmaster ratio
 
 myLayout =
 	avoidStruts $
-	renamed [Replace "Full"] myFull ||| renamed [Replace "Focus"] myFocus ||| renamed [Replace "Discs"] myDiscs
+	noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Focus"] myFocus ||| renamed [Replace "Discs"] myDiscs
 
 --------------------------------------------------------------------------------------
 -- Window rules
