@@ -1,6 +1,8 @@
 [user]
 	name = totte
 	email = totte@tott.es
+[core]
+        excludesfile = /home/totte/.globalgitignore
 [alias]
         a = add
         b = branch
