@@ -2,7 +2,7 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "Freenode";
-    port = "6697";
+    port = "7070";
     use_ssl = "ON";
     autoconnect = "Yes";
   }
@@ -56,7 +56,7 @@ aliases = {
   RESET = "set -default";
   afk = "away";
   mni = "msg nickserv identify";
-  jfc = "/join #debian;/join #archlinux;/join #zsh;/join #tmux;/join #vim;/join #git;/join #python;/join #qt;/join #django;/join #haskell";
+  jfc = "/join #debian;/join #archlinux;/join #zsh;/join #tmux;/join #vim;/join #git;/join #python;/join #qt;/join #mer;/join #haskell;/join #kde;/join #xmonad";
 };
 
 statusbar = {
@@ -181,7 +181,7 @@ statusbar = {
 settings = {
   core = {
     recode = "yes";
-    recode_out_default_charset = "ISO_8859-1";
+    recode_out_default_charset = "utf-8";
     recode_fallback = "utf-8";
     recode_autodetect_utf8 = "yes";
     real_name = "Hans Tovetjärn";
@@ -210,8 +210,11 @@ ignores = (
       "#git",
       "#python",
       "#qt",
-      "#django",
-      "#haskell"
+      "#haskell",
+      "#kde",
+      "#mer",
+      "#xmonad",
+      "#django"
     );
   }
 );
