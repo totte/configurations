@@ -8,16 +8,18 @@
         b = branch
         bd = branch -d
         c = commit -S
-        ca = commit -Sa
-        cam = commit -Sam
+        ca = commit -S -a
+        cam = commit -S -am
         cb = checkout -b
         ch = checkout
-        cm = commit -Sm
+        cm = commit -S -m
         d = diff
+        done = !gittask.sh done        
         f = fetch
         fm = pull
-        l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+        l = log --graph --pretty=format:'%C(yellow)%h%Creset %C(bold green)%d%Creset %s %C(bold cyan)(%cr by %an)%Creset' --abbrev-commit
         m = merge
+        new = !gittask.sh new
         p = push
         s = status
         sa = stash apply
@@ -25,7 +27,6 @@
         sl = stash list
         ss = stash save
         sy = !gitsync.sh
-        t = !gittask.sh
         uc = revert HEAD
         uf = checkout HEAD
         ui = reset --hard HEAD
