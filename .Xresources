@@ -5,6 +5,8 @@ xft.hinting:                    true
 xft.hintstyle:                  hintfull
 xft.rgba:                       rgb
 
+!xsetroot -cursor_name left_ptr
+
 urxvt*geometry:                 86x42
 urxvt*transparent:              false
 urxvt*shading:                  0
@@ -23,9 +25,8 @@ urxvt*depth:                    32
 urxvt*borderless:               1
 urxvt*loginShell:               true
 urxvt*secondaryScroll:          true    # Enable Shift-PageUp/Down in screen
-urxvt*saveLines:                5000
+urxvt*saveLines:                4096
 urxvt*termName:                 rxvt-unicode
-urxvt.urlLauncher:              konqueror
 urxvt.matcher.button:           1
 
 #define S_base03        #002b36
@@ -50,35 +51,27 @@ urxvt.matcher.button:           1
 *cursorColor:           S_base1
 *pointerColorBackground:S_base01
 *pointerColorForeground:S_base1
-
-!! black dark/light
+! black dark/light
 *color0:                S_base02
 *color8:                S_base03
-
-!! red dark/light
+! red dark/light
 *color1:                S_red
 *color9:                S_orange
-
-!! green dark/light
+! green dark/light
 *color2:                S_green
 *color10:               S_base01
-
-!! yellow dark/light
+! yellow dark/light
 *color3:                S_yellow
 *color11:               S_base00
-
-!! blue dark/light
+! blue dark/light
 *color4:                S_blue
 *color12:               S_base0
-
-!! magenta dark/light
+! magenta dark/light
 *color5:                S_magenta
 *color13:               S_violet
-
-!! cyan dark/light
+! cyan dark/light
 *color6:                S_cyan
 *color14:               S_base1
-
-!! white dark/light
+! white dark/light
 *color7:                S_base2
 *color15:               S_base3
