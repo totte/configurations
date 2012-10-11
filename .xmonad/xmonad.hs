@@ -40,7 +40,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 		((modm, xK_m), windows W.swapMaster),           -- Make focused window master window
 		((modm, xK_comma), sendMessage Shrink),         -- Shrink the master area
 		((modm, xK_period), sendMessage Expand),        -- Expand the master area
-		((modm, xK_space), spawn "yeganesh -x -- -fn 'Chicago-14:style=Bold' -nb '#000000' -nf '#868686' -sb '#868686' -sf '#ffffff' -h '32' -p 'Run: ' | sh")
+		((modm, xK_space), spawn "~/bin/drunner.sh")
 	]
     ++
  
@@ -104,7 +104,7 @@ myManageHook = composeAll
 myBar = "xmobar"
 myPP = xmobarPP
 		{
-			ppCurrent = wrap "<fc=#ffffff,#646464> " " </fc>",
+			ppCurrent = wrap "<fc=#ffffff,#073642> " " </fc>",
 			ppVisible = xmobarColor "#ff0000" "",
 			ppHidden = xmobarColor "#646464" "",
 			ppHiddenNoWindows = xmobarColor "#646464" "",

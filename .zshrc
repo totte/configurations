@@ -132,7 +132,7 @@ elif [[ $(uname) == "Linux" ]]; then
     alias pipl='pip freeze'
     alias reboot='sudo shutdown -r now'
     alias shutdown='sudo shutdown -h now'
-    alias v='vim'
+    alias v='gvim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
             alias pkgs='pacman -Ss' # Search
@@ -277,9 +277,9 @@ function prompt_precmd(){
 # Root or user?
 function rou(){
     if [[ $UID -eq 0 ]] ; then
-        echo "%{$fg[red]%}"
+        echo "%{$fg[magenta]%}"
     else
-        echo "%{$fg[green]%}"
+        echo "%{$fg[blue]%}"
     fi
 }
 

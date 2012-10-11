@@ -2,7 +2,7 @@ Config
 	{ 
 		font = "xft:Chicago:style=Bold:size=14",
 		bgColor = "#000000",
-		fgColor = "#868686",
+		fgColor = "#073642",
 		border = NoBorder,
 		borderColor = "#000000"
 		position = Static { xpos = 0, ypos = 0, width = 1440, height = 32 },
@@ -14,5 +14,5 @@ Config
 			],
 		sepChar = "%",
 		alignSep = "}{",
-		template = " %StdinReader% }{ <fc=#ffffff>%date%</fc>"
+		template = " %StdinReader% }{ <fc=#868686>%date%</fc>"
 	}

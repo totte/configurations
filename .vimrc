@@ -17,7 +17,7 @@ filetype indent on                              " Load indent file for filetype
 " SYNTAX HIGHLIGHTING
 "-------------------------------------------------------------------------------------
 syntax on                                       " Enable syntax highlighting
-colorscheme totte                               " Set colorscheme
+colorscheme solarized                           " Set colorscheme
 
 "-------------------------------------------------------------------------------------
 " TAB COMPLETION
@@ -125,18 +125,18 @@ function! GitBranch()
 endfunction
 
 set statusline=\ %F
-set statusline+=%2*%{&modified?'\ (modified)\ ':'\ '}
-set statusline+=%2*%{IsHelp()}
-set statusline+=%2*%{&readonly?'\ (read-only)\ ':'\ '}
-set statusline+=%2*%{IsGit()}%1*%{GitBranch()}
-set statusline+=%2*encoding:%1*%{strlen(&fenc)?&fenc:'none'}\ \ 
-set statusline+=%2*format:%1*%{&ff}\ \ 
-set statusline+=%2*type:%1*%{strlen(&ft)?&ft:'none'}\ \ 
+set statusline+=%{&modified?'\ (modified)\ ':'\ '}
+set statusline+=%{IsHelp()}
+set statusline+=%{&readonly?'\ (read-only)\ ':'\ '}
+set statusline+=%{IsGit()}%{GitBranch()}
+set statusline+=encoding:%{strlen(&fenc)?&fenc:'none'}\ \ 
+set statusline+=format:%{&ff}\ \ 
+set statusline+=type:%{strlen(&ft)?&ft:'none'}\ \ 
 "set statusline+=%2*syntax:%1*%{SyntaxItem()}
-set statusline+=%1*%=
-set statusline+=%2*column:%1*%c\ \ 
-set statusline+=%2*line:%1*%l\ \ 
-set statusline+=%2*total:%1*%L\ 
+set statusline+=%=
+set statusline+=column:%c\ \ 
+set statusline+=line:%l\ \ 
+set statusline+=total:%L\ 
 
 "-------------------------------------------------------------------------------------
 " CHMOD +X CURRENT FILE AND RUN IT (WITH ABSOLUTE PATH AND ESCAPING)
