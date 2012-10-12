@@ -1,0 +1,23 @@
+ctl.equal {
+    type equal;
+}
+
+pcm.plugequal {
+    type equal;
+    # Modify the line below if you do not
+    # want to use sound card 0.
+    #slave.pcm "plughw:0,0";
+    # By default we want to play from more sources at time:
+    slave.pcm "plug:dmix";
+}
+
+# If you don't want the equalizer to be your
+# default soundcard comment the lower
+# line and uncomment the upper line. (You can
+# choose it as the output device by addressing
+# it with specific apps,eg mpg123 -a equal 06.Back_In_Black.mp3)
+#pcm.equal {
+pcm.!default {
+    type plug;
+    slave.pcm plugequal;
+}
