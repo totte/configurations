@@ -130,8 +130,6 @@ elif [[ $(uname) == "Linux" ]]; then
     alias pipu='pip install -U'
     alias pipr='pip uninstall'
     alias pipl='pip freeze'
-    alias reboot='sudo shutdown -r now'
-    alias shutdown='sudo shutdown -h now'
     alias v='gvim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
@@ -141,7 +139,8 @@ elif [[ $(uname) == "Linux" ]]; then
             alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
             alias pkgl='pacman -Q' # List installed packages
             alias pkgd='whoneeds' # List packages depending on specified package
-            alias runx='eval $(gpg-agent --enable-ssh-support --daemon) && ssh-add && startx'
+            alias reboot='sudo systemctl reboot'
+            alias shutdown='sudo systemctl halt'
             alias wifi='wicd-curses'
             ;;
         (Debian|Ubuntu) # Debian and Ubuntu
@@ -150,6 +149,8 @@ elif [[ $(uname) == "Linux" ]]; then
             alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
             alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
             alias pkgl='aptitude search -F "%p" "~i"' # List installed packages
+            alias reboot='sudo shutdown -r now'
+            alias shutdown='sudo shutdown -h now'
             ;;
     esac
 fi
