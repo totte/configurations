@@ -61,6 +61,7 @@ export PAGER=less
 export EDITOR=vim
 export VISUAL=vim
 export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;34'
 HISTFILE=$HOME/.zsh_history
@@ -133,6 +134,7 @@ elif [[ $(uname) == "Linux" ]]; then
     alias v='gvim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
+            alias equa='alsamixer -D equal'
             alias pkgs='pacman -Ss' # Search
             alias pkgi='sudo pacman -S' # Install
             alias pkgu='sudo pacman -Syu' # Update & Upgrade

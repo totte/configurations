@@ -1,3 +1,7 @@
 away.log
 .netrwhist
 .xmonad/xmonad.errors
+.mpd/database
+.mpd/log
+.mpd/pid
+.mpd/state
