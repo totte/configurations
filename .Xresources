@@ -23,7 +23,7 @@ urxvt*buffered:                 true
 urxvt*underlineColor:           yellow
 urxvt*depth:                    32
 urxvt*borderless:               1
-urxvt*loginShell:               true
+urxvt*loginShell:               false
 urxvt*secondaryScroll:          true    # Enable Shift-PageUp/Down in screen
 urxvt*saveLines:                4096
 urxvt*termName:                 rxvt-unicode
