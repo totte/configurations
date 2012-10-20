@@ -7,9 +7,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-# Load settings
-xrdb ~/cfg/.Xresources
-
 # Hide mouse cursor when idle
 unclutter -idle 4 &
 
