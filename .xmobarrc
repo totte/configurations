@@ -1,14 +1,14 @@
 Config
-	{ 
-		font = "xft:Chicago:style=Bold:size=14",
+	{
+                font = "xft:Ubuntu:style=Bold:size=14",
 		bgColor = "#000000",
-		fgColor = "#073642",
+		fgColor = "#0055FF",
 		border = NoBorder,
 		borderColor = "#000000"
 		position = Static { xpos = 0, ypos = 0, width = 1440, height = 32 },
 		lowerOnStart = True,
-		commands = 
-			[ 
+		commands =
+			[
 				Run Date "%y%m%0d %H:%M  " "date" 10,
 				Run StdinReader
 			],

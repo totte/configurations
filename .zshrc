@@ -10,10 +10,10 @@ if [[ ${HOST:r} == "embepe" ]]; then
 
     # Default OS X binaries
     PATH2="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-    
+
     # Git (precompiled, from http://git-scm.com/)
     PATH3="/usr/local/git/bin"
-    
+
     # Python 3.2.3 32- and 64-bit (precompiled, from http://www.python.org/download/releases/3.2.3/)
     #  distribute (curl http://python-distribute.org/distribute_setup.py | python3)
     #  pip 1.2.1 (curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python3)
@@ -21,27 +21,27 @@ if [[ ${HOST:r} == "embepe" ]]; then
     #   pytest (pipi pytest)
     #   virtualenv (pipi virtualenv)
     PATH4="/Library/Frameworks/Python.framework/Versions/3.2/bin"
-    
+
     # ~/bin
     PATH5="$HOME/bin"
 
     export PATH="$PATH1:$PATH2:$PATH3:$PATH4:$PATH5"
 
-    # MacVim (snapshot 61 on OS X 10.6.8) seems to need the path being set in 
-    # ~/.zprofile, see https://github.com/b4winckler/macvim/wiki/Troubleshooting, 
-    # "For zsh users". There was no /etc/zshenv on my system, only /etc/zprofile. 
+    # MacVim (snapshot 61 on OS X 10.6.8) seems to need the path being set in
+    # ~/.zprofile, see https://github.com/b4winckler/macvim/wiki/Troubleshooting,
+    # "For zsh users". There was no /etc/zshenv on my system, only /etc/zprofile.
     # I ran:
     #   sudo defaults write org.vim.MacVim MMLoginShellCommand "/usr/local/zsh"
-    # but it had no visible effect. I then copied the path setting in .zshrc to 
-    # .zprofile and it solved the issue. Despite setting $PATH twice the paths only 
+    # but it had no visible effect. I then copied the path setting in .zshrc to
+    # .zprofile and it solved the issue. Despite setting $PATH twice the paths only
     # appear once, not twice.
 elif [[ ${HOST:r} != "embepe" ]]; then
     # Default binaries
     PATH1="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-    
+
     # Git
     PATH2="/usr/local/git/bin"
-    
+
     # ~/bin
     PATH3="$HOME/bin"
 
@@ -60,7 +60,7 @@ eval "`dircolors -b ~/.dircolorsrc`"
 export PAGER=less
 export EDITOR=vim
 export VISUAL=vim
-export LANG=en_US.UTF-8
+export LANG=en_GB.UTF-8
 export GPG_TTY=$(tty)
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;34'
@@ -131,7 +131,7 @@ elif [[ $(uname) == "Linux" ]]; then
     alias pipu='pip install -U'
     alias pipr='pip uninstall'
     alias pipl='pip freeze'
-    alias v='gvim'
+    alias v='vim'
     case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
         (Arch) # Arch Linux
             alias equa='alsamixer -D equal'
@@ -141,9 +141,9 @@ elif [[ $(uname) == "Linux" ]]; then
             alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
             alias pkgl='pacman -Q' # List installed packages
             alias pkgd='whoneeds' # List packages depending on specified package
+            alias poweroff='sudo systemctl poweroff'
             alias reboot='sudo systemctl reboot'
-            alias shutdown='sudo systemctl halt'
-            alias wifi='wicd-curses'
+            alias nw='wicd-curses'
             ;;
         (Debian|Ubuntu) # Debian and Ubuntu
             alias pkgs='aptitude search' # Search
@@ -216,7 +216,7 @@ term_title="Terminal"
 function title(){
   if [[ "$TERM" == screen* ]]; then
     print -Pn "\ek$tmux_title:q\e\\"
-  elif [[ "$TERM" == xterm* ]] || [[ $TERM == rxvt* ]] || [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+  elif [[ $TERM == rxvt* ]] || [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
     print -Pn "\e]2;$term_title:q\a"
     print -Pn "\e]1;$term_tab_title:q\a"
   fi

@@ -11,14 +11,14 @@ import XMonad.Layout.Spacing
 import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
- 
-myTerminal			=   "urxvtc"
+
+myTerminal			=   "konsole"
 myBorderWidth			=   4
 myModMask			=   mod4Mask
-myWorkspaces			=   ["ZSH","VIM","WEB","IRC","GFX","MSC","NET","SYS"]
+myWorkspaces			=   ["ZSH","VIM","QTC","WEB","IRC","PIM","MSC","LOG","SYS","NET"]
 myNormalBorderColor		=   "#080808"
 myFocusedBorderColor	        =   "#080808"
- 
+
 --------------------------------------------------------------------------------------
 -- Key bindings
 --------------------------------------------------------------------------------------
@@ -43,13 +43,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 		((modm, xK_space), spawn "~/bin/drunner.sh")
 	]
     ++
- 
+
     -- mod-[1..9], Switch to workspace N
     -- mod-shift-[1..9], Move client to workspace N
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
- 
+
 --------------------------------------------------------------------------------------
 -- Mouse bindings
 --------------------------------------------------------------------------------------
@@ -60,9 +60,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 										 >> windows W.shiftMaster)), -- float and move window
 		((modm, button2), (\w -> focus w >> windows W.shiftMaster)), -- raise window
 		((modm, button3), (\w -> focus w >> mouseResizeWindow w
-										 >> windows W.shiftMaster)) -- float and resize window 
+										 >> windows W.shiftMaster)) -- float and resize window
 	]
- 
+
 --------------------------------------------------------------------------------------
 -- Layouts
 --------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ myManageHook = composeAll
 		className =? "MPlayer" --> doFloat,
 		className =? "Gimp" --> doFloat
 	]
- 
+
 --------------------------------------------------------------------------------------
 -- Statusbar
 --------------------------------------------------------------------------------------
@@ -104,12 +104,12 @@ myManageHook = composeAll
 myBar = "xmobar"
 myPP = xmobarPP
 		{
-			ppCurrent = wrap "<fc=#ffffff,#073642> " " </fc>",
+			ppCurrent = wrap "<fc=#ffffff,#0055FF> " " </fc>",
 			ppVisible = xmobarColor "#ff0000" "",
 			ppHidden = xmobarColor "#646464" "",
 			ppHiddenNoWindows = xmobarColor "#646464" "",
 			ppUrgent = xmobarColor "#ff0000" "",
-			ppTitle = xmobarColor "#ffffff" "",
+			ppTitle = xmobarColor "#ffffff" "" . shorten 64,
 			ppLayout = xmobarColor "#aaaaaa" "",
 			ppSep = " » ",
 			ppWsSep = " "

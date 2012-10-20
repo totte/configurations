@@ -16,8 +16,5 @@ unclutter -idle 4 &
 # Background image
 hsetroot -fill $HOME/img/08.jpg &
 
-# rxvt-unicode daemon
-urxvtd -q -f -o &
-
 # Window manager
 xmonad

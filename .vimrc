@@ -17,6 +17,9 @@ filetype indent on                              " Load indent file for filetype
 " SYNTAX HIGHLIGHTING
 "-------------------------------------------------------------------------------------
 syntax on                                       " Enable syntax highlighting
+"let g:solarized_termcolors=256
+"set t_Co=256
+set background=dark
 colorscheme solarized                           " Set colorscheme
 
 "-------------------------------------------------------------------------------------
