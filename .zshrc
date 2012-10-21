@@ -1,52 +1,14 @@
 #-------------------------------------------------------------------------------------
 # PATH
 #-------------------------------------------------------------------------------------
-if [[ ${HOST:r} == "embepe" ]]; then
-    # MacPorts (precompiled, from http://www.macports.org/)
-    #  coreutils 8.19_0 (symlinks without the 'g' prefix in /opt/local/libexec/gnubin)
-    #  tmux 1.6_1
-    #  zsh 5.0.0_0
-    PATH1="/opt/local/bin:/opt/local/libexec/gnubin"
 
-    # Default OS X binaries
-    PATH2="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# System binaries
+PATH0="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
-    # Git (precompiled, from http://git-scm.com/)
-    PATH3="/usr/local/git/bin"
+# My binaries
+PATH1="$HOME/bin"
 
-    # Python 3.2.3 32- and 64-bit (precompiled, from http://www.python.org/download/releases/3.2.3/)
-    #  distribute (curl http://python-distribute.org/distribute_setup.py | python3)
-    #  pip 1.2.1 (curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python3)
-    #   flake8 (pipi flake8)
-    #   pytest (pipi pytest)
-    #   virtualenv (pipi virtualenv)
-    PATH4="/Library/Frameworks/Python.framework/Versions/3.2/bin"
-
-    # ~/bin
-    PATH5="$HOME/bin"
-
-    export PATH="$PATH1:$PATH2:$PATH3:$PATH4:$PATH5"
-
-    # MacVim (snapshot 61 on OS X 10.6.8) seems to need the path being set in
-    # ~/.zprofile, see https://github.com/b4winckler/macvim/wiki/Troubleshooting,
-    # "For zsh users". There was no /etc/zshenv on my system, only /etc/zprofile.
-    # I ran:
-    #   sudo defaults write org.vim.MacVim MMLoginShellCommand "/usr/local/zsh"
-    # but it had no visible effect. I then copied the path setting in .zshrc to
-    # .zprofile and it solved the issue. Despite setting $PATH twice the paths only
-    # appear once, not twice.
-elif [[ ${HOST:r} != "embepe" ]]; then
-    # Default binaries
-    PATH1="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-
-    # Git
-    PATH2="/usr/local/git/bin"
-
-    # ~/bin
-    PATH3="$HOME/bin"
-
-    export PATH="$PATH1:$PATH2:$PATH3"
-fi
+export PATH="$PATH0:$PATH1"
 
 #-------------------------------------------------------------------------------------
 # COLOURS
@@ -57,13 +19,6 @@ eval "`dircolors -b ~/.dircolorsrc`"
 #-------------------------------------------------------------------------------------
 # GENERAL
 #-------------------------------------------------------------------------------------
-export PAGER=less
-export EDITOR=vim
-export VISUAL=vim
-export LANG=en_GB.UTF-8
-export GPG_TTY=$(tty)
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;34'
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -81,12 +36,6 @@ setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
 setopt extendedglob
-
-if [[ ${HOST:r} == "embepe" ]]; then
-    export GIT_EDITOR='mvim -fg'
-elif [[ ${HOST:r} != "embepe" ]]; then
-    export GIT_EDITOR='vim -fg'
-fi
 
 #-------------------------------------------------------------------------------------
 # ALIASES
@@ -192,7 +141,6 @@ zstyle ':completion:*:hosts' hosts $hosts
 #-------------------------------------------------------------------------------------
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
-
 bindkey "^[[H" beginning-of-line
 bindkey "^[[1~" beginning-of-line
 bindkey "^[OH" beginning-of-line
