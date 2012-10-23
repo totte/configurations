@@ -2,10 +2,10 @@
 # PATH
 #-------------------------------------------------------------------------------------
 
-# System binaries
+# System executables
 PATH0="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
-# My binaries
+# My executables
 PATH1="$HOME/bin"
 
 export PATH="$PATH0:$PATH1"

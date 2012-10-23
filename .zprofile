@@ -1,10 +1,20 @@
-export EDITOR='vim'
-export GIT_EDITOR='vim -fg'
-export GPG_TTY=$(tty)
-export GREP_COLOR='1;34'
-export GREP_OPTIONS='--color=auto'
-export LANG='en_GB.UTF-8'
-export PAGER='less'
-export PINENTRY='/usr/bin/pinentry-kwallet'
-export SSH_ASKPASS='/usr/bin/ksshaskpass'
-export VISUAL='vim'
+EDITOR='vim'
+GIT_EDITOR='vim -fg'
+GPG_TTY=$(tty)
+GREP_COLOR='1;34'
+GREP_OPTIONS='--color=auto'
+LANG='en_GB.UTF-8'
+PAGER='less'
+PINENTRY='/usr/bin/pinentry-kwallet'
+SSH_ASKPASS='/usr/bin/ksshaskpass'
+VISUAL='vim'
+export $EDITOR
+export $GIT_EDITOR
+export $GPG_TTY
+export $GREP_COLOR
+export $GREP_OPTIONS
+export $LANG
+export $PAGER
+export $PINENTRY
+export $SSH_ASKPASS
+export $VISUAL
