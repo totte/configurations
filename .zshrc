@@ -92,6 +92,7 @@ elif [[ $(uname) == "Linux" ]]; then
             alias pkgd='whoneeds' # List packages depending on specified package
             alias poweroff='sudo systemctl poweroff'
             alias reboot='sudo systemctl reboot'
+            alias rename='perl-rename'
             alias nw='wicd-curses'
             ;;
         (Debian|Ubuntu) # Debian and Ubuntu

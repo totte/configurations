@@ -1,5 +1,5 @@
 EDITOR='vim'
-GIT_EDITOR='vim -fg'
+GIT_EDITOR='vim -f'
 GPG_TTY=$(tty)
 GREP_COLOR='1;34'
 GREP_OPTIONS='--color=auto'

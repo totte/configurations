@@ -10,8 +10,8 @@ fi
 # Kwallet
 kwalletd &
 
-# Keychain (SSH & GPG)
-#eval `keychain --eval ~/.ssh/id_rsa 1338F289` &
+# Keychain
+eval `keychain --eval --clear id_rsa 1338F289`
 
 # Hide mouse cursor when idle
 unclutter -idle 4 &
