@@ -26,8 +26,8 @@ myFocusedBorderColor    =   "#080808"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
         ((modm, xK_Tab), sendMessage NextLayout),
-        ((modm, xK_q), spawn "slock"),
-        ((modm .|. shiftMask, xK_q), io (exitWith ExitSuccess)),
+        ((modm, xK_Escape), spawn "slock"),
+        ((modm .|. shiftMask, xK_Escape), io (exitWith ExitSuccess)),
         ((modm, xK_r), spawn "xmonad --recompile; xmonad --restart"),
         ((modm, xK_Return), spawn $ XMonad.terminal conf),
         ((modm, xK_n), prevWS),
@@ -108,7 +108,7 @@ myPP = xmobarPP
         ppHidden = xmobarColor "#646464" "",
         ppHiddenNoWindows = xmobarColor "#646464" "",
         ppUrgent = xmobarColor "#ff0000" "",
-        ppTitle = xmobarColor "#ffffff" "" . shorten 64,
+        ppTitle = xmobarColor "#ffffff" "" . shorten 86,
         ppLayout = xmobarColor "#aaaaaa" "",
         ppSep = " » ",
         ppWsSep = " "
