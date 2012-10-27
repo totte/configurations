@@ -40,7 +40,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         ((modm, xK_m), windows W.swapMaster),           -- Make focused window master window
         ((modm, xK_comma), sendMessage Shrink),         -- Shrink the master area
         ((modm, xK_period), sendMessage Expand),        -- Expand the master area
-        ((modm, xK_space), spawn "~/bin/drunner.sh")
+        ((modm, xK_space), spawn "~/bin/drunner.sh"),
+        ((0, 0x1008FF11), spawn "amixer set Master 2-"),
+        ((0, 0x1008FF12), spawn "amixer set Master toggle"),
+        ((0, 0x1008FF13), spawn "amixer set Master 2+")
     ]
     ++
     -- mod-[1..9], Switch to workspace N
@@ -66,25 +69,27 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- Layouts
 --------------------------------------------------------------------------------------
 
-myFocus = gaps [(L,256), (R,256)] $ spacing 4 $ limitWindows 2 $ Dishes nmaster ratio
-    where
-        -- The default number of windows in the master pane
-        nmaster = 1
-        -- Default proportion of screen occupied by other panes
-        ratio = 1/5
-
 myFull = Full
 
-myDiscs = spacing 4 $ limitWindows 5 $ Dishes nmaster ratio
+myWide = Mirror $ Tall nmaster delta ratio
+    where
+        -- The default number of windows in the master pane
+        nmaster = 1
+        -- Percent of screen to increment by when resizing panes
+        delta   = 4/100
+        -- Default proportion of screen occupied by master pane
+        ratio   = 80/100
+
+myDish = limitWindows 5 $ Dishes nmaster ratio
     where
         -- The default number of windows in the master pane
         nmaster = 1
         -- Default proportion of screen occupied by other panes
-        ratio = 1/5
+        ratio = 1/4
 
 myLayout =
     avoidStruts $
-    noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Focus"] myFocus ||| renamed [Replace "Discs"] myDiscs
+    noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Wide"] myWide ||| renamed [Replace "Discs"] myDish
 
 --------------------------------------------------------------------------------------
 -- Window rules
