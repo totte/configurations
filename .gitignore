@@ -1,9 +1,5 @@
 .kde4
-.mpd/database
-.mpd/log
-.mpd/pid
-.mpd/playlists
-.mpd/state
+.mpd/
 .netrwhist
 .opera
 .xmonad/xmonad.errors
