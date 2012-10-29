@@ -1,10 +1,12 @@
-.netrwhist
-.xmonad/xmonad.errors
+.kde4
 .mpd/database
 .mpd/log
 .mpd/pid
 .mpd/playlists
 .mpd/state
+.netrwhist
+.opera
+.xmonad/xmonad.errors
 akonadi
 away.log
 qtfm
