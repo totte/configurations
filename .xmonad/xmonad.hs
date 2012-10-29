@@ -15,7 +15,7 @@ import qualified Data.Map as M
 myTerminal              =   "konsole"
 myBorderWidth           =   4
 myModMask               =   mod4Mask
-myWorkspaces            =   ["ZSH","VIM","QTC","WEB","IRC","PIM","MSC","LOG","SYS","NET"]
+myWorkspaces            =   ["ZSH","VIM","QTC","WEB","IRC","PIM","MPD","GFX","LOG","NET"]
 myNormalBorderColor     =   "#080808"
 myFocusedBorderColor    =   "#080808"
 
@@ -25,24 +25,61 @@ myFocusedBorderColor    =   "#080808"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
+        -- Switch to next layout
         ((modm, xK_Tab), sendMessage NextLayout),
+        
+        -- Lock screen
         ((modm, xK_Escape), spawn "slock"),
+        
+        -- Exit session
         ((modm .|. shiftMask, xK_Escape), io (exitWith ExitSuccess)),
+        
+        -- Recompile and restart XMonad
         ((modm, xK_r), spawn "xmonad --recompile; xmonad --restart"),
+        
+        -- Run terminal
         ((modm, xK_Return), spawn $ XMonad.terminal conf),
+        
+        -- Switch to previous workspace
         ((modm, xK_n), prevWS),
+        
+        -- Move focused window to previous workspace
         ((modm .|. shiftMask, xK_n), shiftToPrev >> prevWS),
-        ((modm, xK_e), windows W.focusDown),            -- Move focus to the previous window
-        ((modm, xK_i), windows W.focusUp),              -- Move focus to the next window
+        
+        -- Move focus to the previous window
+        ((modm, xK_e), windows W.focusDown),
+        
+        -- Move focus to the next window
+        ((modm, xK_i), windows W.focusUp),
+        
+        -- Switch to next workspace
         ((modm, xK_o), nextWS),
+        
+        -- Move focused window to next workspace
         ((modm .|. shiftMask, xK_o), shiftToNext >> nextWS),
-        ((modm, xK_k), kill),                           -- close focused window
-        ((modm, xK_m), windows W.swapMaster),           -- Make focused window master window
-        ((modm, xK_comma), sendMessage Shrink),         -- Shrink the master area
-        ((modm, xK_period), sendMessage Expand),        -- Expand the master area
+        
+        -- Kill focused window
+        ((modm, xK_k), kill),
+        
+        -- Make focused window master window
+        ((modm, xK_m), windows W.swapMaster),
+        
+        -- Shrink the master area
+        ((modm, xK_comma), sendMessage Shrink),
+        
+        -- Expand the master area
+        ((modm, xK_period), sendMessage Expand),
+        
+        -- Run drunner.sh
         ((modm, xK_space), spawn "~/bin/drunner.sh"),
+        
+        -- Lower master volume
         ((0, 0x1008FF11), spawn "amixer set Master 2-"),
+        
+        -- Toggle master output
         ((0, 0x1008FF12), spawn "amixer set Master toggle"),
+        
+        -- Raise master volume
         ((0, 0x1008FF13), spawn "amixer set Master 2+")
     ]
     ++
@@ -58,11 +95,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     [
-        ((modm, button1), (\w -> focus w >> mouseMoveWindow w
-            >> windows W.shiftMaster)), -- float and move window
-        ((modm, button2), (\w -> focus w >> windows W.shiftMaster)), -- raise window
-        ((modm, button3), (\w -> focus w >> mouseResizeWindow w
-            >> windows W.shiftMaster)) -- float and resize window
+        -- Float and move window
+        ((modm, button1), (\w -> focus w >> mouseMoveWindow w >> windows W.shiftMaster)),
+        
+        -- Float and resize window
+        ((modm, button2), (\w -> focus w >> mouseResizeWindow w >> windows W.shiftMaster)),
+        
+        -- Push back into tiling
+        ((modm, button3), windows . W.sink)
     ]
 
 --------------------------------------------------------------------------------------

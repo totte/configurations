@@ -1,4 +1,3 @@
-away.log
 .netrwhist
 .xmonad/xmonad.errors
 .mpd/database
@@ -6,3 +5,9 @@ away.log
 .mpd/pid
 .mpd/playlists
 .mpd/state
+akonadi
+away.log
+qtfm
+transmission
+Nokia
+QMPDClient
