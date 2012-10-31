@@ -1,21 +1,24 @@
 import XMonad
 import XMonad.Actions.CycleWS
+import XMonad.Actions.GridSelect
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Dishes
 import XMonad.Layout.Gaps
+import XMonad.Layout.Grid
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
+import XMonad.Layout.SimplestFloat
 import XMonad.Layout.Spacing
 import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
 myTerminal              =   "konsole"
-myBorderWidth           =   4
+myBorderWidth           =   2
 myModMask               =   mod4Mask
-myWorkspaces            =   ["ZSH","VIM","QTC","WEB","IRC","PIM","MPD","GFX","LOG","NET"]
+myWorkspaces            =   ["ZSH","VIM","NET","ETC"]
 myNormalBorderColor     =   "#080808"
 myFocusedBorderColor    =   "#080808"
 
@@ -80,7 +83,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         ((0, 0x1008FF12), spawn "amixer set Master toggle"),
         
         -- Raise master volume
-        ((0, 0x1008FF13), spawn "amixer set Master 2+")
+        ((0, 0x1008FF13), spawn "amixer set Master 2+"),
+
+        -- Grid stuff
+        ((modm, xK_g), goToSelected defaultGSConfig),
+        ((modm, xK_s), spawnSelected defaultGSConfig ["konsole","opera","qtfm"])
     ]
     ++
     -- mod-[1..9], Switch to workspace N
@@ -127,9 +134,13 @@ myDish = limitWindows 5 $ Dishes nmaster ratio
         -- Default proportion of screen occupied by other panes
         ratio = 1/4
 
+myFloat = simplestFloat
+
+myGrid = Grid
+
 myLayout =
     avoidStruts $
-    noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Wide"] myWide ||| renamed [Replace "Discs"] myDish
+    noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Wide"] myWide ||| renamed [Replace "Discs"] myDish ||| renamed [Replace "Float"] myFloat ||| renamed [Replace "Grid"] myGrid
 
 --------------------------------------------------------------------------------------
 -- Window rules

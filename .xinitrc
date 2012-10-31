@@ -7,8 +7,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Keyboard layout
+setxkbmap us -variant colemak
+
 # Background image
 hsetroot -fill $HOME/images/haskell.png &
+
+# Mouse cursor
+xsetroot -cursor_name left_ptr
 
 # Kwallet
 kwalletd &
