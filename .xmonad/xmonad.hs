@@ -73,9 +73,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         -- Expand the master area
         ((modm, xK_period), sendMessage Expand),
         
-        -- Run drunner.sh
-        ((modm, xK_space), spawn "~/bin/drunner.sh"),
-        
         -- Lower master volume
         ((0, 0x1008FF11), spawn "amixer set Master 2-"),
         
@@ -85,9 +82,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         -- Raise master volume
         ((0, 0x1008FF13), spawn "amixer set Master 2+"),
 
-        -- Grid stuff
-        ((modm, xK_g), goToSelected defaultGSConfig),
-        ((modm, xK_s), spawnSelected defaultGSConfig ["konsole","opera","qtfm"])
+        -- Grid: select and switch to workspace
+        ((modm, xK_s), gridselectWorkspace defaultGSConfig (W.view)),
+
+        -- Grid: select and switch to window
+        ((modm, xK_t), goToSelected defaultGSConfig),
+
+        -- Grid: spawn program
+        ((modm, xK_space), spawnSelected defaultGSConfig ["digikam","konsole","kontact","konversation","opera","qtcreator","qtfm","qmpdclient","smplayer","transmission-qt"])
     ]
     ++
     -- mod-[1..9], Switch to workspace N
