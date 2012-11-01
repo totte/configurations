@@ -1,31 +1,26 @@
 import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Actions.GridSelect
+import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Layout.Dishes
-import XMonad.Layout.Gaps
-import XMonad.Layout.Grid
-import XMonad.Layout.LimitWindows
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
 import XMonad.Layout.SimplestFloat
-import XMonad.Layout.Spacing
+import XMonad.Prompt
+import XMonad.Prompt.Shell
 import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
 myTerminal              =   "konsole"
 myBorderWidth           =   2
-myModMask               =   mod4Mask
-myWorkspaces            =   ["ZSH","VIM","NET","ETC"]
+myFocusedBorderColor    =   "#2C72C7"
 myNormalBorderColor     =   "#080808"
-myFocusedBorderColor    =   "#080808"
+myWorkspaces            =   ["ZSH","VIM","QTC","WEB","IRC","PIM","MPD","ETC"]
+myModMask               =   mod4Mask
 
---------------------------------------------------------------------------------------
--- Key bindings
---------------------------------------------------------------------------------------
-
+-- Keybindings
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
         -- Switch to next layout
@@ -82,25 +77,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         -- Raise master volume
         ((0, 0x1008FF13), spawn "amixer set Master 2+"),
 
-        -- Grid: select and switch to workspace
-        ((modm, xK_s), gridselectWorkspace defaultGSConfig (W.view)),
+        -- Screenshot
+        ((modm, xK_a), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/pictures/screenshots/' -t 10"),
 
         -- Grid: select and switch to window
         ((modm, xK_t), goToSelected defaultGSConfig),
 
-        -- Grid: spawn program
-        ((modm, xK_space), spawnSelected defaultGSConfig ["digikam","konsole","kontact","konversation","opera","qtcreator","qtfm","qmpdclient","smplayer","transmission-qt"])
+        -- Prompt: run program
+        ((modm, xK_space), shellPrompt defaultXPConfig)
     ]
-    ++
-    -- mod-[1..9], Switch to workspace N
-    -- mod-shift-[1..9], Move client to workspace N
-    [((m .|. modm, k), windows $ f i)
-    | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-    , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-
---------------------------------------------------------------------------------------
--- Mouse bindings
---------------------------------------------------------------------------------------
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -114,54 +99,41 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
         ((modm, button3), windows . W.sink)
     ]
 
---------------------------------------------------------------------------------------
 -- Layouts
---------------------------------------------------------------------------------------
-
 myFull = Full
-
 myWide = Mirror $ Tall nmaster delta ratio
     where
-        -- The default number of windows in the master pane
         nmaster = 1
-        -- Percent of screen to increment by when resizing panes
         delta   = 4/100
-        -- Default proportion of screen occupied by master pane
         ratio   = 80/100
-
-myDish = limitWindows 5 $ Dishes nmaster ratio
-    where
-        -- The default number of windows in the master pane
-        nmaster = 1
-        -- Default proportion of screen occupied by other panes
-        ratio = 1/4
-
 myFloat = simplestFloat
-
-myGrid = Grid
-
 myLayout =
     avoidStruts $
-    noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Wide"] myWide ||| renamed [Replace "Discs"] myDish ||| renamed [Replace "Float"] myFloat ||| renamed [Replace "Grid"] myGrid
+        noBorders (renamed [Replace "Full"] myFull) ||| renamed [Replace "Wide"] myWide ||| renamed [Replace "Float"] myFloat
 
---------------------------------------------------------------------------------------
 -- Window rules
---------------------------------------------------------------------------------------
-
 myManageHook = composeAll
     [
-        className =? "MPlayer" --> doFloat,
-        className =? "Gimp" --> doFloat
+        -- className =? "qtcreator" --> doShift "1",
+        -- className =? "opera" --> doShift "2",
+        -- className =? "transmission-qt" --> doShift "2",
+        -- className =? "kontact" --> doShift "3",
+        -- className =? "konversation" --> doShift "3",
+        -- className =? "digikam" --> doShift "4",
+        -- className =? "qmpdclient" --> doShift "4",
+        -- className =? "smplayer" --> doShift "4",
+        className =? "qtpanel" --> doFloat,
+        className =? "xmessage" --> doFloat
     ]
 
---------------------------------------------------------------------------------------
--- Statusbar
---------------------------------------------------------------------------------------
+-- ??? rules
+myLogHook = updatePointer (Relative 0.98 0.94)
 
+-- Panel
 myBar = "xmobar"
 myPP = xmobarPP
     {
-        ppCurrent = wrap "<fc=#ffffff,#0055FF> " " </fc>",
+        ppCurrent = wrap "<fc=#ffffff,#2C72C7> " " </fc>",
         ppVisible = xmobarColor "#ff0000" "",
         ppHidden = xmobarColor "#646464" "",
         ppHiddenNoWindows = xmobarColor "#646464" "",
@@ -172,12 +144,7 @@ myPP = xmobarPP
         ppWsSep = " "
     }
 
---------------------------------------------------------------------------------------
--- Run XMonad
---------------------------------------------------------------------------------------
-
-main = xmonad =<< statusBar myBar myPP (\c -> (modMask c, xK_b)) myConfig
-
+-- ???
 myConfig = defaultConfig
     {
         terminal = myTerminal,
@@ -189,5 +156,9 @@ myConfig = defaultConfig
         keys = myKeys,
         mouseBindings = myMouseBindings,
         layoutHook = myLayout,
-        manageHook = myManageHook
+        manageHook = myManageHook,
+        logHook = myLogHook
     }
+
+-- Main thingy
+main = xmonad =<< statusBar myBar myPP (\c -> (modMask c, xK_b)) myConfig

@@ -3,9 +3,11 @@
 .netrwhist
 .opera
 .xmonad/xmonad.errors
+.xmonad/history
 akonadi
 away.log
 qtfm
 transmission
 Nokia
 QMPDClient
+QtProject

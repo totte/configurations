@@ -2,10 +2,10 @@ Config
 	{
                 font = "xft:Ubuntu:style=Bold:size=14",
 		bgColor = "#000000",
-		fgColor = "#0055FF",
+		fgColor = "#2C72C7",
 		border = NoBorder,
 		borderColor = "#000000"
-		position = Static { xpos = 0, ypos = 0, width = 1680, height = 32 },
+		position = TopSize C 100 32
 		lowerOnStart = True,
 		commands =
 			[

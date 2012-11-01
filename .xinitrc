@@ -11,7 +11,7 @@ fi
 setxkbmap us -variant colemak
 
 # Background image
-hsetroot -fill $HOME/images/haskell.png &
+hsetroot -fill $HOME/pictures/haskell.png &
 
 # Mouse cursor
 xsetroot -cursor_name left_ptr
