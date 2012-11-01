@@ -54,7 +54,7 @@
     "rename-partial-files": true, 
     "rpc-authentication-required": false, 
     "rpc-enabled": false, 
-    "rpc-password": "{e40fe444fe34d7b7f6a33d2160b78370053b68c2b7LM/rkf", 
+    "rpc-password": "", 
     "rpc-port": 9091, 
     "rpc-username": "", 
     "rpc-whitelist": "127.0.0.1", 
