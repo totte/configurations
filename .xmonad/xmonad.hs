@@ -4,6 +4,7 @@ import XMonad.Actions.GridSelect
 import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
 import XMonad.Layout.SimplestFloat
@@ -78,7 +79,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         ((0, 0x1008FF13), spawn "amixer set Master 2+"),
 
         -- Screenshot
-        ((modm, xK_a), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/pictures/screenshots/' -t 10"),
+        ((modm, xK_a), spawn "scrot '%Y-%m-%d_$wx$h.png' -t 10 -e 'mv $f ~/pictures/screenshots/' -e 'mv $m ~/pictures/screenshots/'"),
 
         -- Grid: select and switch to window
         ((modm, xK_t), goToSelected defaultGSConfig),
@@ -114,16 +115,15 @@ myLayout =
 -- Window rules
 myManageHook = composeAll
     [
-        -- className =? "qtcreator" --> doShift "1",
-        -- className =? "opera" --> doShift "2",
-        -- className =? "transmission-qt" --> doShift "2",
-        -- className =? "kontact" --> doShift "3",
-        -- className =? "konversation" --> doShift "3",
+        className =? "kontact" --> doShift "PIM",
+        className =? "konversation" --> doShift "IRC",
+        className =? "opera" --> doShift "WEB",
+        className =? "qmpdclient" --> doShift "MPD",
+        className =? "qtcreator" --> doShift "QTC",
+        className =? "transmission-qt" --> doShift "WEB",
         -- className =? "digikam" --> doShift "4",
-        -- className =? "qmpdclient" --> doShift "4",
         -- className =? "smplayer" --> doShift "4",
-        className =? "qtpanel" --> doFloat,
-        className =? "xmessage" --> doFloat
+        className =? "xmessage" --> doCenterFloat
     ]
 
 -- ??? rules
