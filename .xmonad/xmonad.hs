@@ -16,7 +16,7 @@ import qualified Data.Map as M
 
 myTerminal              =   "konsole"
 myBorderWidth           =   2
-myFocusedBorderColor    =   "#2C72C7"
+myFocusedBorderColor    =   "#2c72c7"
 myNormalBorderColor     =   "#080808"
 myWorkspaces            =   ["ZSH","VIM","QTC","WEB","IRC","PIM","MPD","ETC"]
 myModMask               =   mod4Mask
@@ -85,7 +85,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         ((modm, xK_t), goToSelected defaultGSConfig),
 
         -- Prompt: run program
-        ((modm, xK_space), shellPrompt defaultXPConfig)
+        ((modm, xK_space), shellPrompt myXPConfig)
     ]
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -126,14 +126,14 @@ myManageHook = composeAll
         className =? "xmessage" --> doCenterFloat
     ]
 
--- ??? rules
+-- Other rules
 myLogHook = updatePointer (Relative 0.98 0.94)
 
 -- Panel
 myBar = "xmobar"
 myPP = xmobarPP
     {
-        ppCurrent = wrap "<fc=#ffffff,#2C72C7> " " </fc>",
+        ppCurrent = wrap "<fc=#ffffff,#2c72c7> " " </fc>",
         ppVisible = xmobarColor "#ff0000" "",
         ppHidden = xmobarColor "#646464" "",
         ppHiddenNoWindows = xmobarColor "#646464" "",
@@ -142,6 +142,20 @@ myPP = xmobarPP
         ppLayout = xmobarColor "#aaaaaa" "",
         ppSep = " » ",
         ppWsSep = " "
+    }
+
+-- Prompt
+myXPConfig = defaultXPConfig
+    {
+        font = "xft:Ubuntu:style=Bold:size=14",
+        bgColor = "#000000",
+        fgColor = "#ffffff",
+        bgHLight = "#000000",
+        fgHLight = "#2c72c7",
+        borderColor = "#323232",
+        promptBorderWidth = 0,
+        position = Top,
+        height = 32
     }
 
 -- ???
