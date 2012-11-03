@@ -12,7 +12,7 @@ Config
 				Run Date "%y%m%0d %H:%M  " "date" 10,
 				Run BatteryP ["BAT0"]
                                     ["-t", "<fc=#aaaaaa><left>%</fc><acstatus> ", "--", "-O", "*", "-o", ""]
-                                    600,
+                                    10,
                                 Run StdinReader
 			],
 		sepChar = "%",

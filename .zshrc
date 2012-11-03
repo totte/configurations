@@ -86,6 +86,7 @@ elif [[ $(uname) == "Linux" ]]; then
             alias equa='alsamixer -D equal'
             alias pkgs='pacman -Ss' # Search
             alias pkgi='sudo pacman -S' # Install
+            alias pkgc='sudo pacman -Sc' # Clean cache
             alias pkgu='sudo pacman -Syu' # Update & Upgrade
             alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
             alias pkgl='pacman -Q' # List installed packages

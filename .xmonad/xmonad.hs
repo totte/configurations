@@ -36,7 +36,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         ((modm, xK_Tab), sendMessage NextLayout),
         ((modm, xK_Escape), spawn "slock"),
         ((modm .|. shiftMask, xK_Escape), io (exitWith ExitSuccess)),
-        ((modm, xK_r), spawn "xmonad --recompile; xmonad --restart"),
+        ((modm, xK_r), spawn "xmonad --restart"),
         ((modm, xK_Return), spawn $ XMonad.terminal conf),
         ((modm, xK_n), prevWS),
         ((modm .|. shiftMask, xK_n), shiftToPrev >> prevWS),
