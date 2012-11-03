@@ -93,7 +93,7 @@ myManageHook = composeAll
 -- Panel
 myPP = xmobarPP
     {
-        ppCurrent = xmobarColor myBlueColor "",
+        ppCurrent = xmobarColor myWhiteColor "",
         ppVisible = xmobarColor myBlueColor "",
         ppHidden = xmobarColor myGreyColor "",
         ppHiddenNoWindows = xmobarColor myDarkGreyColor "",

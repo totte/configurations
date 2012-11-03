@@ -2,7 +2,7 @@ Config
 	{
                 font = "xft:Ubuntu:style=Bold:size=14",
 		bgColor = "#000000",
-		fgColor = "#2C72C7",
+		fgColor = "#2c72c7",
 		border = NoBorder,
 		borderColor = "#000000"
 		position = TopSize C 100 32
@@ -10,9 +10,12 @@ Config
 		commands =
 			[
 				Run Date "%y%m%0d %H:%M  " "date" 10,
-				Run StdinReader
+				Run BatteryP ["BAT0"]
+                                    ["-t", "<fc=#aaaaaa><left>%</fc><acstatus> ", "--", "-O", "*", "-o", ""]
+                                    600,
+                                Run StdinReader
 			],
 		sepChar = "%",
 		alignSep = "}{",
-		template = " %StdinReader% }{ <fc=#868686>%date%</fc>"
+		template = " %StdinReader% }{ %battery% <fc=#868686>%date%</fc>"
 	}
