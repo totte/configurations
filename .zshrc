@@ -6,7 +6,7 @@
 PATH0="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 # My executables
-PATH1="$HOME/bin"
+PATH1="$HOME/code/scripts"
 
 export PATH="$PATH0:$PATH1"
 
