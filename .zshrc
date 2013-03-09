@@ -1,24 +1,34 @@
-#-------------------------------------------------------------------------------------
-# PATH
-#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Path
+#-------------------------------------------------------------------------------
+export PATH="$HOME/binaries:$HOME/code/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
-# System executables
-PATH0="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+#-------------------------------------------------------------------------------
+# Miscellaneous
+#-------------------------------------------------------------------------------
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export GREP_OPTIONS='--color=auto'
+export LANG='en_GB.UTF-8'
+setopt prompt_subst
+setopt correctall
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
+setopt extendedglob
 
-# My executables
-PATH1="$HOME/code/scripts"
-
-export PATH="$PATH0:$PATH1"
-
-#-------------------------------------------------------------------------------------
-# COLOURS
-#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Colours
+#-------------------------------------------------------------------------------
 autoload colors; colors;
-eval "`dircolors -b ~/.dircolorsrc`"
+#LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;\
+#33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
+#export LS_COLORS
 
-#-------------------------------------------------------------------------------------
-# GENERAL
-#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# History
+#-------------------------------------------------------------------------------
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -30,105 +40,119 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 setopt share_history
-setopt prompt_subst
-setopt correctall
-setopt auto_menu
-setopt complete_in_word
-setopt always_to_end
-setopt extendedglob
 
-#-------------------------------------------------------------------------------------
-# ALIASES
-#-------------------------------------------------------------------------------------
-alias rezsh='. ~/.zshrc'
-alias _='sudo '
-alias l='ls -lh --color'
-alias la='ls -lAh --color'
+#-------------------------------------------------------------------------------
+# Aliases
+#-------------------------------------------------------------------------------
+alias _='sudo'
 alias -- -='cd -'
 alias ..='cd ..'
+alias cp='cp -v'
+alias d='dirs -v'
 alias df='df -h'
 alias g='git'
-alias tmux='tmux attach'
-alias cp='cp -v'
+alias l='ls -lh --color'
+alias la='ls -lAh --color'
+alias md='mkdir -pv'
+alias mp='makepkg -cs'
 alias mv='mv -v'
+alias q='/usr/bin/vim -g'
+alias rez='. ~/.zshrc'
 alias rm='rm -v'
-alias rmdir='rmdir -v'
-alias d='dirs -v'
+alias rmd='rmdir -v'
+alias tm='tmux attach'
+alias v='/usr/bin/vim'
+unwrap(){
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -xvjf $1;;
+            *.tar.gz)   tar -xvzf $1;;
+            *.bz2)      bunzip2 $1;;
+            *.rar)      rar -x $1;;
+            *.gz)       gunzip $1;;
+            *.tar)      tar -xvf $1;;
+            *.tbz2)     tar -xvjf $1;;
+            *.tgz)      tar -xvzf $1;;
+            *.zip)      unzip $1;;
+            *.Z)        uncompress $1;;
+            *.7z)       7z -x $1;;
+            *)          echo "'$1': Unknown format.";;
+        esac
+    else
+        echo "'$1': Invalid format."
+    fi
+}
+wrap(){tar -cvzf "${1%%/}.tar.gz" "${1%%/}/";}
 bu(){cp -v $1 ${1}.backup}
 cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
-md(){mkdir -p $1; cd $1}
+mdcd(){mkdir -pv $1; cd $1}
+
+# Python packages (/usr/lib/python3.x/site-packages)
+alias pipi='sudo pip install' # Install
+alias pipl='pip freeze' # List
+alias pipr='sudo pip uninstall' # Remove
+alias pips='pip search' # Search
+alias pipu='sudo pip install -U' # Update
 
 # OS-specific aliases
-if [[ $(uname) == "Darwin" ]]; then
-    # Mac OS X
-    alias pkgs='port search' # Search
-    alias pkgi='sudo port install' # Install
-    alias pkgu='sudo port selfupdate && sudo port upgrade outdated' # Update & Upgrade
-    alias pkgr='sudo port uninstall --follow-dependencies' # Remove package and unused dependencies
-    alias pkgl='port installed' # List installed packages
-    alias python='/usr/local/bin/python3'
-    alias pip='pip-3.2'
-    alias pips='pip-3.2 search'
-    alias pipi='pip-3.2 install'
-    alias pipu='pip-3.2 install -U'
-    alias pipr='pip-3.2 uninstall'
-    alias pipl='pip-3.2 freeze'
-    alias v='mvim'
-elif [[ $(uname) == "Linux" ]]; then
-    alias pips='pip search'
-    alias pipi='pip install'
-    alias pipu='pip install -U'
-    alias pipr='pip uninstall'
-    alias pipl='pip freeze'
-    alias v='vim'
-    case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
-        (Arch) # Arch Linux
-            alias equa='alsamixer -D equal'
-            alias pkgs='pacman -Ss' # Search
-            alias pkgi='sudo pacman -S' # Install
-            alias pkgc='sudo pacman -Sc' # Clean cache
-            alias pkgu='sudo pacman -Syu' # Update & Upgrade
-            alias pkgr='sudo pacman -Rns' # Remove package, configuration backups and unused dependencies
-            alias pkgl='pacman -Q' # List installed packages
-            alias pkgd='whoneeds' # List packages depending on specified package
-            alias poweroff='sudo systemctl poweroff'
-            alias reboot='sudo systemctl reboot'
-            alias rename='perl-rename'
-            alias nw='wicd-curses'
-            ;;
-        (Debian|Ubuntu) # Debian and Ubuntu
-            alias pkgs='aptitude search' # Search
-            alias pkgi='sudo aptitude install' # Install
-            alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update & Upgrade
-            alias pkgr='sudo aptitude purge' # Remove package, configuration files and unused dependencies
-            alias pkgl='aptitude search -F "%p" "~i"' # List installed packages
-            alias reboot='sudo shutdown -r now'
-            alias shutdown='sudo shutdown -h now'
-            ;;
-    esac
-fi
+case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
+    (Arch)
+        alias alsae='alsamixer -D equal'
+        alias alsam='alsamixer'
+        alias jc='sudo journalctl'
+        alias mpd='mpd ~/.config/mpd.conf'
+        alias py='ipython'
+        alias pkgc='sudo pacman -Sc' # Clean cache
+        alias pkgd='whoneeds' # List dependants
+        alias pkgi='sudo pacman -S' # Install
+        alias pkgl='pacman -Q' # List
+        alias pkgr='sudo pacman -Rns' # Remove
+        alias pkgs='pacman -Ss' # Search
+        alias pkgu='sudo pacman -Syu' # Update
+        alias pkgy='sudo pacman -Syy' # Force synchronization
+        alias rename='perl-rename' # /usr/bin/rename isn't the one I'm used to
+        alias sc='sudo systemctl'
+        alias syso='sudo systemctl poweroff'
+        alias sysr='sudo systemctl reboot'
+        alias syss='sudo pm-suspend'
+        ;;
+    (Debian|Ubuntu)
+        alias pkgi='sudo aptitude install' # Install
+        alias pkgl='aptitude search -F "%p" "~i"' # List installed packages
+        alias pkgr='sudo aptitude purge' # Remove
+        alias pkgs='aptitude search' # Search
+        alias pkgu='sudo aptitude update && sudo aptitude upgrade' # Update
+        alias syso='sudo shutdown -h now'
+        alias sysr='sudo shutdown -r now'
+        ;;
+esac
 
 # Host-specific aliases
 if [[ ${HOST:r} == "betre" ]]; then
-    alias poff='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
+    alias syso='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
 
-#-------------------------------------------------------------------------------------
-# TAB COMPLETION
-#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Tab completion
+#-------------------------------------------------------------------------------
 autoload compinit
 compinit
 
 # Case-insensitive (all),partial-word and then substring completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*'\
+'l:|=* r:|=*'
 zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack\
+path-directories
 cdpath=(.)
 
 # Use /etc/hosts and known_hosts for hostname completion
-[ -r /etc/ssh/ssh_known_hosts ] && _global_ssh_hosts=(${${${${(f)"$(</etc/ssh/ssh_known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
-[ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
-[ -r /etc/hosts ] && : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || _etc_hosts=()
+[ -r /etc/ssh/ssh_known_hosts ] && _global_ssh_hosts=(${${${${(f)"$(</etc/ssh/\
+ssh_known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
+[ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)\
+"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
+[ -r /etc/hosts ] && : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/\
+hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || _etc_hosts=()
 hosts=(
     "$_global_ssh_hosts[@]"
     "$_ssh_hosts[@]"
@@ -138,9 +162,9 @@ hosts=(
 )
 zstyle ':completion:*:hosts' hosts $hosts
 
-#-------------------------------------------------------------------------------------
-# KEYBINDINGS
-#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Keybindings
+#-------------------------------------------------------------------------------
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 bindkey "^[[H" beginning-of-line
@@ -150,110 +174,23 @@ bindkey "^[[F"  end-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[OF" end-of-line
 
-# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
+# Make the delete key work instead of outputting a ~
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 bindkey "\e[3~" delete-char
 
-#-------------------------------------------------------------------------------------
-# TITLES
-#-------------------------------------------------------------------------------------
-tmux_title="%16<..<%~%<<"
-term_tab_title="%m"
-term_title="Terminal"
-
-function title(){
-  if [[ "$TERM" == screen* ]]; then
-    print -Pn "\ek$tmux_title:q\e\\"
-  elif [[ $TERM == rxvt* ]] || [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-    print -Pn "\e]2;$term_title:q\a"
-    print -Pn "\e]1;$term_tab_title:q\a"
-  fi
+#-------------------------------------------------------------------------------
+# Prompt
+#-------------------------------------------------------------------------------
+# TODO RPROMPT with time, HH:MM:SS, and date, YYYY-MM-DD
+# TODO Use a more basic PROMPT if in a TTY
+# TODO What to do if root user?
+function _update_ps1()
+{
+    export PROMPT="$(powerprompt.py $?)"
 }
-
-function title_precmd(){
-  title $tmux_title $term_tab_title $term_title
+precmd()
+{
+    _update_ps1
 }
-
-function title_preexec(){
-  emulate -L zsh
-  setopt extended_glob
-  local tmux_title=${1[(wr)^(*=*|sudo|ssh|-*)]}
-  title $tmux_title $term_tab_title $term_title
-}
-
-#-------------------------------------------------------------------------------------
-# ZSH VCS_INFO MODULE
-#-------------------------------------------------------------------------------------
-autoload -Uz vcs_info
-
-#zstyle    ':vcs_info:*+*:*'                debug true
-zstyle    ':vcs_info:*'                    enable git
-zstyle    ':vcs_info:git*'                formats                    '%fon $(rou)%b%f%c%u%m'
-zstyle    ':vcs_info:git*'                actionformats            '%fon $(rou)%b%f:$(rou)%a%f%c%u%m'
-zstyle    ':vcs_info:git*:*'                stagedstr                ' (staged)'
-zstyle    ':vcs_info:git*:*'                unstagedstr                ' (unstaged)'
-zstyle    ':vcs_info:git*:*'                get-revision true
-zstyle    ':vcs_info:git*:*'                check-for-changes true
-zstyle    ':vcs_info:git*+set-message:*'    hooks git-stash git-untracked
-
-# Display count of stashed changes
-function +vi-git-stash(){
-    local -a stashes
-
-    if [[ -s ${hook_com[base]}/.git/refs/stash ]] ; then
-        stashes=$(git stash list 2>/dev/null | wc -l)
-        if [[ $stashes > 1 ]] ; then
-            hook_com[misc]+=" (${stashes} stashes)"
-        else
-            hook_com[misc]+=" (${stashes} stash)"
-        fi
-    fi
-}
-
-# Display message if untracked files are present
-function +vi-git-untracked(){
-    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-        git status --porcelain | grep '??' &> /dev/null ; then
-        hook_com[unstaged]+=" (untracked files present)"
-    fi
-}
-
-function prompt_precmd(){
-    vcs_info
-}
-
-#-------------------------------------------------------------------------------------
-# PROMPT
-#-------------------------------------------------------------------------------------
-# Root or user?
-function rou(){
-    if [[ $UID -eq 0 ]] ; then
-        echo "%{$fg[magenta]%}"
-    else
-        echo "%{$fg[blue]%}"
-    fi
-}
-
-# Display ± if we're in a git repository and » at all other times
-function prompt_character(){
-    git branch >/dev/null 2>/dev/null && echo '%{$fg[white]%}±%{$reset_color%}' && return
-    echo '%{$fg[white]%}»%{$reset_color%}'
-}
-
-# Set the prompt
-function set_prompt(){
-    PROMPT="$(rou)%n %{$reset_color%}at $(rou)%m %{$reset_color%}in $(rou)%~ ${vcs_info_msg_0_}
- %{$reset_color%}$(prompt_character) "
-}
-
-#-------------------------------------------------------------------------------------
-# HOOKS
-#-------------------------------------------------------------------------------------
-autoload -U add-zsh-hook
-
-add-zsh-hook    preexec    title_preexec
-add-zsh-hook    precmd     title_precmd
-add-zsh-hook    precmd     prompt_precmd
-add-zsh-hook    precmd     set_prompt

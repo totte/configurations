@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/usr/bin/mpd /home/totte/.config/mpd.conf
+GenericName[en_US]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[en_US]=mpd
+Name=mpd
+OnlyShowIn=KDE;
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

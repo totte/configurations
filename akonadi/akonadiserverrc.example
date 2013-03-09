@@ -1,14 +1,16 @@
 [%General]
-Driver=QMYSQL
+Driver=QPSQL
 
-[QMYSQL]
+[QPSQL]
+StartServer=true
+ServerPath=/usr/bin/pg_ctl
+InitDbPath=/usr/bin/initdb
 Name=akonadi
 Host=localhost
-ServerPath=/usr/bin/mysqld
-StartServer=false
+Port=
 User=akonadiuser
 Password=
 Options=
 
 [Debug]
-Tracer=null
+Tracer=dbus

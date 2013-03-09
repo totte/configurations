@@ -21,12 +21,7 @@ endif
 "-------------------------------------------------------------------------------------
 " FONT
 "-------------------------------------------------------------------------------------
-if has("macunix")
-        " MacVim
-        set guifont=Inconsolata:h18
-        set fuoptions=maxvert,background:Normal
-elseif has("unix")
-        " GVim
-        "set guifont=Inconsolata\ XL\ 12
-        set guifont=Inconsolata\ 16
-endif
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 12
+highlight LineNr font='Droid Sans Mono Slashed for Powerline 10'
+highlight CursorLineNr font='Droid Sans Mono Slashed for Powerline 10'
+let g:Powerline_symbols = 'fancy'

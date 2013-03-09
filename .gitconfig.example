@@ -1,18 +1,19 @@
 [user]
 	name = totte
-	email = totte@tott.es
+        email = totte@tott.es
 [core]
+	editor = vim
         excludesfile = /home/totte/.globalgitignore
 [alias]
         a = add
         b = branch
         bd = branch -d
-        c = commit -S
-        ca = commit -S -a
-        cam = commit -S -am
+        c = commit
+        ca = commit -a
+        cam = commit -am
         cb = checkout -b
         ch = checkout
-        cm = commit -S -m
+        cm = commit -m
         d = diff
         done = !gittask.sh done        
         f = fetch
