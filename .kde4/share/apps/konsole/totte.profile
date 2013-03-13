@@ -1,7 +1,10 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=totte
-Font=Droid Sans Mono Slashed for Powerline,12,-1,5,50,0,0,0,0,0
+Font=Droid Sans Mono Slashed,12,-1,5,50,0,0,0,0,0
+
+[Encoding Options]
+DefaultEncoding=UTF-8
 
 [General]
 Environment=TERM=konsole-256color

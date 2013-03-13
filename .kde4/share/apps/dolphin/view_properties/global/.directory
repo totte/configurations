@@ -1,1 +1,9 @@
-/home/totte/.config/.kde4/share/apps/konqueror/view_properties/global/.directory
+[Dolphin]
+PreviewsShown=true
+Timestamp=2013,3,12,16,4,44
+Version=3
+ViewMode=1
+VisibleRoles=CustomizedDetails,Details_text,Details_size,Details_date,Details_owner,Details_group,Details_permissions,Details_destination
+
+[Settings]
+HiddenFilesShown=true

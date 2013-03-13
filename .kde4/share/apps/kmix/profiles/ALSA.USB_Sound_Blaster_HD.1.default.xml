@@ -9,8 +9,17 @@
 <profile id="ALSA.USB_Sound_Blaster_HD.1.default" name="USB Sound Blaster HD"/>
 <product vendor="Any Vendor" name="Generic Soundcard" />
 
+<control id="^Master:0$" subcontrols="*" show="simple" />
+<control id="^Front:0$" subcontrols="*" show="simple" />
+<control id="^Surround:0$" subcontrols="*" show="simple" />
+<control id="^Center:0$" subcontrols="*" show="simple" />
+<control id="^LFE:0$" subcontrols="*" show="simple" />
 <control id="^PCM:0$" subcontrols="*" show="simple" />
-<control id="^PCM_Capture_Source:0.penum$" subcontrols="*" show="extended" />
-<control id="^.*$" subcontrols="*" show="full" mandatory="true" />
+<control id="^CD:0$" subcontrols="*" show="simple" />
+<control id="^Headphone:0$" subcontrols="*" show="simple" />
+<control id="^Mic.*:0$" subcontrols="*" show="simple" />
+<control id="^DAC:0$" subcontrols="*" show="simple" />
+<control id="^ADC:0$" subcontrols="*" show="simple" />
+<control id="^.*$" subcontrols="*" show="extended" mandatory="true" />
 
 </soundcard>

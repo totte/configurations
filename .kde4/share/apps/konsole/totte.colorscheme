@@ -1,5 +1,5 @@
 [Background]
-Color=22,22,22
+Color=8,8,8
 
 [BackgroundIntense]
 Color=0,0,0
@@ -61,5 +61,5 @@ Color=255,255,255
 
 [General]
 Description=totte
-Opacity=1
+Opacity=0.96
 Wallpaper=

@@ -30,7 +30,7 @@ set nocompatible                " Disable Vi-like behaviour
 set nolist                      " Don't display unprintable characters
 "set nostartofline	         " Keep cursor in the same column if possible
 set noswapfile
-"set notitle                     " Disable 'Thanks for flying Vim' message
+set notitle                     " Disable 'Thanks for flying Vim' message
 set nowritebackup
 set number                      " Display line numbers
 set numberwidth=4               " Columns used for line number display

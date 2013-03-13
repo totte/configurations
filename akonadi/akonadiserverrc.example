@@ -8,7 +8,7 @@ InitDbPath=/usr/bin/initdb
 Name=akonadi
 Host=localhost
 Port=
-User=akonadiuser
+User=USERNAME
 Password=
 Options=
 
