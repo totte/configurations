@@ -21,7 +21,7 @@ endif
 "-------------------------------------------------------------------------------------
 " FONT
 "-------------------------------------------------------------------------------------
-set guifont=Droid\ Sans\ Mono\ Slashed\ 12
-highlight LineNr font='Droid Sans Mono Slashed 10'
-highlight CursorLineNr font='Droid Sans Mono Slashed 10'
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 12
+"highlight LineNr font='Droid Sans Mono Slashed 10'
+"highlight CursorLineNr font='Droid Sans Mono Slashed 10'
 let g:Powerline_symbols = 'fancy'

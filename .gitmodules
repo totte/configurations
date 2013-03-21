@@ -1,40 +1,40 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-	ignore = untracked
+        url = git://github.com/kien/ctrlp.vim.git
+        ignore = untracked
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/indentguides"]
 	path = .vim/bundle/indentguides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/pep8textwidth"]
 	path = .vim/bundle/pep8textwidth
 	url = git://github.com/jimf/vim-pep8-text-width.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-	ignore = untracked
+        ignore = untracked
 [submodule ".vim/bundle/tasklist"]
 	path = .vim/bundle/tasklist
 	url = git://github.com/vim-scripts/TaskList.vim.git
-	ignore = untracked
+        ignore = untracked

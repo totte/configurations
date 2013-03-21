@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Path
 #-------------------------------------------------------------------------------
-export PATH="$HOME/binaries:$HOME/code/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$HOME/code/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 #-------------------------------------------------------------------------------
 # Miscellaneous
@@ -47,18 +47,24 @@ setopt share_history
 alias _='sudo'
 alias -- -='cd -'
 alias ..='cd ..'
-alias cp='cp -v'
+alias cp='cp -iv'
 alias d='dirs -v'
 alias df='df -h'
+alias du='du -ch'
 alias g='git'
 alias l='ls -lh --color'
-alias la='ls -lAh --color'
+alias la='ls -Alh --color'
+alias ln='ln -iv'
+alias lsblk='lsblk --output NAME,MOUNTPOINT,LABEL,SIZE,FSTYPE,TYPE,MODEL'
 alias md='mkdir -pv'
+alias mount='mount | column -t'
 alias mp='makepkg -cs'
-alias mv='mv -v'
+alias mv='mv -iv'
+alias ping='ping -c 8'
+alias ports='netstat -alnptu'
 alias q='/usr/bin/vim -g'
 alias rez='. ~/.zshrc'
-alias rm='rm -v'
+alias rm='rm -Iv'
 alias rmd='rmdir -v'
 alias tm='tmux attach'
 alias v='/usr/bin/vim'
@@ -129,7 +135,7 @@ case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
 esac
 
 # Host-specific aliases
-if [[ ${HOST:r} == "betre" ]]; then
+if [[ ${HOST:r} == "bramble" ]]; then
     alias syso='sudo /sbin/write-magic 0xdeadbeef && sudo /sbin/reboot'
 fi
 
@@ -184,12 +190,9 @@ bindkey "\e[3~" delete-char
 #-------------------------------------------------------------------------------
 # Prompt
 #-------------------------------------------------------------------------------
-# TODO RPROMPT with time, HH:MM:SS, and date, YYYY-MM-DD
-# TODO Use a more basic PROMPT if in a TTY
-# TODO What to do if root user?
 function _update_ps1()
 {
-    export PROMPT="$(powerprompt.py $?)"
+    export PROMPT="$(~/.config/powerprompt.py $?)"
 }
 precmd()
 {

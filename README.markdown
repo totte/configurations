@@ -1,9 +1,23 @@
-totte's cfg
-===========
+totte's configurations
+======================
+Various configuration files for Arch Linux, Debian GNU/Linux and Mac OS X.
+All files are to include a comment on the first lines like so:
 
-Various configuration files for Mac OS X, Arch Linux and Debian GNU/Linux.
+\# $SOFTWARE configuration
+\# ${DEVICE,ENVIRONMENT} specific (optional)
+\# Belongs in /this/specific/directory
+\# Notable $EFFECT
 
-Colours:
+Splitting long files into sections with 79 character lines of -'s (the first
+character being a # or whatever) is a good idea. Like so:
+
+\#---------------...
+\# Section header
+\#---------------...
+
+Colours
+-------
+A collection of nice colours for use in Zsh, Vim and so on.
 
 Black
 \#000000
@@ -25,7 +39,7 @@ Green
 \#b1d631
 \#d0e683
 
-Yellow
+Yellow (Brown)
 \#cec1a6
 \#e5d6b8
 
@@ -33,7 +47,7 @@ Magenta
 \#9966ff
 \#b894ff
 
-Cyan
+Cyan (Grey)
 \#323232
 \#424242
 \#646464

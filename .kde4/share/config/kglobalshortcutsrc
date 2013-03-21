@@ -17,10 +17,12 @@ stoptrack=Meta+X,Meta+X,Stop
 
 [kactivitymanagerd]
 _k_friendly_name=KDE Activity Manager
+switch-to-activity-12f60727-f8bf-46fd-8de4-096c575d5d1e=none,none,Switch to activity "New Activity"
+switch-to-activity-50f802fc-4b47-48b1-8fb6-1a27939aaafe=none,none,Switch to activity "Desktop"
 switch-to-activity-9ff92c2d-4e8d-4dc2-95c2-bd9dc6c3238e=none,none,Switch to activity "Desktop"
 
 [kalarm]
-_k_friendly_name=KAlarm
+_k_friendly_name=kalarm
 newAudio=none,none,New Audio Alarm
 newCommand=none,none,New Command Alarm
 newDisplay=none,none,New Display Alarm
@@ -39,16 +41,17 @@ display=Display,Display,Switch Display
 
 [khotkeys]
 _k_friendly_name=khotkeys
+{6b10cb41-0dc7-4395-a954-1af3cb6f5516}=,none,PrintScreen
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,Search
-{e2f9b555-de0c-46e0-9930-22305c6b0d76}=Print,none,PrintScreen
 
 [klipper]
-_k_friendly_name=klipper
+_k_friendly_name=Klipper
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
 cyclePrevAction=none,none,Previous History Item
 edit_clipboard=none,none,Edit Contents...
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
+show-barcode=none,none,Show Barcode...
 show-on-mouse-pos=none,none,Open Klipper at Mouse Position
 
 [kmix]
@@ -88,7 +91,7 @@ increase_volume=Volume Up,Volume Up,Increase Volume
 mute=Volume Mute,Volume Mute,Mute
 
 [konversation]
-_k_friendly_name=konversation
+_k_friendly_name=Konversation
 next_active_tab=none,none,Next Active Tab
 toggle_mainwindow_visibility=none,none,Show/Hide Konversation
 
@@ -289,6 +292,7 @@ Next Activity=,Meta+Tab,Next Activity
 Previous Activity=,Meta+Shift+Tab,Previous Activity
 Show Dashboard=Ctrl+F12,Ctrl+F12,Show Dashboard
 Stop Activity=,Meta+S,Stop Current Activity
+SystemTray-Klipper-6=,Ctrl+Alt+V,
 Systemtray-Klipper-6=Ctrl+Alt+V,Ctrl+Alt+V,
 _k_friendly_name=Plasma Desktop Shell
 activate widget 111=,Meta+Space,Activate Application Launcher Widget

@@ -60,10 +60,12 @@ useSystemTray=false
 version=0.9.2
 
 [MainWindow]
+Height 1024=868
 Height 900=901
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABaAAAANIAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAABQAAAAQAAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
+Width 1280=1276
 Width 1440=1441
 
 [Notification Messages]
