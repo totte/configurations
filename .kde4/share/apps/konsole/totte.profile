@@ -8,10 +8,10 @@ DefaultEncoding=UTF-8
 
 [General]
 Environment=TERM=konsole-256color
-LocalTabTitleFormat=
+LocalTabTitleFormat=%u@%h
 Name=totte
 Parent=FALLBACK/
-RemoteTabTitleFormat=
+RemoteTabTitleFormat=%u@%h
 ShowTerminalSizeHint=false
 
 [Interaction Options]

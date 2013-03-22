@@ -47,6 +47,8 @@ setopt share_history
 alias _='sudo'
 alias -- -='cd -'
 alias ..='cd ..'
+alias :d='/usr/bin/vim -gd'
+alias :e='/usr/bin/vim -g'
 alias cp='cp -iv'
 alias d='dirs -v'
 alias df='df -h'
@@ -62,12 +64,10 @@ alias mp='makepkg -cs'
 alias mv='mv -iv'
 alias ping='ping -c 8'
 alias ports='netstat -alnptu'
-alias q='/usr/bin/vim -g'
 alias rez='. ~/.zshrc'
 alias rm='rm -Iv'
 alias rmd='rmdir -v'
 alias tm='tmux attach'
-alias v='/usr/bin/vim'
 unwrap(){
     if [ -f $1 ]; then
         case $1 in
