@@ -1,0 +1,13 @@
+Powerline==beta
+appdirs==1.2.0
+distribute==0.6.35
+flake8==2.0
+jedi==0.7.0
+mccabe==0.2.1
+pep8==1.4.6
+pyflakes==0.7.3
+requests==1.1.0
+stevedore==0.10
+virtualenv==1.10.1
+virtualenv-clone==0.2.4
+virtualenvwrapper==4.1.1
