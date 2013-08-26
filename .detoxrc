@@ -1,0 +1,18 @@
+# totte's .detoxrc
+
+sequence default {
+	utf_8;
+	safe;
+	lower;
+	wipeup;
+};
+
+ignore {
+	filename ".arch-params";
+	filename ".evolution";
+	filename ".gnome";
+	filename ".mozilla";
+	filename ".themes";
+	filename "{arch}";
+};
+

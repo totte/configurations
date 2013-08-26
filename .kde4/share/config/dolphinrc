@@ -1,0 +1,77 @@
+Height 900=868
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADpAAADMfwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAzAAADMQAAAFABAAAF+wAAABQAcABsAGEAYwBlAHMARABvAGMAawAAAANBAAAAuQAAAAgBAAAFAAAAAQAAAQEAAAMx/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAADMAAAMxAAAA9QEAAAUAAAADAAAGkAAAALz8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAGkAAAAAgBAAAFAAAFoAAAA08AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+Width 1440=1440
+
+[AdditionalInfoDialog]
+Height 900=276
+Width 1440=289
+
+[CompactMode]
+FontWeight=50
+PreviewSize=16
+
+[Desktop Entry]
+DefaultProfile=totte.profile
+
+[DetailsMode]
+FontWeight=50
+PreviewSize=256
+
+[Favorite Profiles]
+Favorites=
+
+[FileMetaDataConfigurationDialog]
+Height 1050=261
+Width 1680=277
+
+[General]
+EditableUrl=true
+GlobalViewProps=true
+HomeUrl=file:///home/totte
+ShowCopyMoveMenu=true
+ShowFullPath=true
+ShowSpaceInfo=true
+ShowToolTips=true
+Version=200
+ViewPropsTimestamp=2012,11,8,22,0,0
+
+[IconsMode]
+FontWeight=50
+IconSize=16
+
+[InformationPanel]
+previewsShown=false
+
+[KPropertiesDialog]
+Height 900=400
+Width 1440=417
+
+[MainWindow]
+Height 1024=611
+Height 1050=651
+Height 900=611
+State=AAAA/wAAAAD9AAAAAgAAAAAAAADrAAACY/wCAAAAA/sAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAAAAABWgAAAAgBAAAF+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAAAAAEgAAAACAEAAAX7AAAAFABwAGwAYQBjAGUAcwBEAG8AYwBrAQAAAAAAAAJjAAAAUAEAAAUAAAADAAAGkAAAALz8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAGkAAAAAgBAAAFAAACzgAAAmMAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1280=956
+Width 1440=956
+Width 1680=944
+
+[Open-with settings]
+CompletionMode=5
+History=qvim %U
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=cursorthumbnail,imagethumbnail,jpegthumbnail
+
+[SettingsDialog]
+Height 1050=349
+Height 900=563
+Width 1440=781
+Width 1680=512
+
+[ViewPropertiesDialog]
+Height 900=240
+Width 1440=337

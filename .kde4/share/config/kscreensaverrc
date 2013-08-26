@@ -1,0 +1,12 @@
+[ScreenSaver]
+ActionBottomLeft=0
+ActionBottomRight=0
+ActionTopLeft=0
+ActionTopRight=0
+Enabled=true
+LegacySaverEnabled=false
+Lock=true
+LockGrace=240000
+PlasmaEnabled=false
+Saver=KSlideshow.desktop
+Timeout=480

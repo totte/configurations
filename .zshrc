@@ -22,6 +22,12 @@ setopt extendedglob
 # Colours
 #-------------------------------------------------------------------------------
 autoload colors; colors;
+<<<<<<< HEAD
+=======
+#LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;\
+#33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
+#export LS_COLORS
+>>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
 
 #-------------------------------------------------------------------------------
 # History
@@ -51,8 +57,13 @@ alias d='dirs -v'
 alias df='df -h'
 alias du='du -ch'
 alias g='git'
+<<<<<<< HEAD
 alias l='ls -lh --color --group-directories-first'
 alias la='ls -Alh --color --group-directories-first'
+=======
+alias l='ls -lh --color'
+alias la='ls -Alh --color'
+>>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
 alias ln='ln -iv'
 alias lsblk='lsblk --output NAME,MOUNTPOINT,LABEL,SIZE,FSTYPE,TYPE,MODEL'
 alias md='mkdir -pv'
@@ -100,12 +111,20 @@ alias pipu='sudo pip install -U' # Update
 
 # OS-specific aliases
 case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
+<<<<<<< HEAD
     (Arch|Chakra)
+=======
+    (Arch)
+>>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
         alias alsae='alsamixer -D equal'
         alias alsam='alsamixer'
         alias jc='sudo journalctl'
         alias mpd='mpd ~/.config/mpd.conf'
+<<<<<<< HEAD
         alias py='python3'
+=======
+        alias py='ipython'
+>>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
         alias pkgc='sudo pacman -Sc' # Clean cache
         alias pkgd='whoneeds' # List dependants
         alias pkgi='sudo pacman -S' # Install
@@ -187,4 +206,15 @@ bindkey "\e[3~" delete-char
 #-------------------------------------------------------------------------------
 # Prompt
 #-------------------------------------------------------------------------------
+<<<<<<< HEAD
 . /usr/share/zsh/site-contrib/powerline.zsh
+=======
+function _update_ps1()
+{
+    export PROMPT="$(~/.config/powerprompt.py $?)"
+}
+precmd()
+{
+    _update_ps1
+}
+>>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0

@@ -1,0 +1,279 @@
+[$Version]
+update_info=konversation.upd:1.1-rememberline,konversation.upd:1.1-markerlines,konversation.upd:0.20-customfonts,konversation.upd:0.20-quickbuttons,konversation.upd:0.19-notifylists,konversation.upd:0.19-appearance,konversation.upd:0.19-browser,konversation.upd:0.19-flags,konversation.upd:0.19-highlightcolors,konversation.upd:0.19-osdcolors,konversation.upd:0.19-sortorder,konversation.upd:0.19-colors,konversation.upd:0.19-generaloptions,konversation.upd:0.19-cleanup-themes,konversation.upd:0.19-cleanup-notifylist,konversation.upd:0.19-cleanup-dcc,konversation.upd:0.19-cleanup-colors,konversation.upd:0.19-cleanup-hilightlist,konversation.upd:0.19-cleanup-notificationmessages,konversation.upd:0.19-cleanup-ledcolors,konversation.upd:0.19-cleanup-kmditaskbar,konversation.upd:0.19-channelsplitter
+
+[Aliases]
+AliasList=sysinfo /exec sysinfo,cmd /exec cmd,uptime /exec uptime,sayclip /exec sayclip,kdeversion /exec kdeversion,media /exec media,audio /exec media audio,video /exec media video,gauge /exec gauge,fortune /exec fortune,bug /exec bug,tinyurl /exec tinyurl,mail /exec mail
+
+[Appearance]
+AllowColorCodes=false
+ChannelSplitterSizes=1222,215
+CustomListFont=true
+CustomTabFont=true
+CustomTextFont=true
+FocusNewQueries=false
+ListFont=Droid Sans Mono Slashed for Powerline,12,-1,5,50,0,0,0,0,0
+NickColor0=238,238,238
+NickColor1=238,238,238
+NickColor2=238,238,238
+NickColor3=238,238,238
+NickColor4=238,238,238
+NickColor5=238,238,238
+NickColor6=238,238,238
+NickColor7=238,238,238
+NickColor8=44,114,199
+ShowTabBarCloseButton=false
+ShowTopic=false
+TabFont=Droid Sans,10,-1,5,50,0,0,0,0,0
+TextFont=Droid Sans Mono Slashed for Powerline,12,-1,5,50,0,0,0,0,0
+TopicSplitterSizes=27,752
+
+[Autoreplace List]
+Direction0=o
+Direction1=o
+Pattern0=\\[\\[([^\\s]+)\\]\\]#
+Pattern1=(BUG:|bug:)([0-9]+)#
+Regex0=1
+Regex1=1
+Replace0=http://en.wikipedia.org/wiki/Special:Search?go=Go&search=%1#
+Replace1=https://bugs.kde.org/show_bug.cgi?id=%2#
+
+[Button List]
+Button0=Op,/OP %u%n
+Button1=DeOp,/DEOP %u%n
+Button2=WhoIs,/WHOIS %s,%%u%n
+Button3=Version,/CTCP %s,%%u VERSION%n
+Button4=Kick,/KICK %u%n
+Button5=Ban,/BAN %u%n
+Button6=Part,/PART %c Leaving...%n
+Button7=Quit,/QUIT Leaving...%n
+
+[Channel 0]
+EnableNotifications=true
+Name=#freenode
+Password=
+
+[Channel 1]
+EnableNotifications=true
+Name=#archlinux
+Password=
+
+[Channel 2]
+EnableNotifications=true
+Name=#kde
+Password=
+
+[Channel 3]
+EnableNotifications=true
+Name=#postgresql
+Password=
+
+[Channel 4]
+EnableNotifications=true
+Name=#python
+Password=
+
+[Channel 5]
+EnableNotifications=true
+Name=#vim
+Password=
+
+[Channel 6]
+EnableNotifications=true
+Name=#kontact
+Password=
+
+[Channel 7]
+EnableNotifications=true
+Name=#akonadi
+Password=
+
+[Channel 8]
+EnableNotifications=true
+Name=#kexi
+Password=
+
+[Channel 9]
+EnableNotifications=true
+Name=#kate
+Password=
+
+[Channel 10]
+EnableNotifications=true
+Name=#konversation
+Password=
+
+[Channel 11]
+EnableNotifications=true
+Name=#mpd
+Password=
+
+[Channel 12]
+EnableNotifications=true
+Name=#plasma
+Password=
+
+[Channel 13]
+EnableNotifications=true
+Name=#konqueror
+Password=
+
+[Channel 14]
+EnableNotifications=true
+Name=#kwin
+Password=
+
+[Channel 15]
+EnableNotifications=true
+Name=#Calligra
+Password=
+
+[Channel 16]
+EnableNotifications=true
+Name=##vim_qt
+Password=
+
+[Channel 17]
+EnableNotifications=true
+Name=#konsole
+Password=
+
+[Channel 18]
+EnableNotifications=true
+Name=#qt
+Password=
+
+[Channel 19]
+EnableNotifications=true
+Name=#zsh
+Password=
+
+[Channel 20]
+EnableNotifications=true
+Name=#git
+Password=
+
+[Colors]
+CurrentPalette=Oxygen Colors
+
+[DCC Settings]
+IPv4FallbackIface=0
+PanelSplitter=AAAA/wAAAAAAAAACAAAFQAAAANcBAAAAAwEAAAAC
+
+[Flags]
+FixedMOTD=false
+InputFieldsBackgroundColor=true
+TabPlacement=Top
+
+[General Options]
+RedirectServerAndAppMsgToStatusPane=true
+
+[Highlight List]
+HighlightNickColor=44,114,199
+
+[Identity 0]
+AutomaticAway=false
+AutomaticUnaway=false
+AwayInactivity=10
+AwayMessage=
+AwayNick=
+AwayReason=
+Bot=
+Codec=UTF-8
+Ident=USERNAME
+InsertRememberLineOnAway=false
+KickReason=
+Name=Default Identity
+Nicknames=NICKNAME
+PartReason=
+Password=
+PreShellCommand=
+QuitReason=
+Realname=REALNAME
+ReturnMessage=
+ShowAwayMessage=false
+
+[KFileDialog Settings]
+Height 1050=525
+Width 1680=840
+
+[MainWindow]
+Height 1050=1018
+Height 900=901
+State=AAAA/wAAAAD9AAAAAAAABaAAAAOEAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+Width 1440=1441
+Width 1680=1680
+
+[Message Text Colors]
+ActionMessage=44,114,199
+AlternateBackground=8,8,8
+BacklogMessage=221,221,221
+ChannelMessage=238,238,238
+CommandMessage=136,136,136
+Hyperlink=44,114,199
+QueryMessage=136,136,136
+ServerMessage=136,136,136
+TextViewBackground=22,22,22
+Time=136,136,136
+
+[NicksOnline ViewSettings]
+ColumnSortDescending=false
+ColumnSorted=0
+ColumnWidths=214,1574
+
+[Notification Messages]
+ChannelListNoServerSelected=1
+ChannelListWarning=1
+ClearLogfileQuestion=1
+CloseQueryAfterIgnore=1
+HideMenuBarWarning=0
+HideOnCloseInfo=1
+IgnoreNick=1
+Invitation=1
+QuitChannelTab=0
+QuitDCCChatTab=1
+QuitQueryTab=0
+QuitServerTab=0
+QuitWithActiveDccTransfers=1
+ReconnectWithDifferentServer=1
+ReuseExistingConnection=1
+SaveLogfileNote=1
+UnignoreNick=1
+WarnEncodingConflict=1
+systemtrayquitKonversation=0
+
+[OSD]
+OSDFont=Droid Sans,10,-1,5,50,0,0,0,0,0
+
+[Server 0]
+Password=PASSWORD
+Port=1234
+SSLEnabled=true
+Server=WWW.EXAMPLE.COM
+
+[ServerGroup 0]
+AutoConnect=true
+AutoJoinChannels=
+ChannelHistory=Channel 0,Channel 1,Channel 2,Channel 3,Channel 4,Channel 5,Channel 6,Channel 7,Channel 8,Channel 9,Channel 10,Channel 11,Channel 12,Channel 13,Channel 14,Channel 15,Channel 16,Channel 17,Channel 18,Channel 19,Channel 20,Channel 21,Channel 22,Channel 23,Channel 24,Channel 25,Channel 26,Channel 27,Channel 28,Channel 29,Channel 30,Channel 31,Channel 32,Channel 33,Channel 34,Channel 35,Channel 36,Channel 37,Channel 38,Channel 39,Channel 40,Channel 41,Channel 42,Channel 43,Channel 44,Channel 45,Channel 46,Channel 47,Channel 48,Channel 49,Channel 50
+ConnectCommands=
+EnableNotifications=true
+Expanded=true
+Identity=Default Identity
+Name=SERVERNAME
+NotifyList=
+ServerList=Server 0
+
+[ServerListDialog]
+ServerListHeaderState=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02q\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00»ˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00»\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01E\x00\x00\x00\x01\x00\x00\x00\x00
+Size=720,360
+
+[Sort Nicknames]
+SortByStatus=true
+
+[Tab Notifications]
+TabNotificationsHighlightsColor=44,114,199
+TabNotificationsMsgsColor=164,192,228
+TabNotificationsNickColor=44,114,199
+TabNotificationsPrivateColor=44,114,199
+TabNotificationsSystemColor=238,238,238

@@ -1,0 +1,39 @@
+[ConfigDialog]
+Height 900=242
+Width 1440=363
+
+[DownloadDialog Settings]
+Height 900=868
+Width 1440=1440
+
+[KFileDialog Settings]
+Height 900=450
+Width 1440=720
+
+[KPropertiesDialog]
+Height 900=375
+Width 1440=572
+
+[MainWindow]
+Height 1024=1025
+Height 1050=1018
+Height 900=901
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABaAAAANGAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1280=1281
+Width 1440=1441
+Width 1680=1680
+
+[Notification Messages]
+welcome=false
+
+[Open-with settings]
+CompletionMode=5
+
+[Phonon::AudioOutput]
+System Settings_Volume=1
+
+[classic_mode]
+autoExpandOneLevel=false
+viewLayout=479,958

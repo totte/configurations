@@ -1,0 +1,10 @@
+#! /bin/sh
+kcminputrc_mouse_cursortheme=Neutra
+kcminputrc_mouse_cursorsize=0
+ksplashrc_ksplash_theme=caledonia
+ksplashrc_ksplash_engine=KSplashX
+krandrrc_display_applyonstartup=false
+krandrrc_display_startupcommands=''
+kcmfonts_general_forcefontdpi=0
+kdeglobals_locale_language=''
+klocale_languages=en_US

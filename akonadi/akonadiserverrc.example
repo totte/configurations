@@ -1,0 +1,16 @@
+[%General]
+Driver=QPSQL
+
+[QPSQL]
+StartServer=true
+ServerPath=/usr/bin/pg_ctl
+InitDbPath=/usr/bin/initdb
+Name=akonadi
+Host=localhost
+Port=
+User=USERNAME
+Password=
+Options=
+
+[Debug]
+Tracer=dbus
