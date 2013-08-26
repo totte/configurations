@@ -7,7 +7,7 @@ filetype plugin on              " Load relevant plugins
 filetype indent on              " Load indent file for filetype
 autocmd! filetype python set omnifunc=pythoncomplete#Complete
 syntax on                       " Enable syntax highlighting
-colorscheme totte        " Set colorscheme
+colorscheme totte               " Set colorscheme
 set autoindent                  " Automatically indent the new line to match previous
 set autoread
 set backspace=indent,eol,start  " Make the backspace key act like I'm used to
@@ -22,42 +22,43 @@ set hlsearch                    " Highlight search pattern
 set ignorecase                  " Case insensitive search
 set incsearch                   " Match while typing
 set laststatus=2                " Always display statusline
-"set lazyredraw		         " Don't redraw screen while executing macros/mappings
+"set lazyredraw                  " Don't redraw screen while executing macros/mappings
 set linebreak
 set list
 set listchars=tab:▸\ ,eol:¬     " Use these symbols for tabstops and EOLs
 set mouse=a
 set nobackup
 set nocompatible                " Disable Vi-like behaviour
-"set nostartofline	         " Keep cursor in the same column if possible
+"set nostartofline               " Keep cursor in the same column if possible
 set noswapfile
 set notitle                     " Disable 'Thanks for flying Vim' message
 set nowritebackup
 set number                      " Display line numbers
 set numberwidth=4               " Columns used for line number display
-set ruler		         " Show the cursor position all the time
+set ruler                        " Show the cursor position all the time
 set scrolloff=999               " Number of lines to keep above and beneath cursor
 set shiftround
 set shiftwidth=4                " Number of spaces for each indent by the < > keys
 set shortmess=I                 " Disable startup message
-"set showcmd		         " Display incomplete commands
-"set showtabline=2	         " Always show tab page labels
-"set smartcase		         " Ignore case when the pattern contains lowercase letters only
+"set showcmd                     " Display incomplete commands
+"set showtabline=2               " Always show tab page labels
+"set smartcase                   " Ignore case when the pattern contains lowercase letters only
 set softtabstop=4               " Number of spaces inserted instead of tab characters
 set tabstop=8
 set termencoding=utf-8          " Set terminal UTF-8 encoding
 set textwidth=0                 " Disable hard linewrap
 set t_Co=256
-"set virtualedit=block	         " Allow virtual editing in Visual block mode
+"set virtualedit=block           " Allow virtual editing in Visual block mode
 "set whichwrap=b,s,[,],<,>,h,l   " Allow cursor to wrap between lines
 set wildmode=list:longest
-"set winaltkeys=no	         " Allow mapping of alt (meta) key shortcuts
+"set winaltkeys=no               " Allow mapping of alt (meta) key shortcuts
 set wrap                        " Enable soft linewrap
 set wrapmargin=0                " Number of characters from the right
 
 " Plugins
 set rtp+=/usr/lib/python3.3/site-packages/powerline/bindings/vim
 let g:powerline_pycmd = 'python3'
+let g:powerline_symbols = 'fancy'
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 4
 let g:indent_guides_enable_on_vim_startup = 1

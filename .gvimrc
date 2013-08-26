@@ -1,7 +1,7 @@
 "------------------------------------------------------------------------------
 " DISABLE GUI PARTS
 "------------------------------------------------------------------------------
-set title titlestring=QVim  " Set GUI window title
+set title titlestring=Vim   " Set GUI window title
 set iconstring=''           " Set GUI window icon
 set go-=l                   " Remove left scrollbar
 set go-=L                   " Remove scrollbar

@@ -242,7 +242,7 @@ bindkey "\e[3~" delete-char
 # OS-specific prompt commands
 case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
     (Arch|Chakra)
-        . /usr/share/zsh/site-contrib/powerline.zsh
+        . /usr/lib/python3.3/site-packages/powerline/bindings/zsh/powerline.zsh
         ;;
     (Debian|Ubuntu)
         . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
