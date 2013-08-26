@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorSession>
+<!-- Written by QtCreator 2.7.0, 2013-05-25T21:51:01. -->
+<qtcreator>
+ <data>
+  <variable>Color</variable>
+  <value type="QString">#666666</value>
+ </data>
+ <data>
+  <variable>EditorSettings</variable>
+  <value type="QByteArray">AAAAD0VkaXRvck1hbmFnZXJWNAAAAAIAAABIAC8AaABvAG0AZQAvAHQAbwB0AHQAZQAvAGMAbwBkAGUALwByAGEAYwBrAGEAcABhAC8AcgBhAGMAawBhAHAAYQAuAGMAcABwAAAADAAAAAAYAAAAAQAAAC0AAAAAAAAARAAAABsAAAAAAAAASgAvAGgAbwBtAGUALwB0AG8AdAB0AGUALwBjAG8AZABlAC8AcgBhAGMAawBhAHAAYQAtAHEAdABjAC8AbQBhAGkAbgAuAGMAcABwAAAADAAAAAAYAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAEoALwBoAG8AbQBlAC8AdABvAHQAdABlAC8AYwBvAGQAZQAvAHIAYQBjAGsAYQBwAGEALQBxAHQAYwAvAG0AYQBpAG4ALgBjAHAAcAAAABAAbQBhAGkAbgAuAGMAcABwAAAAE0NwcFBsdWdpbi5DKytFZGl0b3IAAAClAAAADWN1cnJlbnRlZGl0b3IAAABKAC8AaABvAG0AZQAvAHQAbwB0AHQAZQAvAGMAbwBkAGUALwByAGEAYwBrAGEAcABhAC0AcQB0AGMALwBtAGEAaQBuAC4AYwBwAHAAAAAmAEMAcABwAFAAbAB1AGcAaQBuAC4AQwArACsARQBkAGkAdABvAHIAAAAYAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA</value>
+ </data>
+ <data>
+  <variable>OpenEditors</variable>
+  <value type="int">1</value>
+ </data>
+ <data>
+  <variable>ProjectDependencies</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>ProjectList</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">/home/totte/code/rackapa-qtc/CMakeLists.txt</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>StartupProject</variable>
+  <value type="QString">/home/totte/code/rackapa-qtc/CMakeLists.txt</value>
+ </data>
+ <data>
+  <variable>value-ActiveMode</variable>
+  <value type="QString">Mode.Debug</value>
+ </data>
+ <data>
+  <variable>value-Breakpoints</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>value-DebuggerToolTips</variable>
+  <value type="QString"></value>
+ </data>
+ <data>
+  <variable>value-DefaultFormats</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>value-ProjectTree.ExpandData</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">session</value>
+   <value type="QString">/home/totte/code/rackapa-qtc/CMakeLists.txt</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-Watchers</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>valueKeys</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">ActiveMode</value>
+   <value type="QString">Breakpoints</value>
+   <value type="QString">DebuggerToolTips</value>
+   <value type="QString">DefaultFormats</value>
+   <value type="QString">ProjectTree.ExpandData</value>
+   <value type="QString">Watchers</value>
+  </valuelist>
+ </data>
+</qtcreator>

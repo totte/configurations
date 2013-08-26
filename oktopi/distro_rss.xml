@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<rss version="2.0" 
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:admin="http://webns.net/mvcb/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+   xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+   >
+<channel>
+    
+    <title>Chakra | News</title>
+    <link>http://chakra-project.org/news/</link>
+    <description></description>
+    <dc:language>en</dc:language>
+    <generator>Serendipity 1.7-rc3 - http://www.s9y.org/</generator>
+    <pubDate>Fri, 10 May 2013 13:10:23 GMT</pubDate>
+
+    <image>
+        <url>http://chakra-project.org/news/templates/default/img/s9y_banner_small.png</url>
+        <title>RSS: Chakra | News - </title>
+        <link>http://chakra-project.org/news/</link>
+        <width>100</width>
+        <height>21</height>
+    </image>
+
+<item>
+    <title>KDE SC 4.10.3 moved to stable repositories.</title>
+    <link>http://chakra-project.org/news/index.php?/archives/103-KDE-SC-4.10.3-moved-to-stable-repositories..html</link>
+            <category>KDE</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/103-KDE-SC-4.10.3-moved-to-stable-repositories..html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=103</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=103</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Neophytos Kolokotronis)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/kdelogo.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://kde.org/announcements/announce-4.10.3.php&quot; title=&quot;KDE SC 4.10.3 announcement&quot;&gt;KDE SC 4.10.3&lt;/a&gt; is now officially available for all Chakra users. The over 75 recorded bugfixes include improvements to the Personal Information Management suite Kontact, the Window Manager KWin, and others. The complete changes are listed on &lt;a href=&quot;https://bugs.kde.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=2013-01-01&amp;chfieldto=Now&amp;chfield=cf_versionfixedin&amp;chfieldvalue=4.10.3&amp;cmdtype=doit&amp;order=Bug+Number&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&quot; title=&quot;Bugs closed for KDE SC 4.10.3&quot;&gt;KDE&#039;s issue tracker&lt;/a&gt;. &lt;br /&gt;
+&lt;br /&gt;
+As always, make sure your mirror is fully synced before performing this update. To check, run in a konsole: &lt;strong&gt;mirror-check&lt;/strong&gt; 
+    </content:encoded>
+
+    <pubDate>Fri, 10 May 2013 14:56:13 +0200</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/103-guid.html</guid>
+    
+</item>
+<item>
+    <title>The BundleSystem got replaced by the [extra] repository</title>
+    <link>http://chakra-project.org/news/index.php?/archives/102-The-BundleSystem-got-replaced-by-the-extra-repository.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/102-The-BundleSystem-got-replaced-by-the-extra-repository.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=102</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=102</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;br /&gt;&lt;br /&gt;
+After upgrading the toolchain to GlibC 2.17, you will notice your bundles are not working anymore and CInstall shows an empty list.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;
+Please follow the discussion &lt;a href=&quot;http://chakra-project.org/bbs/viewtopic.php?id=10278&quot;&gt;here&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+Basically you should enable the EXTRA repository at /etc/pacman.conf and install &lt;b&gt;filesystem-extra&lt;/b&gt; and finally reboot.&lt;br /&gt;
+&lt;br /&gt;
+After this, you can install any package from [extra] as any other normal application. 
+    </content:encoded>
+
+    <pubDate>Sat, 04 May 2013 13:42:38 +0200</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/102-guid.html</guid>
+    
+</item>
+<item>
+    <title>pacman 4.1 moved to stable</title>
+    <link>http://chakra-project.org/news/index.php?/archives/101-pacman-4.1-moved-to-stable.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/101-pacman-4.1-moved-to-stable.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=101</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=101</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;br /&gt;&lt;br /&gt;
+After a long testing cycle, pacman alongside it&#039;s dependencies got moved to the stable repository. &lt;br /&gt;
+&lt;br /&gt;
+Allan posted some interesting info you may read about pacman 4.1:&lt;br /&gt;
+&lt;a href=&quot;http://allanmcrae.com/2013/04/pacman-4-1-released/&quot;&gt;http://allanmcrae.com/2013/04/pacman-4-1-released&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+We advice to use the terminal for this update and wait until your mirror get synced. 
+    </content:encoded>
+
+    <pubDate>Mon, 22 Apr 2013 23:46:16 +0200</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/101-guid.html</guid>
+    
+</item>
+<item>
+    <title>KDE SC 4.10.2 moved to stable repositories.</title>
+    <link>http://chakra-project.org/news/index.php?/archives/100-KDE-SC-4.10.2-moved-to-stable-repositories..html</link>
+            <category>KDE</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/100-KDE-SC-4.10.2-moved-to-stable-repositories..html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=100</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=100</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Neophytos Kolokotronis)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/kdelogo.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://kde.org/announcements/announce-4.10.2.php&quot; title=&quot;KDE SC 4.10.2 announcement&quot;&gt;KDE SC 4.10.2&lt;/a&gt; is now officially available for all Chakra users. The over 100 recorded bugfixes in this release include improvements to the Personal Information Management suite Kontact, the Window Manager KWin, and others. KDE&#039;s Development Platform has received a number of updates that affect multiple applications. The complete changes are listed on &lt;a href=&quot;https://bugs.kde.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=2013-01-01&amp;chfieldto=Now&amp;chfield=cf_versionfixedin&amp;chfieldvalue=4.10.2&amp;cmdtype=doit&amp;order=Bug+Number&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&quot; title=&quot;Bugs closed for KDE SC 4.10.2&quot;&gt;KDE&#039;s issue tracker&lt;/a&gt;. &lt;br /&gt;
+&lt;br /&gt;
+As always, make sure your mirror is fully synced before performing this update. To check, run in a konsole: &lt;strong&gt;mirror-check&lt;/strong&gt; 
+    </content:encoded>
+
+    <pubDate>Sat, 06 Apr 2013 01:24:32 +0200</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/100-guid.html</guid>
+    
+</item>
+<item>
+    <title>RIP Fritz_Van_Tom</title>
+    <link>http://chakra-project.org/news/index.php?/archives/99-RIP-Fritz_Van_Tom.html</link>
+            <category>Chakra</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/99-RIP-Fritz_Van_Tom.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=99</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=99</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Anke Boersma)</author>
+    <content:encoded>
+    &lt;IMG BORDER=&quot;0&quot; hspace=&quot;30&quot; ALIGN=&quot;Left&quot; SRC=&quot;http://wstaw.org/m/2013/03/17/fritzvantom.png&quot; width=&quot;480&quot; height=&quot;360&quot; border=&quot;2&quot; / style=&quot;margin-right:20px&quot;&gt; A very sad email reached many of the Chakra devs today.  One of our own, one we all wondered where he was since last fall, had passed away last September.  &lt;br /&gt;
+&lt;br /&gt;
+Excerpt from the mail:&lt;br /&gt;
+&lt;em&gt;Hi Chakra developers,&lt;br /&gt;
+&lt;br /&gt;
+the reason for my writing is a very sad one.&lt;br /&gt;
+Last September Johannes Tröscher, a friend of mine, died in a tragic accident. &lt;br /&gt;
+He was an open source enthusiast and often told me that he is working on some projects.&lt;br /&gt;
+I finally got the guts to do some research about his work and it turns out he worked on the Chakra project. &lt;br /&gt;
+&lt;/em&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Johannes Tröscher,  Fritz_Van_Tom as he was known in Chakra and KDE, was a very active contributor to Chakra and many KDE projects.  What you see today for the Welcome Plasmoid, the bundle manager, all the work done in Tribe QML, all that (and much more) came from Johannes Tröscher.  He was quite active coding for KDE too, most will probably know of his contributions to Rekonq.&lt;br /&gt;
+&lt;br /&gt;
+The ISOs following the KDE 4.11 series will be dedicated to him, and will carry the name &quot;Fritz&quot;.&lt;br /&gt;
+&lt;br /&gt;
+On behalf of the whole Chakra-Project team, our deepest condolences to his friends and family, may you find all the needed strength to deal with this loss. 
+    </content:encoded>
+
+    <pubDate>Sun, 17 Mar 2013 22:18:37 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/99-guid.html</guid>
+    
+</item>
+<item>
+    <title>Chakra-2013.03-Benz ISO released</title>
+    <link>http://chakra-project.org/news/index.php?/archives/98-Chakra-2013.03-Benz-ISO-released.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/98-Chakra-2013.03-Benz-ISO-released.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=98</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=98</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Anke Boersma)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/img/news/chakra-desktop-benz.png&quot; align=&quot;left&quot; alt=&quot;&quot; border=&quot;2&quot; / style=&quot;margin-right:20px; margin-bottom:10px&quot;&gt; With this second release of &lt;strong&gt;&quot;Benz&quot;&lt;/strong&gt;(a code name that will follow the KDE SC 4.10 series), the Chakra-Project team is very happy to announce a new feature that has been on the wishlist for quite some time. Tribe (the installer) has a &lt;strong&gt;netinstaller&lt;/strong&gt; feature implemented, giving the user the option for a regular offline install, or install fully updated packages, starting with a minimal functional KDE desktop, and adding groups of packages to that minimal install as desired.&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;KDE SC&lt;/strong&gt; is updated to 4.10.1. The over 100 recorded bugfixes since 4.10.0 include improvements to the Personal Information Management suite Kontact, the Window Manager KWin, and others. KDE&#039;s Development Platform has received a number of updates that affect multiple applications&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&#039;http://wstaw.org/w/1HfI/&#039;&gt;&lt;img src=&#039;http://wstaw.org/m/2013/02/18/snapshot25_png_300x300_q85.jpg&#039; align=&quot;right&quot; alt=&quot;&quot; border=&quot;&quot; / style=&quot;margin-right:20px; margin-bottom:10px&quot;&gt;&lt;/a&gt; For our other tools &lt;strong&gt;Kapudan&lt;/strong&gt; has launchers added and improved systemd units activation handling.  &lt;strong&gt;GFXboot&lt;/strong&gt; has improved keyboard options and for the artwork, the &lt;strong&gt;&quot;Dharma Grub&quot;&lt;/strong&gt; theme is updated.&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+As for the repositories, there were a large amount of updates to base packages, including Glib2 2.34.3, Networkmanager 0.9.8.0, Iw 3.8, Libffi 3.0.12, Libnl 3.2.21, Db 5.3.21, Apr 1.4.6, with updates to all that depend on these. Calligra 2.6.1, LibreOffice to 4.0.1, Chromium 25.0.1364.160, Firefox 19.0.2 are among the many applications and bundles updated to their latest version.&lt;br /&gt;
+The much anticipated &lt;strong&gt;Steam&lt;/strong&gt; has been added to the games repositories. &lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+With our first &lt;strong&gt;&quot;Benz&quot;&lt;/strong&gt; ISO release, we mentioned three major features missing. With the &lt;strong&gt;netinstaller&lt;/strong&gt; in place, we are down to two, most obvious is no GUI for package management and Tribe&#039;s partition page is missing the Solid integration, needed to have automated partitioning and support for LVM, RAID, LUKS and the likes, which we know are needed for a complete, modern installer.&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+To create &lt;strong&gt;reliable installation media&lt;/strong&gt;, please follow the &lt;a href=&quot;http://www.chakra-project.org/wiki/index.php?title=Bootable_Medium_Creation&quot;&gt;instructions&lt;/a&gt; in the wiki. Chakra&#039;s ISO&#039;s do &lt;strong&gt;not support unetbootin&lt;/strong&gt;, and DVDs need a burn speed &lt;strong&gt;no higher than 4x&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;hr width=&quot;100%&quot; /&gt;&lt;br /&gt;&lt;strong&gt;Links:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-project.org/get/&quot;&gt;Download: Images at SourceForge&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-project.org/wiki/index.php?title=Beginner&#039;s_Guide&quot;&gt;Chakra Beginners Guide&lt;/a&gt; 
+    </content:encoded>
+
+    <pubDate>Sat, 09 Mar 2013 03:31:28 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/98-guid.html</guid>
+    
+</item>
+<item>
+    <title>KDE SC 4.10.1 moved to stable</title>
+    <link>http://chakra-project.org/news/index.php?/archives/97-KDE-SC-4.10.1-moved-to-stable.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/97-KDE-SC-4.10.1-moved-to-stable.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=97</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=97</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Anke Boersma)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/kdelogo.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt; KDE is updated to 4.10.1. The over 100 recorded bugfixes since 4.10.0 include improvements to the Personal Information Management suite Kontact, the Window Manager KWin, and others. KDE&#039;s Development Platform has received a number of updates that affect multiple applications.&lt;br /&gt;
+&lt;br /&gt;
+There were some significant changes to how KDE ships kdesdk and kdetoys packages, so you&#039;ll notice quite a few replace/conflicts questions for those.  Answer all with &quot;y&quot; (Yes).&lt;br /&gt;
+&lt;br /&gt;
+As always, make sure your mirror is fully synced before performing this update, to check, run:&lt;br /&gt;&lt;strong&gt;mirror-check&lt;/strong&gt; 
+    </content:encoded>
+
+    <pubDate>Thu, 07 Mar 2013 18:42:22 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/97-guid.html</guid>
+    
+</item>
+<item>
+    <title>Tribe Netinstall testing ISO released</title>
+    <link>http://chakra-project.org/news/index.php?/archives/96-Tribe-Netinstall-testing-ISO-released.html</link>
+            <category>Chakra Live</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/96-Tribe-Netinstall-testing-ISO-released.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=96</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=96</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Anke Boersma)</author>
+    <content:encoded>
+    &lt;br /&gt;
+&lt;a href=&#039;http://wstaw.org/w/1HfI/&#039;&gt;&lt;img src=&#039;http://wstaw.org/m/2013/02/18/snapshot25_png_300x300_q85.jpg&#039; align=&quot;left&quot; alt=&quot;&quot; border=&quot;&quot; / style=&quot;margin-right:20px&quot;&gt;&lt;/a&gt;  As mentioned in the notes for the first Benz release, one of the three major things missing is minimal/netinstall.  Work was underway at that time for an option to have netinstall in Tribe, but such a drastic change needs as much testing as possible.  Since that first Benz ISO already had plenty of changes, we decided to delay the release of the netinstall option, until it had a change to be very thoroughly tested.&lt;br /&gt;
+With this announcement we&#039;d like to ask the community to help with this testing, so when it will be included in a future stable ISO,  it is fully ready.&lt;br /&gt;
+&lt;br /&gt;
+Please understand, there has been quite a bit of internal testing done on this new feature, but we do expect a lot more bugs to be found, so do not test on a production system, but follow the guidelines explained in the &lt;a href=&quot;http://chakra-project.org/wiki/index.php?title=Become_a_Tester#Test_the_Chakra_ISO&quot;&gt;&lt;strong&gt;Test-Squad Wiki&lt;/strong&gt;&lt;/a&gt;.&lt;br /&gt;
+You can use the latest Benz-2013.02 ISO, if you already downloaded that version.  All needed is to install the latest Tribe in live mode:&lt;/br&gt;&lt;br /&gt;
+&lt;b&gt;sudo pacman -U http://chakra-project.org/repo/testing/x86_64/tribe-2013.02.17-1-x86_64.pkg.tar.xz&lt;/b&gt;&lt;/br&gt;&lt;/br&gt;&lt;br /&gt;
+Or you can use the minimal &lt;a href=&quot;http://sourceforge.net/projects/chakra-repo/files/PackagersPlayground/ISO/chakra-2013.02.18-Benz-x86_64.iso/download&quot;&gt;&lt;strong&gt;&quot;Benz-2013.02.18&quot;&lt;/strong&gt;&lt;/a&gt; test ISO for this purpose.&lt;/br&gt;&lt;br /&gt;
+&lt;a href=&#039;http://wstaw.org/w/1HfS/&#039;&gt;&lt;img src=&#039;http://wstaw.org/m/2013/02/18/snapshot26_png_300x300_q85.jpg&#039; align=&quot;right&quot; alt=&quot;&quot; border=&quot;&quot; / style=&quot;margin-right:20px&quot;&gt;&lt;/a&gt;&lt;br /&gt;
+Start Tribe as usual and make sure you are connected to the internet, you&#039;ll notice the change after the partition page.  There the new install type selection page is added, and select &quot;Netinstall&quot;, add as many package groups as you like. 
+    </content:encoded>
+
+    <pubDate>Mon, 18 Feb 2013 22:26:21 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/96-guid.html</guid>
+    
+</item>
+<item>
+    <title>Wanna play?    Steam lands in Chakra!</title>
+    <link>http://chakra-project.org/news/index.php?/archives/95-Wanna-play-Steam-lands-in-Chakra!.html</link>
+            <category>Packages</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/95-Wanna-play-Steam-lands-in-Chakra!.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=95</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=95</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra-project.org/img/news/steam.png&quot; alt=&quot;&quot;  width=&quot;220px&quot; style=&quot;padding-right:20px; padding-botton;20px&quot;  align=&quot;left&quot; /&gt;  &lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://store.steampowered.com/&quot;&gt;&lt;b&gt;Steam&lt;/b&gt;&lt;/a&gt;, the gaming platform for Linux,  lands in the Chakra  [games] repository. &lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Just type:&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;sudo pacman -Syu&lt;/b&gt;&lt;br /&gt;
+&lt;b&gt;sudo pacman -S steam&lt;/b&gt;&lt;br /&gt;
+&lt;br /&gt;
+and start playing your favorite games!&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+You can find some games free to play &lt;a href=&quot;http://store.steampowered.com/genre/Free%20to%20Play/&quot;&gt;here&lt;/a&gt;. 
+    </content:encoded>
+
+    <pubDate>Fri, 15 Feb 2013 23:10:03 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/95-guid.html</guid>
+    
+</item>
+<item>
+    <title>Chakra-2013.02-Benz ISO released</title>
+    <link>http://chakra-project.org/news/index.php?/archives/94-Chakra-2013.02-Benz-ISO-released.html</link>
+            <category>Chakra Live</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/94-Chakra-2013.02-Benz-ISO-released.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=94</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=94</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/img/news/chakra-desktop-benz.png&quot; align=&quot;left&quot; alt=&quot;&quot; border=&quot;2&quot; / style=&quot;margin-right:20px&quot;&gt; It is 3 years this week the late Chakra-Project founder &lt;strong&gt;Jan Mette&lt;/strong&gt;, called a team meeting to discuss his plans to have Chakra continue as an independent distribution. With this first release of &lt;strong&gt;&quot;Benz&quot;&lt;/strong&gt; (a code name that will follow the KDE SC 4.10 series), it would have been so nice to know if he&#039;d agreed with how the Chakra-Project team executed his dream. With the code name &quot;Benz&quot; we are back to using names of famous engineers, with this one, we&#039;d like to honor the German roots of Chakra by using one of the top German engineers.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt; KDE SC 4.10&lt;/strong&gt;  is about the most polished release KDE has put out to date, for all the highlights visit &lt;a href=&quot;http://www.kde.org/announcements/4.10&quot;&gt;4.10 announcement&lt;/a&gt; . One feature that stands out is the fast improvements of nepomuk, please read all about &lt;a href=&quot;http://vhanda.in/blog/2013/01/nepomuk-cleaner&quot;&gt;Nepomuk cleaner&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;http://chakra.sourceforge.net/img/news/isolinux28.jpg&quot; align=&quot;right&quot; alt=&quot;&quot; border=&quot;2&quot; style=&quot;margin-left:20px&quot;/&gt; Our tools have gotten a lot of attention too, the live ISO has switched to using &lt;strong&gt; GFXboot&lt;/strong&gt; , this will give many more options for language and keyboard settings, adds quite a few hardware checking tools in a visual pleasing way.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+Tribe has now a dedicated keyboard page, this will avoid issues in setting the desired keyboard correctly. Marble is better integrated, locale selection improved.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+The Chakra artwork theme &lt;br /&gt;
+&lt;a href=&quot;http://chakra-project.org/bbs/viewtopic.php?id=9538&quot;&gt;&lt;strong&gt;&quot;Dharma&quot;&lt;/strong&gt;&lt;/a&gt;  is fully updated, and integration is set for all parts of the live ISO, grub bootloader, KDM and the installed desktop.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;http://chakra.sourceforge.net/img/news/chakra-tribe-keyboard.jpg&quot; align=&quot;left&quot; border=&quot;2&quot; alt=&quot;&quot; style=&quot;margin-right:20px; margin-bottom:20px&quot;/&gt;&lt;br /&gt;&lt;br /&gt;As for the repositories, most noteworthy updates are Linux 3.7.6, the first kernel that fixes the &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;px=MTI4ODQ&quot;&gt;Samsung laptop issues&lt;/a&gt;. Nvidia and Catalyst are at their latest version, so are the free graphics drivers.&lt;br /&gt;&lt;br /&gt;
+Qtwebkit is updated to 2.3, which brings full WebGl support back, adds Caret browsing, support for spellchecking and animated scrolling in Qt browsers.&lt;br /&gt;&lt;strong&gt;Mariadb&lt;/strong&gt; has replaced MySql. Boost 1.52.0, Icu 50.1.2, Mesa 9.0.2, Poppler 0.22.0, Openjpeg 1.5.1, PyQt 4.9.6, Networkmanager 0.9.6.4, Virtuoso 6.1.6, Phonon-backend-gstreamer 4.6.3, Calligra 2.6.0, LibreOffice 3.6.5, are among the many updated to their latest version. As always, the bundles are fully updated, this includes for example Firefox 18.0.2, Chromium 24.0.1312.68, GIMP 2.8.4 and Inkscape 0.48.4.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+The Chakra-Project team is fully aware a distribution is far more judged by what is not accomplished yet, than by what is. Though many of the things we set out to get done 3 years ago are implemented, there still are three major features missing. Most obvious is no GUI for package management. Our own package manager, Akabei, is in Alpha 2, not ready to be used. Tribe&#039;s partition page is missing the Solid integration one of our devs worked on during the last GSoC, to have automated partitioning and support for LVM, RAID, LUKS and the likes, which we know are needed for a complete, modern installer. Plus the option to choose a minimal/netinstall is needed.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+To create &lt;strong&gt;reliable installation media&lt;/strong&gt;, please follow the &lt;a href=&quot;http://www.chakra-project.org/wiki/index.php?title=Bootable_Medium_Creation&quot;&gt;instructions&lt;/a&gt; in the wiki. Chakra&#039;s ISO&#039;s do &lt;strong&gt;not support unetbootin&lt;/strong&gt;, and DVDs need a burn speed &lt;strong&gt;no higher than 4x&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;hr width=&quot;100%&quot; /&gt;&lt;br /&gt;&lt;strong&gt;Links:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-project.org/get/&quot;&gt;Download: Images at SourceForge&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-project.org/wiki/index.php?title=Beginner&#039;s_Guide&quot;&gt;Chakra Beginners Guide&lt;/a&gt; 
+    </content:encoded>
+
+    <pubDate>Sun, 10 Feb 2013 01:54:58 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/94-guid.html</guid>
+    
+</item>
+<item>
+    <title>KDE SC 4.10, plus a total of over 1000 packages moved to stable repositories</title>
+    <link>http://chakra-project.org/news/index.php?/archives/2-KDE-SC-4.10,-plus-a-total-of-over-1000-packages-moved-to-stable-repositories.html</link>
+            <category>KDE</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/2-KDE-SC-4.10,-plus-a-total-of-over-1000-packages-moved-to-stable-repositories.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=2</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=2</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/kdelogo.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;  After 3 months of testing, 6 full KDE SC (beta&#039;s, RC&#039;s) builds, well over 3000 packages compiled just for the 4.10 test cycle, we are very pleased to present KDE SC 4.10 to our stable repo&#039;s.  Please read all about what this new version brings in the &lt;a href=&quot;http://kde.org/announcements/4.10/&quot;&gt;official announcement&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;
+But this has been a long test cycle, with many things updated for 4.10, others updated to prepare for the first Benz release, so in all, this is the biggest move from testing to stable to date.&lt;br /&gt;&lt;br /&gt;
+You&#039;ll receive a Boost and Icu update, which alone triggered a rebuild of over 100 packages, including most games.  LibreOffice, Calligra, Digikam, XBMC, QtWebkit, QtCreator, Qt5 updates are also coming to stable.&lt;br /&gt;&lt;br /&gt;
+Mariadb replaces MySql.&lt;br /&gt;&lt;br /&gt;
+There are quite a few replaces with the KDE games being packaged differently, printer plasmoid changes, gtk-integration taken over by KDE (no longer a Chakra developed app), so make sure to &lt;strong&gt;answer &quot;yes&quot; to all replaces questions&lt;/strong&gt;, and make sure your mirror is synced before trying to update.  Run &lt;strong&gt;&quot;mirror-check&quot; first&lt;/strong&gt;. &lt;br /&gt;
+     
+    </content:encoded>
+
+    <pubDate>Thu, 07 Feb 2013 02:36:44 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/2-guid.html</guid>
+    
+</item>
+<item>
+    <title>Switching from MySQL to MariaDB</title>
+    <link>http://chakra-project.org/news/index.php?/archives/3-Switching-from-MySQL-to-MariaDB.html</link>
+            <category>Updates</category>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/3-Switching-from-MySQL-to-MariaDB.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=3</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=3</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/MariaDB.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;The Chakra Project decided to switch Chakra&#039;s default SQL engine to MariaDB. The upcoming KDE SC 4.10 will be built against it.  &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+MariaDB is an enhanced, drop-in replacement for MySQL and is available under the terms of the GPL v2 license. It&#039;s developed by the MariaDB community with the MariaDB Foundation as its main steward.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+For more information about MariaDB, it&#039;s features and the community you can have a look here:&lt;br /&gt;&lt;a href=&quot;https://mariadb.org/en/about/&quot; title=&quot;About MariaDB&quot;&gt;https://mariadb.org/en/about/&lt;/a&gt; 
+    </content:encoded>
+
+    <pubDate>Thu, 31 Jan 2013 20:33:43 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/3-guid.html</guid>
+    
+</item>
+<item>
+    <title>Systemd-197 and persistent network naming scheme</title>
+    <link>http://chakra-project.org/news/index.php?/archives/91-Systemd-197-and-persistent-network-naming-scheme.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/91-Systemd-197-and-persistent-network-naming-scheme.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=91</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=91</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/img/news/update.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;  Systemd 197 is ready to move to stable, a clear explanation is added in the .install what is changing with this update.&lt;br /&gt;&lt;br /&gt;
+More info about why the decision to update systemd as chosen, plus a link to an upstream wiki:&lt;br /&gt;&lt;a href=&quot;https://groups.google.com/forum/?fromgroups=#!topic/chakra-devel/1utAf4-MXvg&quot;&gt;chakra-devel mailing list, discussing systemd-197&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+Your next pacman -Syu will stop with a pacman and pacman-helpme update, explaining the need to use: &lt;br /&gt;&lt;blockquote&gt;sudo pacman -S systemd --force&lt;/blockquote&gt;&lt;br /&gt;&lt;br /&gt;
+Followed by:&lt;br /&gt;&lt;blockquote&gt;sudo pacman -Syu&lt;/blockquote&gt;&lt;br /&gt;&lt;br /&gt;
+To get all the way in line with upstream, in Systemd 196 getty@.service build inclusion was changed, so the symlink was owned by systemd, but that created a file conflict.  It was masked in that update, this update it is no longer masked.&lt;br /&gt;&lt;br /&gt;
+Make sure your mirror is fully synced before performing this update:&lt;br /&gt;&lt;blockquote&gt;mirror-check&lt;/blockquote&gt; 
+    </content:encoded>
+
+    <pubDate>Mon, 28 Jan 2013 19:07:17 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/91-guid.html</guid>
+    
+</item>
+<item>
+    <title>Fifth Claire ISO (2013.01) released</title>
+    <link>http://chakra-project.org/news/index.php?/archives/90-Fifth-Claire-ISO-2013.01-released.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/90-Fifth-Claire-ISO-2013.01-released.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=90</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=90</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/img/news/claire.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+The Chakra Project Team is proud to announce the fifth &lt;strong&gt;&quot;Claire&quot;&lt;/strong&gt; release, (a codename that followed the &lt;strong&gt;KDE SC 4.9 series&lt;/strong&gt;, and dedicated to the memory of &lt;a href=&quot;http://dot.kde.org/2012/05/20/remembering-claire-lotion&quot;&gt;Claire Lotion&lt;/a&gt;).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+The day the 2012.12 release was announced as the final ISO in the &quot;Claire&quot; series, KDE announced there was going to be a KDE 4.9.5, that fact combined with KDE 4.10 release being pushed back 2-3 weeks and many base packages updated, the team decided to have one more &quot;Claire&quot; release. &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+Among &lt;strong&gt;updates&lt;/strong&gt; on this release, KDE 4.9.5, Openssl and Krb5 stack, sound group, KDE-telepathy 0.5.2 to name a few. &lt;strong&gt;ISOlinux &lt;/strong&gt;(the start-up of the live session) received a face-lift, plus booting into existing OS and memtest options added. &lt;strong&gt;Tribe&lt;/strong&gt; has fixes for partitioning, username options, much clearer log output, avatar corrections and checks for laptop running on battery, to name some of the parts that were worked on since the last ISO. &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+As with the previous release, Chakra is no longer shipping a GUI for package management. Appset-qt was the GUI for pacman, but was not handling complex updates as should, so it is dropped from this ISO. In the initial phase of using a built from scratch package manager, there will be no GUI for package management either, so this is a good time to let any user get accustomed to this situation. &lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Pacman&quot;&gt;Pacman&lt;/a&gt; is the cli frontend for package management, the online package viewer is there for additional info and searches.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+It was decided to no longer provide an i686 ISO. You can read more on this decision in this &lt;a href=&quot;http://chakra-linux.org/news/index.php?/archives/72-Chakra-phasing-out-i686-support.html&quot;&gt;news article&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+Chakra is offering an ISO version that includes all the language packs, many standard KDE apps, the new calligra 2.5.4, amarok, kde-telepathy, spideroak, printer support, minitube, k3b to name a few.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+With this release we offer:&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;  KDE 4.9.5&lt;br /&gt;&lt;br /&gt;
+&lt;/strong&gt;  Linux 3.6.6 (3.0.43 optional)&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;  DVD image, including all locales and a nice selections of apps&lt;br /&gt;&lt;br /&gt;
+&lt;/strong&gt;  Kapudan, Chakra&#039;s desktop greeter, and all around first setup tool&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;  Artwork theme called &quot;Dharma&quot;&lt;br /&gt;&lt;br /&gt;
+&lt;/strong&gt;  Latest openssl 1.0.1c, krb5 1.10.3, curl-7.28.1, libssh2-1.4.3&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;  Enhancements to Chakra tools Tribe and Kapudan&lt;br /&gt;&lt;br /&gt;
+&lt;/strong&gt;  Updated sound stack including Pulseaudio 3.0, and inclusion of gstreamer 1.0.3 packages&lt;br /&gt;&lt;br /&gt;
+*  A first showcase of the all new Qt5 and five apps/widgets included in this new version&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+You can install additional packages from our repositories.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+A good start is to read our &lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Main_Page&quot;&gt;Wiki&lt;/a&gt; or visit our &lt;a href=&quot;http://chakra-project.org/bbs/&quot;&gt;Forums&lt;/a&gt;. To create &lt;strong&gt;reliable installation media&lt;/strong&gt;, please follow the &lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Bootable_Medium_Creation&quot;&gt;instructions&lt;/a&gt; in the wiki. Chakra&#039;s ISO&#039;s do &lt;strong&gt;not support unetbootin&lt;/strong&gt;, and DVDs need a burn speed &lt;strong&gt;no higher than 4x&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;hr width=&quot;100%&quot; /&gt;&lt;br /&gt;&lt;strong&gt;Links:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-linux.org/get/&quot;&gt;Download: Images at SourceForge&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Bootable_USB_Flash_Drive_Creation&quot;&gt;Wiki: bootable USB-FlashDrive creation&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Alternate_Bootable_USB_Flash_Drive_Creation&quot;&gt;Wiki: Alternate bootable USB-FlashDrive creation&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.chakra-linux.org/wiki/index.php/Beginner&#039;s_Guide&quot;&gt;Chakra Beginners Guide&lt;/a&gt; 
+    </content:encoded>
+
+    <pubDate>Sun, 06 Jan 2013 17:20:40 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/90-guid.html</guid>
+    
+</item>
+<item>
+    <title>KDE 4.9.5 moved to stable</title>
+    <link>http://chakra-project.org/news/index.php?/archives/6-KDE-4.9.5-moved-to-stable.html</link>
+    
+    <comments>http://chakra-project.org/news/index.php?/archives/6-KDE-4.9.5-moved-to-stable.html#comments</comments>
+    <wfw:comment>http://chakra-project.org/news/wfwcomment.php?cid=6</wfw:comment>
+
+    <slash:comments>0</slash:comments>
+    <wfw:commentRss>http://chakra-project.org/news/rss.php?version=2.0&amp;type=comments&amp;cid=6</wfw:commentRss>
+    
+
+    <author>nospam@example.com (Manuel Tortosa)</author>
+    <content:encoded>
+    &lt;img src=&quot;http://chakra.sourceforge.net/news/uploads/kdelogo.png&quot; align=&quot;left&quot; alt=&quot;&quot; /&gt;  An extra KDE 4.9 release became available last week, and 4.9.5 has been in testing for the usual seven days.  Initially KDE announced not going beyond a 4.9.4 release, but some bugs found made KDE decide on one more release in the 4.9 series.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+As always, make sure your mirror is fully synced before performing this update, to check, run:&lt;br /&gt;&lt;strong&gt;mirror-check&lt;/strong&gt; 
+    </content:encoded>
+
+    <pubDate>Thu, 03 Jan 2013 17:18:38 +0100</pubDate>
+    <guid isPermaLink="false">http://chakra-project.org/news/index.php?/archives/6-guid.html</guid>
+    
+</item>
+
+</channel>
+</rss>

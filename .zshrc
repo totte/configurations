@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Path
 #-------------------------------------------------------------------------------
-export PATH="$HOME/code/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 #-------------------------------------------------------------------------------
 # Miscellaneous
@@ -11,9 +11,17 @@ export VISUAL='vim'
 export PAGER='less'
 export GREP_OPTIONS='--color=auto'
 export LANG='en_GB.UTF-8'
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+export WORKON_HOME='~/virtual_environments'
+export VIRTUAL_ENV_DISABLE_PROMPT=true
+
+# Python virtualenvwrapper
+source /usr/bin/virtualenvwrapper.sh
+
 setopt prompt_subst
 setopt correctall
 setopt auto_menu
+setopt autocd
 setopt complete_in_word
 setopt always_to_end
 setopt extendedglob
@@ -22,12 +30,6 @@ setopt extendedglob
 # Colours
 #-------------------------------------------------------------------------------
 autoload colors; colors;
-<<<<<<< HEAD
-=======
-#LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;\
-#33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
-#export LS_COLORS
->>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
 
 #-------------------------------------------------------------------------------
 # History
@@ -45,37 +47,63 @@ setopt inc_append_history
 setopt share_history
 
 #-------------------------------------------------------------------------------
+# Less for reading man pages
+#-------------------------------------------------------------------------------
+man() {
+    env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;32m") \
+    LESS_TERMCAP_so=$(printf "\e[47;30m") \
+    LESS_TERMCAP_us=$(printf "\e[1;33m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    man "$@"
+}
+
+#-------------------------------------------------------------------------------
 # Aliases
 #-------------------------------------------------------------------------------
 alias _='sudo'
 alias -- -='cd -'
 alias ..='cd ..'
-alias :d='/usr/bin/vim -gd'
-alias :e='/usr/bin/vim -g'
-alias cp='cp -iv'
-alias d='dirs -v'
-alias df='df -h'
-alias du='du -ch'
+alias :d='/usr/bin/vim -gd' # gvim diff mode
+alias :e='/usr/bin/vim -g' # gvim
+alias b='backup' # personal
+alias cc='compile' # personal
+alias ccd='compile_debug' # personal
+alias cp='cp -iv' # interactive, verbose cp
+alias d='dirs -v' # shell built-in, display remembered directories
+alias df='df -h' # disk space usage for the file system
+alias du='du -ch' # disk space usage for the directory tree
 alias g='git'
-<<<<<<< HEAD
+alias h='commands_history' # personal
 alias l='ls -lh --color --group-directories-first'
 alias la='ls -Alh --color --group-directories-first'
-=======
-alias l='ls -lh --color'
-alias la='ls -Alh --color'
->>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
-alias ln='ln -iv'
+alias ln='ln -iv' # interactive, verbose ln
 alias lsblk='lsblk --output NAME,MOUNTPOINT,LABEL,SIZE,FSTYPE,TYPE,MODEL'
-alias md='mkdir -pv'
-alias mount='mount | column -t'
-alias mp='makepkg -cs'
-alias mv='mv -iv'
-alias ping='ping -c 8'
-alias ports='netstat -alnptu'
-alias rez='. ~/.zshrc'
-alias rm='rm -Iv'
-alias rmd='rmdir -v'
-alias tm='tmux attach'
+alias m='./manage.py' # Django timesaver
+alias md='mkdir -pv' # create parent directories as needed, verbose mkdir
+alias mount='mount | column -t' # list mounted file systems, columnated
+alias mp='makepkg -cs' # arch/chakra-specific
+alias mv='mv -iv' # interactive, verbose mv
+alias ping='ping -c 8' # ping eight times
+alias ports='sudo netstat -alnptu' # list open ports
+alias rez='source ~/.zshrc' # reload .zshrc
+alias rm='rm -Iv' # semi-interactive, verbose rm
+alias rmd='rmdir -v' # verbose rmdir
+alias t='tree -I "*pyc*"' # tree view
+alias tm='tmux attach' # attach to existing tmux
+alias tv='tabview' # curses csv file viewer
+alias users='column -ts: /etc/passwd' # list system users in a legible fashion
+alias ve='workon' # Find a way to make no argument run 'deactivate'
+
+# Functions
+backup(){cp -iv --backup=numbered $1 ${1}~}
+commands_history(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
+compile(){g++ -pedantic -std=c++11 -Wall -Weffc++ -Werror -Wextra "${1}" -o "${1%%.cpp}"}
+compile_debug(){g++ -g -pedantic -std=c++11 -Wall -Weffc++ -Werror -Wextra "${1}" -o "${1%%.cpp}"}
+find_world_writables(){sudo find / -perm 777 -a \! -type s -a \! -type l -a \! \( -type d -a -perm 1777 \)}
+mdcd(){mkdir -pv $1; cd $1}
 unwrap(){
     if [ -f $1 ]; then
         case $1 in
@@ -98,37 +126,33 @@ unwrap(){
     fi
 }
 wrap(){tar -cvzf "${1%%/}.tar.gz" "${1%%/}/";}
-bu(){cp -v $1 ${1}.backup}
-cmds(){history | awk '{print $2}' | sort | uniq -c | sort -rn | head}
-mdcd(){mkdir -pv $1; cd $1}
 
-# Python packages (/usr/lib/python3.x/site-packages)
-alias pipi='sudo pip install' # Install
-alias pipl='pip freeze' # List
-alias pipr='sudo pip uninstall' # Remove
-alias pips='pip search' # Search
-alias pipu='sudo pip install -U' # Update
+# Python 3 packages (/usr/lib/python3.x/site-packages)
+alias pip3i='sudo pip3 install' # Install
+alias pip3l='pip3 freeze' # List
+alias pip3r='sudo pip3 uninstall' # Remove
+alias pip3s='pip3 search' # Search
+alias pip3u='sudo pip3 install -U' # Update
+
+# Python 2 packages (/usr/lib/python2.x/site-packages)
+alias pip2i='sudo pip2 install' # Install
+alias pip2l='pip2 freeze' # List
+alias pip2r='sudo pip2 uninstall' # Remove
+alias pip2s='pip2 search' # Search
+alias pip2u='sudo pip2 install -U' # Update
 
 # OS-specific aliases
 case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
-<<<<<<< HEAD
     (Arch|Chakra)
-=======
-    (Arch)
->>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
         alias alsae='alsamixer -D equal'
         alias alsam='alsamixer'
         alias jc='sudo journalctl'
         alias mpd='mpd ~/.config/mpd.conf'
-<<<<<<< HEAD
         alias py='python3'
-=======
-        alias py='ipython'
->>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
         alias pkgc='sudo pacman -Sc' # Clean cache
-        alias pkgd='whoneeds' # List dependants
         alias pkgi='sudo pacman -S' # Install
         alias pkgl='pacman -Q' # List
+        alias pkgm='sudo pacman -Sii' # View meta
         alias pkgr='sudo pacman -Rns' # Remove
         alias pkgs='pacman -Ss' # Search
         alias pkgu='sudo pacman -Syu' # Update
@@ -185,6 +209,15 @@ hosts=(
 )
 zstyle ':completion:*:hosts' hosts $hosts
 
+# Show blue dots while loading...
+expand-or-complete-with-dots() {
+    echo -n " $fg[blue]...$reset_color"
+    zle expand-or-complete
+    zle redisplay
+}
+zle -N expand-or-complete-with-dots
+bindkey "^I" expand-or-complete-with-dots
+
 #-------------------------------------------------------------------------------
 # Keybindings
 #-------------------------------------------------------------------------------
@@ -206,15 +239,12 @@ bindkey "\e[3~" delete-char
 #-------------------------------------------------------------------------------
 # Prompt
 #-------------------------------------------------------------------------------
-<<<<<<< HEAD
-. /usr/share/zsh/site-contrib/powerline.zsh
-=======
-function _update_ps1()
-{
-    export PROMPT="$(~/.config/powerprompt.py $?)"
-}
-precmd()
-{
-    _update_ps1
-}
->>>>>>> de70eb7941706e20b8d0864151a8fc0a371ec4d0
+# OS-specific prompt commands
+case $(lsb_release -d | cut -f2 | cut -d " " -f1) in
+    (Arch|Chakra)
+        . /usr/share/zsh/site-contrib/powerline.zsh
+        ;;
+    (Debian|Ubuntu)
+        . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+        ;;
+esac
