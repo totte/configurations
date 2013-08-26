@@ -1,0 +1,5 @@
+[Tab0]
+sources=Source0,Source1,Source2,Source3
+
+[Tab0][Source3][PlasmaRunnerManager]
+LaunchCounts=30 services_firefox.desktop,22 services_kde4-konversation.desktop,33 services_kde4-sheets.desktop,5 services_vlc.desktop,4 services_chromium.desktop,4 services_transmission-qt.desktop,1 services_kde4-krita.desktop,3 services_kde4-digikam.desktop,27 services_kde4-Kontact.desktop,1 services_colors.desktop,33 services_qvim.desktop,1 services_eclipse.desktop,4 services_kde4-systemsettings.desktop,19 services_sqliteman.desktop,21 services_kde4-kexi.desktop,2 shell_kexi

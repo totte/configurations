@@ -6,3 +6,8 @@ transmission
 menus
 chromium
 akonadi
+.kde4/Autostart
+.kde4/cache*
+.kde4/share
+.kde4/socket*
+.kde4/tmp*

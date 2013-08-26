@@ -1,0 +1,285 @@
+[$Version]
+update_info=kwin.upd:kde3.2Xinerama,kded.upd:kde3.0
+
+[Appmenu Style]
+Style=Others
+
+[ColorEffects:Disabled]
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=-0.9
+ColorEffect=1
+ContrastAmount=0.25
+ContrastEffect=2
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=224,223,222
+BackgroundNormal=223,220,217
+DecorationFocus=58,167,221
+DecorationHover=110,214,255
+ForegroundActive=146,76,157
+ForegroundInactive=137,136,135
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=34,31,30
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[Colors:Selection]
+BackgroundAlternate=62,138,204
+BackgroundNormal=67,172,232
+DecorationFocus=58,167,221
+DecorationHover=110,214,255
+ForegroundActive=108,36,119
+ForegroundInactive=199,226,248
+ForegroundLink=0,49,110
+ForegroundNegative=156,14,14
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=69,40,134
+
+[Colors:Tooltip]
+BackgroundAlternate=196,224,255
+BackgroundNormal=24,21,19
+DecorationFocus=58,167,221
+DecorationHover=110,214,255
+ForegroundActive=255,128,224
+ForegroundInactive=137,136,135
+ForegroundLink=88,172,255
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=231,253,255
+ForegroundPositive=0,110,40
+ForegroundVisited=150,111,232
+
+[Colors:View]
+BackgroundAlternate=248,247,246
+BackgroundNormal=255,255,255
+DecorationFocus=58,167,221
+DecorationHover=110,214,255
+ForegroundActive=146,76,157
+ForegroundInactive=137,136,135
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=31,28,27
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[Colors:Window]
+BackgroundAlternate=218,217,216
+BackgroundNormal=214,210,208
+DecorationFocus=58,167,221
+DecorationHover=110,214,255
+ForegroundActive=146,76,157
+ForegroundInactive=137,136,135
+ForegroundLink=0,87,174
+ForegroundNegative=191,3,3
+ForegroundNeutral=176,128,0
+ForegroundNormal=34,31,30
+ForegroundPositive=0,110,40
+ForegroundVisited=100,74,155
+
+[DesktopIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=togamma
+ActiveSemiTransparent=false
+ActiveValue=0.7
+Animated=true
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=48
+
+[DialogIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=32
+
+[DirSelect Dialog]
+DirSelectDialog Size=797,576
+History Items[$e]=file://$HOME/downloads,file://$HOME/pictures/local_photographs,file://$HOME/pictures,file:///media/photographs/photographs,file://$HOME/code/rackapa/docs,file://$HOME/code/rackapa
+
+[General]
+BrowserApplication=firefox
+ColorScheme=Oxygen
+Name=Oxygen
+XftAntialias=true
+XftHintStyle=hintmedium
+XftSubPixel=none
+dbfile=/home/totte/.mozilla/firefox/iqi1oe98.default/places.sqlite
+desktopFont=DejaVu Sans,10,-1,5,50,0,0,0,0,0
+fixed=Meslo LG S,12,-1,5,50,0,0,0,0,0
+font=DejaVu Sans,10,-1,5,50,0,0,0,0,0
+menuFont=DejaVu Sans,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=DejaVu Sans,8,-1,5,50,0,0,0,0,0
+taskbarFont=DejaVu Sans,10,-1,5,50,0,0,0,0,0
+toolBarFont=DejaVu Sans,10,-1,5,50,0,0,0,0,0
+widgetStyle=oxygen
+
+[Icons]
+Theme=oxygen
+
+[KDE]
+ShowDeleteCommand=true
+ShowIconsInMenuItems=true
+ShowIconsOnPushButtons=true
+SingleClick=true
+contrast=7
+
+[KDE-Global GUI Settings]
+GraphicEffectsLevel=7
+
+[KFileDialog Settings]
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=0
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Previews=true
+Recent URLs[$e]=$HOME/pictures/,$HOME/packaging/ccr/,$HOME/documents/hinfo/,$HOME/code/hinfoweb/,$HOME/pictures/backgrounds/,$HOME/downloads/,$HOME/packaging/testing/buildroot/apps-testing-x86_64/pkgbuilds/ghc/
+Show Bookmarks=false
+Show Full Path=false
+Show Preview=false
+Show Speedbar=true
+Show hidden files=true
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=160
+View Style=Simple
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[MainToolbarIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=22
+
+[PanelIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=togamma
+ActiveSemiTransparent=false
+ActiveValue=0.7
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=32
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[Shortcuts]
+SaveAs=Ctrl+Shift+S
+
+[SmallIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=16
+
+[Toolbar style]
+ToolButtonStyle=TextBesideIcon
+ToolButtonStyleOtherToolbars=TextBesideIcon
+
+[ToolbarIcons]
+ActiveColor=169,156,255
+ActiveColor2=0,0,0
+ActiveEffect=none
+ActiveSemiTransparent=false
+ActiveValue=1
+Animated=false
+DefaultColor=144,128,248
+DefaultColor2=0,0,0
+DefaultEffect=none
+DefaultSemiTransparent=false
+DefaultValue=1
+DisabledColor=34,202,0
+DisabledColor2=0,0,0
+DisabledEffect=togray
+DisabledSemiTransparent=true
+DisabledValue=1
+Size=22
+
+[WM]
+activeBackground=48,174,232
+activeBlend=255,255,255
+activeFont=DejaVu Sans,10,-1,5,75,0,0,0,0,0
+activeForeground=255,255,255
+inactiveBackground=224,223,222
+inactiveBlend=75,71,67
+inactiveForeground=75,71,67

@@ -1,1 +1,1 @@
-/home/totte/code/pathogen/autoload/pathogen.vim
+../bundle/pathogen/autoload/pathogen.vim

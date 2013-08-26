@@ -1,0 +1,36 @@
+[ImportExport]
+AddColumnNamesForExportingCSVFiles=false
+DefaultDelimiterForExportingCSVFiles=;
+ShowOptionsInCSVExportDialog=true
+StoreOptionsForCSVCopyDialog=false
+StoreOptionsForCSVExportDialog=true
+StripBlanksOffOfTextValuesWhenImportingCSVFiles=true
+
+[KFileDialog Settings]
+Height 1024=450
+Height 1050=508
+Height 900=450
+Recent Files[$e]=hinfo.csv,$HOME/documents/hinfo/tmp.csv,$HOME/code/playground/python/csv/real_output.csv
+Width 1280=720
+Width 1440=720
+Width 1680=840
+
+[MainWindow]
+Maximized=true
+ProjectNavigatorArea=left
+ProjectNavigatorSize=248,867
+PropertyEditorArea=right
+PropertyEditorSize=208,240
+
+[Recent Dirs]
+CSVImportExport[$e]=file://$HOME/code/hinfoweb,file://$HOME/documents/hinfo,file://$HOME/documents/hinfo/
+OpenExistingOrCreateNewProject[$e]=file://$HOME/documents/hinfo,file://$HOME/documents/hinfo/db,file://$HOME/databases
+ProjectMigrationSourceDir[$e]=file://$HOME/documents/hinfo/,file://$HOME/,$HOME/Documents
+
+[User Feedback]
+BasicInfo=true
+LastStatusBarUpdate=2013,8,20,15,17,41
+RegionalSettings=true
+ScreenInfo=true
+SystemInfo=true
+Uid={6932e5ec-c759-41a4-ae55-bb205e2b8db1}

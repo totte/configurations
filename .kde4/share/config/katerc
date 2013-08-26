@@ -1,0 +1,1040 @@
+block=false
+close_tag=false
+commentar=false
+console=true
+expand=false
+format=false
+gid=false
+tools=false
+
+[CTags]
+GlobalCommand=ctags -R --c++-types=+px --extra=+q --excmd=pattern --exclude=Makefile --exclude=.
+GlobalNumTargets=0
+
+[Colors]
+CurrentPalette=Oxygen Colors
+
+[Desktop Entry]
+DefaultProfile=totte.profile
+
+[Document 0]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=HTML
+Indentation Mode=python
+Mode=HTML
+URL=fish://tott.es:86/home/totte/websites/totte.io/hp/plan.html
+
+[Document 1]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=None
+Indentation Mode=python
+Mode=
+URL=file:///home/totte/code/chakra_website/.kateproject
+
+[Document 10]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/config.php.proto
+
+[Document 11]
+Bookmarks=
+Encoding=ISO-8859-15
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/feedcreator.class.php
+
+[Document 12]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/functions.php
+
+[Document 13]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/gettext.php
+
+[Document 14]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/recaptchalib.php
+
+[Document 15]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/streams.php
+
+[Document 16]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/translator.php
+
+[Document 17]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/footer.php
+
+[Document 18]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/header.php
+
+[Document 19]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/list_search_form.php
+
+[Document 2]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=Markdown
+Indentation Mode=python
+Mode=Markdown
+URL=file:///home/totte/code/chakra_website/README.md
+
+[Document 20]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/pkg_details.php
+
+[Document 21]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/search_form.php
+
+[Document 22]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/templates/search_results.php
+
+[Document 3]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=Python
+Indentation Mode=python
+Mode=Python
+URL=file:///home/totte/code/chakra_website/polls/models.py
+
+[Document 4]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=Python
+Indentation Mode=python
+Mode=Python
+URL=file:///home/totte/code/chakra_website/chakra_website/urls.py
+
+[Document 5]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=Python
+Indentation Mode=python
+Mode=Python
+URL=file:///home/totte/code/chakra_website/polls/admin.py
+
+[Document 6]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=None
+Indentation Mode=python
+Mode=
+URL=
+
+[Document 7]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=Bash
+Indentation Mode=python
+Mode=Bash
+URL=file:///home/totte/downloads/qvim/PKGBUILD
+
+[Document 8]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=INI Files
+Indentation Mode=python
+Mode=INI Files
+URL=file:///home/totte/restore/.config/server/php-development.ini
+
+[Document 9]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=PHP (HTML)
+Indentation Mode=python
+Mode=PHP (HTML)
+URL=file:///home/totte/code/chakra/packages/include/class.simplediff.php
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+Days Meta Infos=30
+Last Session=
+Modified Notification=true
+Restore Window Configuration=true
+Save Meta Infos=true
+Show Full Path in Title=false
+Show Status Bar=true
+Startup Session=manual
+
+[KFileDialog Settings]
+Height 1050=508
+Height 900=433
+Recent Files[$e]=$HOME/downloads/qvim/PKGBUILD,$HOME/code/chakra_website/README.md,$HOME/code/chakra_website/chakra_website/settings.py,$HOME/code/tottes-chakra-website-mockup/index.php,/etc/httpd/conf/httpd.conf,$HOME/restore/.config/server/php-development.ini,$HOME/restore/.config/server/httpd-custom.conf,$HOME/restore/.config/server/httpd-userdir.conf,$HOME/restore/.config/server/httpd.conf,$HOME/downloads/bootstrap/css/bootstrap.css,$HOME/documents/chakra-packaging.txt,$HOME/documents/hvhvm.txt,$HOME/documents/foo.txt,$HOME/documents/chakra-overview.txt
+Width 1440=720
+Width 1680=840
+
+[Kate Document Defaults]
+Allow End of Line Detection=true
+Allow Simple Mode=true
+BOM=false
+Backup Flags=0
+Backup Prefix=
+Backup Suffix=~
+Encoding=UTF-8
+End of Line=0
+Indent On Backspace=true
+Indent On Tab=true
+Indent On Text Paste=false
+Indentation Mode=python
+Indentation Width=4
+Keep Extra Spaces=false
+Line Length Limit=3000
+Newline At EOF=false
+No sync=false
+On-The-Fly Spellcheck=false
+Overwrite Mode=false
+PageUp/PageDown Moves Cursor=false
+Remove Spaces=2
+ReplaceTabsDyn=true
+Search Dir Config Depth=9
+Show Spaces=true
+Show Tabs=true
+Smart Home=true
+Tab Handling=2
+Tab Width=4
+Word Wrap=false
+Word Wrap Column=80
+
+[Kate Part Defaults]
+Encoding Prober Type=1
+Fallback Encoding=ISO-8859-15
+
+[Kate Plugins]
+kate_kttsd=false
+katebacktracebrowserplugin=false
+katebuildplugin=true
+katectagsplugin=true
+katefilebrowserplugin=false
+katefiletemplates=false
+katefiletreeplugin=true
+kategdbplugin=false
+katekonsoleplugin=false
+katemailfilesplugin=false
+kateopenheaderplugin=true
+kateprojectplugin=true
+katesearchplugin=true
+katesnippetsplugin=false
+katesqlplugin=false
+katesymbolviewerplugin=false
+katetabbarextensionplugin=false
+katetabifyplugin=false
+katetextfilterplugin=true
+katexmlcheckplugin=false
+katexmltoolsplugin=false
+pateplugin=true
+
+[Kate Renderer Defaults]
+Schema=Solarized (light)
+Show Indentation Lines=true
+Show Whole Bracket Expression=true
+Word Wrap Marker=true
+
+[Kate Vi Input Mode Settings]
+Normal Mode Mapping Keys=
+Normal Mode Mappings=
+
+[Kate View Defaults]
+Allow Mark Menu=true
+Auto Center Lines=0
+Auto Completion=true
+Bookmark Menu Sorting=0
+Default Mark Type=1
+Dynamic Word Wrap=true
+Dynamic Word Wrap Align Indent=80
+Dynamic Word Wrap Indicators=1
+Folding Bar=true
+Icon Bar=false
+Line Modification=true
+Line Numbers=true
+Maximum Search History Size=100
+Persistent Selection=false
+Replacement Text History=$roles,$languages,array("Developer"),label_start,),array("English"\\,"Spanish")\\,array("Developer"\\,"Packager"),,e4e4e4,f0f0f0,e0e0e0,Contact</td><td><button class="btn btn-inverse" type="button"><i class="icon-envelope icon-white"></i>&nbsp;E-mail</button>,E-mail</td><td><button class="btn btn-inverse" type="button"><i class="icon-envelope icon-white"></i>&nbsp;E-mail</button>,<button class="btn btn-inverse" type="button"><i class="icon-envelope"></i>&nbsp;E-mail</button>,Unknown,N/A,blank,outset shadow,outset,well-inverted,bootstrap,$pkgname,"assets/,<,>,source/
+Scroll Bar Marks=false
+Scroll Bar Mini Map=true
+Scroll Bar Mini Map All=false
+Scroll Bar Mini Map Width=100
+Scroll Past End=false
+Search Pattern History=$role,$language,array("Developer"\\,"Packager"),label_role_start,label_language_start,\\,"Spanish"),"English"\\,"Developer",<td>Website</td><td><p><strong>Unknown</strong></p></td>,f0f0f0,f4f4f4,foo@chakraproject.org</strong></p>,E-mail</td><td><p><strong>,E-mail,Anonymous,None,N/A@chakraproject.org,SECRET,boom1992,outset,well-inverted,well,carou,assets,asset,foo,href="*","bootstrap/,../assets,been,.png<,>source/,./
+Search/Replace Flags=140
+Smart Copy Cut=false
+Vi Input Mode=false
+Vi Input Mode Hide Status Bar=true
+Vi Input Mode Steal Keys=false
+Word Completion=true
+Word Completion Minimal Word Length=3
+
+[Konsole]
+AutoSyncronize=true
+SetEditor=true
+
+[MainWindow]
+Height 1050=1051
+Height 900=901
+State=AAAA/wAAAAD9AAAAAAAABpAAAAPjAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAAAAADGgAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1440=1441
+Width 1680=1681
+
+[MainWindow0]
+Characters Count Visible=false
+Cursor Position Visible=true
+Document Name Visible=true
+Encoding Visible=true
+Height 1050=1051
+Height 900=901
+Insertion Mode Visible=true
+Kate-MDI-H-Splitter=237,1652,329
+Kate-MDI-Sidebar-0-Splitter=995,0
+Kate-MDI-Sidebar-1-Splitter=
+Kate-MDI-Sidebar-3-Splitter=0,0,0,0
+Kate-MDI-Sidebar-Style=2
+Kate-MDI-ToolView-kate_plugin_katesearch-Persistent=false
+Kate-MDI-ToolView-kate_plugin_katesearch-Position=3
+Kate-MDI-ToolView-kate_plugin_katesearch-Sidebar-Position=0
+Kate-MDI-ToolView-kate_plugin_katesearch-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katebuildplugin-Persistent=false
+Kate-MDI-ToolView-kate_private_plugin_katebuildplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katebuildplugin-Sidebar-Position=1
+Kate-MDI-ToolView-kate_private_plugin_katebuildplugin-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katectagsplugin-Persistent=false
+Kate-MDI-ToolView-kate_private_plugin_katectagsplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katectagsplugin-Sidebar-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katectagsplugin-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Persistent=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Sidebar-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Persistent=false
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Sidebar-Position=4
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
+Kate-MDI-ToolView-kateproject-Persistent=true
+Kate-MDI-ToolView-kateproject-Position=0
+Kate-MDI-ToolView-kateproject-Sidebar-Position=1
+Kate-MDI-ToolView-kateproject-Visible=false
+Kate-MDI-ToolView-kateprojectinfo-Persistent=false
+Kate-MDI-ToolView-kateprojectinfo-Position=3
+Kate-MDI-ToolView-kateprojectinfo-Sidebar-Position=2
+Kate-MDI-ToolView-kateprojectinfo-Visible=false
+Kate-MDI-V-Splitter=150,969,176
+Selection Mode Visible=true
+State=AAAA/wAAAAD9AAAAAAAABpAAAAPjAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAAAAADGgAAAAAAAAAA
+Width 1440=1441
+Width 1680=1681
+
+[MainWindow0 Settings]
+Height 1050=1051
+Height 900=901
+State=AAAA/wAAAAD9AAAAAAAABpAAAAPjAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAAAAADGgAAAAAAAAAA
+Width 1440=1441
+Width 1680=1681
+WindowState=10
+
+[MainWindow0-Splitter 0]
+Orientation=2
+Sizes=969
+
+[MainWindow0-ViewSpace 0]
+Active View=fish://tott.es:86/home/totte/websites/totte.io/hp/plan.html
+Count=1
+View 0=fish://tott.es:86/home/totte/websites/totte.io/hp/plan.html
+View 1=file:///home/totte/code/chakra_website/polls/models.py
+View 10=file:///home/totte/code/chakra/packages/include/feedcreator.class.php
+View 11=file:///home/totte/code/chakra/packages/include/translator.php
+View 12=file:///home/totte/code/chakra/packages/include/streams.php
+View 13=file:///home/totte/code/chakra/packages/include/recaptchalib.php
+View 14=file:///home/totte/code/chakra/packages/include/gettext.php
+View 15=file:///home/totte/code/chakra/packages/include/functions.php
+View 16=file:///home/totte/code/chakra/packages/templates/search_results.php
+View 17=file:///home/totte/code/chakra/packages/templates/pkg_details.php
+View 2=file:///home/totte/code/chakra_website/chakra_website/urls.py
+View 3=file:///home/totte/code/chakra_website/chakra_website/settings.py
+View 4=file:///home/totte/code/chakra_website/polls/admin.py
+View 5=file:///home/totte/code/chakra_website/README.md
+View 6=file:///home/totte/restore/.config/server/httpd-userdir.conf
+View 7=file:///home/totte/downloads/qvim/PKGBUILD
+View 8=file:///home/totte/restore/.config/server/php-development.ini
+View 9=file:///home/totte/code/chakra/packages/include/config.php.proto
+
+[MainWindow0-ViewSpace 0 file:///home/totte/.kde4/share/config/kateschemarc]
+CursorColumn=25
+CursorLine=5
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/chakra-e-mail.txt]
+CursorColumn=175
+CursorLine=56
+JumpList=
+ViMarks=^,56,10
+ViRegisterContents=\n,    packages (separate application)\n,A
+ViRegisterFlags=1,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/chakra-overview.txt]
+CursorColumn=14
+CursorLine=2
+JumpList=
+ViMarks=<,1,11,>,48,15,^,3,31
+ViRegisterContents=\n,[Obsidian]\ndummy=prevent-empty-group, (group)\n        chakra (project)\n            akabei (repository)
+ViRegisterFlags=1,0,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/chakra-packaging.txt]
+CursorColumn=15
+CursorLine=21
+JumpList=
+ViMarks=<,21,16,>,21,16,^,29,39
+ViRegisterContents=\n,[Obsidian]\ndummy=prevent-empty-group, (group)\n        chakra (project)\n            akabei (repository)
+ViRegisterFlags=1,0,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/chakra.txt]
+CursorColumn=322
+CursorLine=52
+JumpList=
+ViMarks=<,52,322,>,52,322,^,39,3
+ViRegisterContents=\n,    packages (separate application)\n,A
+ViRegisterFlags=1,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/after_installing_chakra.txt]
+CursorColumn=89
+CursorLine=39
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/ccr/PKGBUILD]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/packages/include/functions.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/packages/index.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/packages/templates/pkg_details.php]
+CursorColumn=0
+CursorLine=4
+JumpList=
+ViMarks=
+ViRegisterContents=\n,[Obsidian]\ndummy=prevent-empty-group, (group)\n        chakra (project)\n            akabei (repository)
+ViRegisterFlags=1,0,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/README.md]
+CursorColumn=39
+CursorLine=90
+JumpList=
+ViMarks=^,90,40,a,79,0
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/footer.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/header.php]
+CursorColumn=0
+CursorLine=97
+JumpList=
+ViMarks=<,97,0,>,97,0,^,97,0
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/index.html]
+CursorColumn=39
+CursorLine=215
+JumpList=
+ViMarks=<,214,35,>,216,35,^,215,40
+ViRegisterContents=\s                           <br />\n,                                <tr>\n                                    <th>Included kernel</th><td>1.2.3</td>\n                                </tr>\n,Kernel</th><td>1.2.3</td>\n                                </tr>\n                                <tr>\n                                    <th>
+ViRegisterFlags=1,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/index.php]
+CursorColumn=29
+CursorLine=176
+JumpList=
+ViMarks=<,117,35,>,119,35,^,176,19,a,117,0,b,119,0
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/index3.html]
+CursorColumn=38
+CursorLine=351
+JumpList=
+ViMarks=<,432,24,>,432,24,^,350,12
+ViRegisterContents=>,        <h2>This just in</h2>\n        <p>So I totally just met this guy and he was all like ...</p>\n        <a href="#"><p>Read more</p></a>\n,\n    <!-- One column for the latest news and another for the latest updated packages (official repositories)? -->
+ViRegisterFlags=0,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/index4.html]
+CursorColumn=111
+CursorLine=116
+JumpList=107,0
+ViMarks=<,126,7,>,128,7,^,116,112
+ViRegisterContents=>,        <h2>This just in</h2>\n        <p>So I totally just met this guy and he was all like ...</p>\n        <a href="#"><p>Read more</p></a>\n,\n    <!-- One column for the latest news and another for the latest updated packages (official repositories)? -->
+ViRegisterFlags=0,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra-webdev/tottes-chakra-website-mockup/style.css]
+CursorColumn=20
+CursorLine=7
+JumpList=
+ViMarks=^,7,21,a,41,0
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/chakra/tribe/README]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/GNU-GPL]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/admin.php]
+CursorColumn=12
+CursorLine=21
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/diffs.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/files.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/flags.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/class.simplediff.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/config.php.proto]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/feedcreator.class.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/functions.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/gettext.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/recaptchalib.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/streams.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/include/translator.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/packages.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/rss.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/templates/pkg_details.php]
+CursorColumn=104
+CursorLine=44
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/packages/templates/search_results.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/.kateproject]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/CMakeLists.txt]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/README]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/src/installationhandler.cpp]
+CursorColumn=10
+CursorLine=334
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/src/installationhandler.h]
+CursorColumn=0
+CursorLine=56
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/src/main.cpp]
+CursorColumn=6
+CursorLine=41
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra/tribe/src/mainwindow.cpp]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/.kateproject]
+CursorColumn=25
+CursorLine=1
+JumpList=
+ViMarks=^,1,11
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/README.md]
+CursorColumn=31
+CursorLine=51
+JumpList=
+ViMarks=^,51,32
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/chakra_website/settings.py]
+CursorColumn=9
+CursorLine=126
+JumpList=
+ViMarks=<,123,6,>,123,6,^,126,10
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/chakra_website/urls.py]
+CursorColumn=3
+CursorLine=12
+JumpList=
+ViMarks=^,12,4
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/polls/admin.py]
+CursorColumn=24
+CursorLine=3
+JumpList=
+ViMarks=^,3,25
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/chakra_website/polls/models.py]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/laponia/footer.php]
+CursorColumn=35
+CursorLine=11
+JumpList=
+ViMarks=<,11,35,>,11,56
+ViRegisterContents=>,        <h2>This just in</h2>\n        <p>So I totally just met this guy and he was all like ...</p>\n        <a href="#"><p>Read more</p></a>\n,\n    <!-- One column for the latest news and another for the latest updated packages (official repositories)? -->
+ViRegisterFlags=0,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/packages/ccr/xcursor-neutra/PKGBUILD]
+CursorColumn=77
+CursorLine=10
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/scripts/ali.sh]
+CursorColumn=13
+CursorLine=104
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/README.md]
+CursorColumn=21
+CursorLine=47
+JumpList=
+ViMarks=^,46,27
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/about.php]
+CursorColumn=42
+CursorLine=56
+JumpList=
+ViMarks=<,521,24,>,549,28,^,56,23
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/footer.php]
+CursorColumn=138
+CursorLine=5
+JumpList=
+ViMarks=<,30,0,>,30,0,^,5,139
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/header.php]
+CursorColumn=51
+CursorLine=34
+JumpList=
+ViMarks=<,37,81,>,37,31,^,34,52
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/index.php]
+CursorColumn=29
+CursorLine=174
+JumpList=
+ViMarks=<,182,33,>,186,33,^,189,0
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/old_about.php]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/tottes-chakra-website-mockup/style.css]
+CursorColumn=15
+CursorLine=40
+JumpList=
+ViMarks=<,49,17,>,54,4,^,40,29
+ViRegisterContents=\s   color: #fff;\n, class="unstyled
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/code/ttf-meslo/PKGBUILD]
+CursorColumn=0
+CursorLine=1
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/documents/chakra-overview.txt]
+CursorColumn=31
+CursorLine=90
+JumpList=
+ViMarks=<,60,46,>,60,18,^,90,32
+ViRegisterContents=>,        <h2>This just in</h2>\n        <p>So I totally just met this guy and he was all like ...</p>\n        <a href="#"><p>Read more</p></a>\n,\n    <!-- One column for the latest news and another for the latest updated packages (official repositories)? -->
+ViRegisterFlags=0,1,0
+ViRegisterNames=-,0,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/downloads/qvim/PKGBUILD]
+CursorColumn=0
+CursorLine=84
+JumpList=
+ViMarks=<,84,0,>,84,0,^,84,0
+ViRegisterContents=\n,md5sums=('6e7adfbd5d26c1d161030ec203a7f243'\n         'e57777374891063b9ca48a1fe392ac05'\n         '1fc9d4930ab312fd8654e72165d53ca3'\n         '1e1da22422d6d4650663fe866ad5daae')\n
+ViRegisterFlags=1,1
+ViRegisterNames=-,0
+
+[MainWindow0-ViewSpace 0 file:///home/totte/mdark.kateschema]
+CursorColumn=12
+CursorLine=4112
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/totte/restore/.config/server/httpd-custom.conf]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/restore/.config/server/httpd-userdir.conf]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/restore/.config/server/httpd.conf]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 file:///home/totte/restore/.config/server/php-development.ini]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+ViRegisterContents=\s                           <br />\n,#
+ViRegisterFlags=1,0
+ViRegisterNames=-,^
+
+[MainWindow0-ViewSpace 0 fish://tott.es:86/home/totte/websites/totte.io/hp/plan.html]
+CursorColumn=68
+CursorLine=286
+JumpList=
+ViMarks=
+
+[MainWindow0-ViewSpace 0 smb://totte@betre/storage/chakra_installation_notes.txt]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
+[Open Documents]
+Count=1
+
+[Open MainWindows]
+Count=1
+
+[Plugin:katebuildplugin:MainWindow:0:build-plugin]
+0 BuildCmd=
+0 BuildPath=
+0 CleanCmd=
+0 QuickCmd=
+0 Target=
+Active Target Index=0
+NumTargets=1
+
+[Plugin:katectagsplugin:MainWindow:0:ctags-plugin]
+SessionDatabase=/home/totte/.kde4/share/apps/kate/plugins/katectags/session_db_20130507_190509
+SessionNumTargets=1
+SessionTarget_  0=/home/totte/code/chakra/tribe/
+TagsGenCMD=ctags -R --c++-types=+px --extra=+q --excmd=pattern --exclude=Makefile --exclude=.
+
+[Plugin:katesearchplugin:MainWindow:0:search-plugin]
+BinaryFiles=false
+CurrentFilter=0
+Filters=\\0
+FollowSymLink=false
+HiddenFiles=false
+MatchCase=false
+Place=-1
+Recursive=true
+Search=outdated
+SearchFolder=
+SearchFolders=
+UseRegExp=false
+
+[Plugin:pateplugin:global]
+AutoReload=false
+
+[Plugin:pateplugin:load]
+block=false
+close_tag=false
+commentar=true
+console=true
+expand=false
+format=false
+gid=false
+tools=true
+
+[Recent Files]
+File1[$e]=$HOME/code/tottes-chakra-website-mockup/index.php
+File2[$e]=$HOME/code/tottes-chakra-website-mockup/README.md
+File3[$e]=smb://totte@betre/storage/chakra_installation_notes.txt
+File4[$e]=fish://tott.es:86/home/totte/websites/totte.io/hp/plan.html
+Name1[$e]=index.php
+Name2[$e]=README.md
+Name3[$e]=chakra_installation_notes.txt
+Name4[$e]=plan.html
+
+[TipOfDay]
+RunOnStart=false
+
+[filetree]
+editShade=68,85,106
+listMode=false
+shadingEnabled=true
+showFullPathOnRoots=false
+sortRole=0
+viewShade=72,62,83

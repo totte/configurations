@@ -1,0 +1,12 @@
+[console]
+dialogSize=csip\n_unpickle_type\np0\n(S'PyQt4.QtCore'\np1\nS'QSize'\np2\n(I600\nI420\ntp3\ntp4\nRp5\n.
+exceptionColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I180\nI3\nI3\nI255\ntp3\ntp4\nRp5\n.
+floatColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I176\nI126\nI0\nI255\ntp3\ntp4\nRp5\n.
+font=VMonospace,12,-1,5,50,0,0,0,0,0\np0\n.
+helpColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I0\nI128\nI0\nI255\ntp3\ntp4\nRp5\n.
+integerColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I0\nI20\nI255\nI255\ntp3\ntp4\nRp5\n.
+nameColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I0\nI128\nI0\nI255\ntp3\ntp4\nRp5\n.
+promptColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I160\nI160\nI160\nI255\ntp3\ntp4\nRp5\n.
+ps1=V>>>\np0\n.
+ps2=V...\np0\n.
+stringColour=csip\n_unpickle_type\np0\n(S'PyQt4.QtGui'\np1\nS'QColor'\np2\n(I190\nI3\nI3\nI255\ntp3\ntp4\nRp5\n.

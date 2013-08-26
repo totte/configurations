@@ -1,2 +1,10 @@
 [ActiveShadow]
-Size=20
+Size=16
+
+[InactiveShadow]
+Size=16
+VerticalOffset=0.4
+
+[Windeco]
+FrameBorder=No Side Border
+UseOxygenShadows=false

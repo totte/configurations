@@ -1,5 +1,5 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 call pathogen#infect()
 filetype on                     " Detect filetypes
@@ -58,6 +58,7 @@ set wrapmargin=0                " Number of characters from the right
 " Plugins
 set rtp+=/usr/lib/python3.3/site-packages/powerline/bindings/vim
 let g:powerline_pycmd = 'python3'
+let g:ctrlp_map = '<c-z>'
 let g:powerline_symbols = 'fancy'
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 4

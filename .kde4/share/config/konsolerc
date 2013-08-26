@@ -1,28 +1,26 @@
 [$Version]
 update_info=konsole.upd:2.9.0-global-options
 
-[Colors]
-CurrentPalette=Oxygen Colors
-
 [Desktop Entry]
 DefaultProfile=totte.profile
 
 [Favorite Profiles]
-Favorites=totte.profile
-
-[KonsoleWindow]
-ShowMenuBarByDefault=false
+Favorites=totte.profile,Shell.profile
 
 [MainWindow]
 Height 1024=1025
-Height 1050=991
-Height 900=724
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABaAAAANQAAAABAAAAAQAAAAIAAAACPwAAAAA
+Height 1050=1051
+Height 480=481
+Height 864=865
+Height 900=901
+State=AAAA/wAAAAD9AAAAAAAABpAAAAPjAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
+Width 1152=1153
 Width 1280=1281
-Width 1440=956
-Width 1680=836
+Width 1440=1441
+Width 1680=1681
+Width 2720=2721
+Width 640=641
 
 [TabBar]
 TabBarPosition=Top

@@ -1,10 +1,19 @@
 [GENERAL]
 delay=0
-filename[$e]=file://$HOME/snapshot1.png
+filename[$e]=fish://tott.es:86/home/totte/websites/totte.io/img/oddity1.png
 includeDecorations=true
 includePointer=false
 mode=0
 
+[KFileDialog Settings]
+Height 1050=508
+Height 900=450
+Recent Files[$e]=$HOME/code/xcursor-neutra/preview.png,fish://tott.es:86/home/totte/websites/totte.io/img/oddity.png,$HOME/downloads/zeiva/preview5.png,$HOME/downloads/zeiva/preview4.png,$HOME/downloads/zeiva/preview3.png,$HOME/downloads/zeiva/preview2.png,$HOME/downloads/zeiva/preview1.png
+Width 1440=720
+Width 1680=840
+
 [MainWindow]
+Height 1050=499
 Height 900=499
-Width 1440=421
+Width 1440=441
+Width 1680=441

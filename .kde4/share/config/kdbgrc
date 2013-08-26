@@ -1,0 +1,29 @@
+[Debugger]
+DebuggerCmdStr=
+
+[KFileDialog Settings]
+Height 1050=508
+Recent Files[$e]=rackapa.cpp,$HOME/code/rackapa/rackapa,$HOME/code/rackapa/rackapa.cpp
+Width 1680=840
+
+[LastSession]
+Width0Locals=100
+Width0Watches=100
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAFaAAABaPwCAAAAAfsAAAAMAEwAbwBjAGEAbABzAQAAAB4AAAFoAAAAaAEAAAUAAAADAAAEYAAAAR38AQAAAAL8AAAAAAAAAqkAAADdAP////oAAAACAQAAAAX7AAAACgBTAHQAYQBjAGsBAAAAAP////8AAABSAQAABfsAAAAWAEIAcgBlAGEAawBwAG8AaQBuAHQAcwEAAAAA/////wAAAN0BAAAF+wAAAAwATwB1AHQAcAB1AHQBAAAAAP////8AAABSAQAABfsAAAAMAE0AZQBtAG8AcgB5AQAAAAD/////AAAAagEAAAX7AAAAEgBSAGUAZwBpAHMAdABlAHIAcwEAAAAA/////wAAAFIBAAAF/AAAAqwAAAG0AAAAlQD////6AAAAAAEAAAAC+wAAAA4AVwBhAHQAYwBoAGUAcwEAAAAA/////wAAAJUBAAAF+wAAAA4AVABoAHIAZQBhAGQAcwEAAAIeAAABWQAAAFIBAAAFAAADAwAAAWgAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAAAAAN3AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+
+[OutputWindow]
+TermCmdStr=xterm -name kdbgio -title %T -e sh -c %C
+
+[Preferences]
+BackTimeout=1000
+HeaderFileFilter=*.h *.hh *.hpp *.h++
+PopForeground=false
+SourceFileFilter=*.c *.cc *.cpp *.c++ *.C *.CC
+TabWidth=0
+
+[RecentExecutables]
+File1[$e]=$HOME/code/rackapa/rackapa
+Name1[$e]=rackapa

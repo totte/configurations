@@ -4,15 +4,15 @@ icon=battery-charging
 [AC][BrightnessControl]
 value=100
 
-[AC][DPMSControl]
-idleTime=480
-
-[AC][DimDisplay]
-idleTime=240000
-
 [AC][HandleButtonEvents]
 lidAction=1
 powerButtonAction=16
+
+[Activities][8d719432-8255-4792-a87c-1e16bd09eb36]
+mode=None
+
+[Activities][9e798d9d-e8a5-4567-89b2-0b5f6884d12e]
+mode=None
 
 [Battery]
 icon=battery-060
@@ -21,7 +21,7 @@ icon=battery-060
 value=60
 
 [Battery][DPMSControl]
-idleTime=240
+idleTime=480
 
 [Battery][DimDisplay]
 idleTime=120000
@@ -31,7 +31,7 @@ lidAction=1
 powerButtonAction=16
 
 [Battery][SuspendSession]
-idleTime=480000
+idleTime=960000
 suspendType=1
 
 [LowBattery]
@@ -41,7 +41,7 @@ icon=battery-low
 value=30
 
 [LowBattery][DPMSControl]
-idleTime=120
+idleTime=240
 
 [LowBattery][DimDisplay]
 idleTime=60000
@@ -51,5 +51,5 @@ lidAction=1
 powerButtonAction=16
 
 [LowBattery][SuspendSession]
-idleTime=240000
+idleTime=480000
 suspendType=1
