@@ -1,0 +1,17 @@
+body
+{
+    background-color:#ffffff;
+    color:#000000;
+}
+
+input,option,select,textarea
+{
+    background-color:#000000 !important;
+    color:#ffffff !important;
+}
+
+input.lst
+{
+    background-color:#000000 !important;
+    color:#ffffff !important;
+}

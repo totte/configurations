@@ -1,0 +1,1 @@
+/home/totte/code/pathogen/autoload/pathogen.vim
